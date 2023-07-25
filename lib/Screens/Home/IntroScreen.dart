@@ -42,7 +42,7 @@ class IntroScreen extends StatelessWidget {
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
                 SizedBox(
-                  height: h! / 70,
+                  height: h! / 30,
                 ),
                 myWidgets.contactUsButton()
               ],

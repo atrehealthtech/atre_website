@@ -25,11 +25,20 @@ class _NavBarState extends State<NavBar> {
 
 Widget MobileNavBar() {
   return Container(
-    margin: const EdgeInsets.symmetric(horizontal: 20),
+    decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+      BoxShadow(
+          color: Colors.grey,
+          offset: Offset(0.0, 2.0), //(x,y)
+          blurRadius: 2.0,
+          spreadRadius: 2)
+    ]),
     height: 70,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [navLogo(), const Icon(Icons.menu)],
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [navLogo(), const Icon(Icons.menu)],
+      ),
     ),
   );
 }
@@ -38,11 +47,10 @@ Widget DeskTopNavBar() {
   return Container(
     decoration: const BoxDecoration(color: Colors.white, boxShadow: [
       BoxShadow(
-        color: Colors.grey, // Set the color of the shadow
-        blurRadius: 4, // Set the blur radius of the shadow
-        offset:
-            Offset(0, 4), // Set the offset of the shadow (horizontal, vertical)
-      )
+          color: Colors.grey,
+          offset: Offset(0.0, 2.0), //(x,y)
+          blurRadius: 2.0,
+          spreadRadius: 2)
     ]),
     height: 70,
     child: Row(
