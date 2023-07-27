@@ -22,7 +22,8 @@ class IntroScreen extends StatelessWidget {
 
   Widget DeskTopIntro() {
     return Container(
-      height: h! / 1.115,
+      padding: EdgeInsets.symmetric(vertical: h! / 5),
+      // height: h! / 1.085,
       color: Palette.liteGreen,
       child: Row(
         children: [

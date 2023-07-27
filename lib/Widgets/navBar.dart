@@ -53,32 +53,35 @@ Widget DeskTopNavBar() {
           spreadRadius: 2)
     ]),
     height: 70,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: [
-        navLogo(),
-        Row(
-          children: [
-            navButton('Home'),
-            const SizedBox(
-              width: 20,
-            ),
-            navButton('About Us'),
-            const SizedBox(
-              width: 20,
-            ),
-            navButton('Career'),
-            const SizedBox(
-              width: 20,
-            ),
-            navButton('Product'),
-            const SizedBox(
-              width: 20,
-            ),
-            navButton('News & Articles')
-          ],
-        ),
-      ],
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 140),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          navLogo(),
+          Row(
+            children: [
+              navButton('Home'),
+              const SizedBox(
+                width: 20,
+              ),
+              navButton('About Us'),
+              const SizedBox(
+                width: 20,
+              ),
+              navButton('Career'),
+              const SizedBox(
+                width: 20,
+              ),
+              navButton('Product'),
+              const SizedBox(
+                width: 20,
+              ),
+              navButton('News & Articles')
+            ],
+          ),
+        ],
+      ),
     ),
   );
 }
