@@ -1,0 +1,34 @@
+import 'package:atre_website/Routes/web_route_constants.dart';
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import '../Screens/Home/home_page.dart';
+
+class MyRoutes {
+  GoRouter myRouter = GoRouter(routes: [
+    GoRoute(
+      path: "/",
+      name: MyRouteConstants.homeRouteName,
+      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+    ),
+    GoRoute(
+      path: "/about_us",
+      name: MyRouteConstants.aboutRouteName,
+      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+    ),
+    GoRoute(
+      path: "/career",
+      name: MyRouteConstants.careerRouteName,
+      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+    ),
+    GoRoute(
+      path: "/product",
+      name: MyRouteConstants.productRouteName,
+      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+    ),
+    GoRoute(
+      path: "/news_articles",
+      name: MyRouteConstants.articlesRouteName,
+      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+    ),
+  ]);
+}
