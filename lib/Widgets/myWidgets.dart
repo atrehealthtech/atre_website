@@ -21,7 +21,7 @@ class MyWidgets {
                 borderSide: BorderSide(color: Palette.black),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Palette.black),
+                borderSide: BorderSide(color: Palette.greyText),
               ),
             ),
           ),
@@ -45,7 +45,7 @@ class MyWidgets {
                 borderSide: BorderSide(color: Palette.black),
               ),
               enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(color: Palette.black),
+                borderSide: BorderSide(color: Palette.greyText),
               ),
             ),
           ),
@@ -133,6 +133,16 @@ class MyWidgets {
             fontSize: 20,
             fontFamily: "DMSans",
             fontWeight: FontWeight.w500));
+  }
+  // this widget used for bold black title texts
+
+  Widget boldBlackText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 25,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.w600));
   }
   // this widget used for normal white title texts
 

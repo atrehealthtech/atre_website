@@ -1,10 +1,14 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:atre_website/Routes/web_route_config.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Widgets/onHover.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../Routes/web_route_constants.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -18,7 +22,7 @@ class _NavBarState extends State<NavBar> {
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
       mobile: (_) => MobileNavBar(),
-      desktop: (_) => DeskTopNavBar(),
+      desktop: (_) => DeskTopNavBar(context),
     );
   }
 }
@@ -43,7 +47,7 @@ Widget MobileNavBar() {
   );
 }
 
-Widget DeskTopNavBar() {
+Widget DeskTopNavBar(BuildContext context) {
   return Container(
     decoration: const BoxDecoration(color: Colors.white, boxShadow: [
       BoxShadow(
@@ -61,23 +65,34 @@ Widget DeskTopNavBar() {
           navLogo(),
           Row(
             children: [
-              navButton('Home'),
+              navButton(
+                  text: 'Home',
+                  onTap: () {
+                    print("Home");
+                    return context.pushNamed(MyRouteConstants.homeRouteName);
+                  }),
               const SizedBox(
                 width: 20,
               ),
-              navButton('About Us'),
+              navButton(
+                  text: 'About Us',
+                  onTap: () {
+                    print("About Us");
+
+                    return context.pushNamed(MyRouteConstants.aboutRouteName);
+                  }),
               const SizedBox(
                 width: 20,
               ),
-              navButton('Career'),
+              navButton(text: 'Career', onTap: () {}),
               const SizedBox(
                 width: 20,
               ),
-              navButton('Product'),
+              navButton(text: 'Product', onTap: () {}),
               const SizedBox(
                 width: 20,
               ),
-              navButton('News & Articles')
+              navButton(text: 'News & Articles', onTap: () {})
             ],
           ),
         ],
@@ -86,40 +101,24 @@ Widget DeskTopNavBar() {
   );
 }
 
-Widget navButton(String text) {
+Widget navButton({required String text, required Function onTap}) {
   return Container(
     margin: const EdgeInsets.symmetric(horizontal: 12),
     child: OnHover(
       builder: (bool isHovered) {
-        return Text(text,
-            style: TextStyle(
-                color: !isHovered ? Colors.black : Palette.primary,
-                fontSize: 16,
-                fontFamily: "DMSans",
-                fontWeight: FontWeight.normal));
+        return GestureDetector(
+          onTap: onTap as void Function(),
+          child: Text(text,
+              style: TextStyle(
+                  color: !isHovered ? Colors.black : Palette.primary,
+                  fontSize: 16,
+                  fontFamily: "DMSans",
+                  fontWeight: FontWeight.normal)),
+        );
       },
     ),
   );
 }
-// Widget navButton(String text) {
-//   return Container(
-//       margin: const EdgeInsets.symmetric(horizontal: 12),
-//       child: HoverWidget(
-//         onHover: (event) {},
-//         hoverChild: Text(text,
-//             style: TextStyle(
-//                 color: Palette.primary,
-//                 fontSize: 16,
-//                 fontFamily: "DMSans",
-//                 fontWeight: FontWeight.normal)),
-//         child: Text(text,
-//             style: const TextStyle(
-//                 color: Colors.black,
-//                 fontSize: 16,
-//                 fontFamily: "DMSans",
-//                 fontWeight: FontWeight.normal)),
-//       ));
-// }
 
 Widget navLogo() {
   return Text(

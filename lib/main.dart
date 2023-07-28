@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       routerConfig: MyRoutes().myRouter,
       // ----------------------------
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Atre Health Tech',
       theme: ThemeData(
         primaryColor: Palette.primary,
         fontFamily: 'DMSans',

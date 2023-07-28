@@ -2,7 +2,7 @@ import 'package:atre_website/Screens/Home/technologyScreen.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:flutter/material.dart';
 
-import '../../Widgets/navBar.dart';
+import '../navBar.dart';
 import '../BottomSheet.dart';
 import 'IntroScreen.dart';
 import 'contactUsScreen.dart';

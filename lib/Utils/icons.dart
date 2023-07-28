@@ -5,4 +5,6 @@ class MyIcons {
   var Insta_White = "assets/icons/Insta_white.png";
   var Facebook_White = "assets/icons/Facebook_white.png";
   var LinkedIn_White = "assets/icons/LinkedIn_white.png";
+  var Bulls_eye = "assets/icons/Bullseye_icon.png";
+  var Light_bulb = "assets/icons/Lightbulb_icon.png";
 }
