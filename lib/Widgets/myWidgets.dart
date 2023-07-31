@@ -90,6 +90,23 @@ class MyWidgets {
                   fontWeight: FontWeight.w300))),
     );
   }
+  // this widget is Green button
+
+  Widget greenButton({required String text, required Function onTap}) {
+    return InkWell(
+      onTap: onTap as void Function(),
+      child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+          decoration: BoxDecoration(
+              color: Palette.primary, borderRadius: BorderRadius.circular(8)),
+          child: Text(text,
+              style: TextStyle(
+                  color: Palette.white,
+                  fontSize: 16,
+                  fontFamily: "DMSans",
+                  fontWeight: FontWeight.w400))),
+    );
+  }
   // this widget used for bold green title texts
 
   Widget greenTitleText({required String text}) {
@@ -131,6 +148,16 @@ class MyWidgets {
         style: TextStyle(
             color: Palette.black,
             fontSize: 20,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.w500));
+  }
+  // this widget used for bold black title texts
+
+  Widget miniBlackTitleText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 15,
             fontFamily: "DMSans",
             fontWeight: FontWeight.w500));
   }

@@ -9,7 +9,7 @@ class MyImages {
   var innovationImg = "assets/images/InnovationImg.png";
   //Our Team Images
   var balaImg = "assets/images/bala_img.jpg";
-  var sachinImg = "assets/images/sachin.png";
+  var sachinImg = "assets/images/sachin.jpg";
   var suganImg = "assets/images/sugan.jpeg";
   var velImg = "assets/images/vel.jpg";
   var gowsiImg = "assets/images/gowsalya.png";
@@ -18,4 +18,9 @@ class MyImages {
   var malaImg = "assets/images/malavika.png";
   var manisha = "assets/images/manisha.png";
   var jeevaImg = "assets/images/jeeva.png";
+
+  // Our Advisers Images
+  var arjunImg = "assets/images/Arjun.png";
+  var krishnamoortyImg = "assets/images/Krishnamoorty.png";
+  var ramalingamImg = "assets/images/Ramalingam.png";
 }
