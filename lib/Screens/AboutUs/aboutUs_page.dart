@@ -1,6 +1,7 @@
 import 'package:atre_website/Screens/navBar.dart';
 import 'package:flutter/material.dart';
 
+import '../BottomSheet.dart';
 import 'investScreen.dart';
 import 'ourAdvisersScreen.dart';
 import 'ourTeamSlideScreen.dart';
@@ -31,7 +32,8 @@ class _AboutUsState extends State<AboutUs> {
                   OurMissionScreen(),
                   OurTeamSlideScreen(),
                   InvestScreen(),
-                  OurAdvisersScreen()
+                  OurAdvisersScreen(),
+                  AtreBottomSheet()
                 ],
               ),
             ),

@@ -7,6 +7,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../Utils/Sizes.dart';
 
@@ -62,12 +63,24 @@ class OurTeamSlideScreen extends StatelessWidget {
                                 fit: BoxFit.cover,
                                 opacity: 0.2)),
                         child: InkWell(
-                            onTap: () {},
+                            onTap: () {
+                              _launchInBrowser(Uri(
+                                  scheme: 'https',
+                                  host: 'www.linkedin.com',
+                                  path: "/in/${slideList[i].linkedInUrl!}"));
+                            },
                             child: Padding(
-                              padding: const EdgeInsets.all(15),
-                              child: Image.asset(
-                                  alignment: Alignment.topLeft,
-                                  myIcons.LinkedIn_black),
+                              padding: const EdgeInsets.all(10),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  slideList[i].content != ""
+                                      ? myWidgets.subTitleText(
+                                          text: slideList[i].content!)
+                                      : Container(),
+                                  Image.asset(myIcons.LinkedIn_black),
+                                ],
+                              ),
                             ))),
                   ),
                   onHover: (event) {},
@@ -159,6 +172,14 @@ class OurTeamSlideScreen extends StatelessWidget {
   }
 }
 
+Future<void> _launchInBrowser(Uri url) async {
+  if (!await launchUrl(
+    url,
+    mode: LaunchMode.externalApplication,
+  )) {
+    throw Exception('Could not launch $url');
+  }
+}
 // =============================================================================================
 
 class OurTeam {
@@ -187,25 +208,25 @@ List<OurTeam> slideList = [
       name: "Balachandar P",
       role: "Robotic Engineer",
       imgUrl: myImages.balaImg,
-      linkedInUrl: "",
+      linkedInUrl: "bala-chandar-95b9a5185/",
       content: ""),
   OurTeam(
       name: "Sugan S",
       role: "Design Engineer",
       imgUrl: myImages.suganImg,
-      linkedInUrl: "",
+      linkedInUrl: "sugan-subramanian/",
       content: ""),
   OurTeam(
       name: "Sachin",
       role: "Ux & Backend Engineer",
       imgUrl: myImages.sachinImg,
-      linkedInUrl: "",
+      linkedInUrl: "anish-bala-sachin-119586199/",
       content: ""),
   OurTeam(
       name: "Manisha",
       role: "Junior Backend Engineer",
       imgUrl: myImages.manisha,
-      linkedInUrl: "",
+      linkedInUrl: "manisha-a-c-8a0294230/",
       content: ""),
   OurTeam(
       name: "Jeeva P",
@@ -217,24 +238,25 @@ List<OurTeam> slideList = [
       name: "Malavika",
       role: "Junior Frontend Developer",
       imgUrl: myImages.malaImg,
-      linkedInUrl: "",
+      linkedInUrl: "malavika-a-c-539346236/",
       content: ""),
   OurTeam(
       name: "Gowsalya",
       role: "Junior Frontend Developer",
       imgUrl: myImages.gowsiImg,
-      linkedInUrl: "",
+      linkedInUrl: "gowsalya-natraj-909896243/",
       content: ""),
   OurTeam(
       name: "Velmurugan R",
       role: "Frontend Developer",
       imgUrl: myImages.velImg,
-      linkedInUrl: "",
+      linkedInUrl: "velmurugan-ravindran-a83438286/",
       content: ""),
   OurTeam(
       name: "Ms. Amritha Krishnaraj",
       role: "Co-Founder",
       imgUrl: myImages.amrithaImg,
-      linkedInUrl: "",
-      content: ""),
+      linkedInUrl: "amritakrishnaraj/",
+      content:
+          "With a Masters in Medical Robotics from Johns Hopkins University and research experience from Carnegie Mellon, Amrita is a highly skilled engineer with a passion for using technology to help the public."),
 ];

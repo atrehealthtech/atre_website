@@ -19,6 +19,7 @@ class OurAdvisersScreen extends StatelessWidget {
     w = MediaQuery.of(context).size.width;
     return ScreenTypeLayout.builder(
       desktop: (_) => DesktopOurAdvisers(),
+      mobile: (_) => MobileOurAdvisers(),
     );
   }
 
@@ -47,34 +48,33 @@ class OurAdvisersScreen extends StatelessWidget {
             itemBuilder: (context, i, realIndex) => Column(
               children: [
                 HoverWidget(
-                  hoverChild: SingleChildScrollView(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(10),
-                      child: Container(
-                          width: w! / 7,
-                          height: h! / 2,
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                    advisersList[i].imgUrl!,
-                                  ),
-                                  fit: BoxFit.cover,
-                                  opacity: 0.2)),
-                          child: InkWell(
-                              onTap: () {},
-                              child: Padding(
-                                padding: const EdgeInsets.all(15),
+                  hoverChild: ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                        width: w! / 7,
+                        height: h! / 2,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  advisersList[i].imgUrl!,
+                                ),
+                                fit: BoxFit.cover,
+                                opacity: 0.2)),
+                        child: InkWell(
+                            onTap: () {},
+                            child: Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: SingleChildScrollView(
                                 child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     myWidgets.subTitleText(
                                         text: advisersList[i].content),
-                                    Image.asset(
-                                        alignment: Alignment.topLeft,
-                                        myIcons.LinkedIn_black),
+                                    Image.asset(myIcons.LinkedIn_black),
                                   ],
                                 ),
-                              ))),
-                    ),
+                              ),
+                            ))),
                   ),
                   onHover: (event) {},
                   child: ClipRRect(
@@ -105,6 +105,60 @@ class OurAdvisersScreen extends StatelessWidget {
           ),
         ),
       ]),
+    );
+  }
+
+  Widget MobileOurAdvisers() {
+    return Container(
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          myWidgets.greenTitleText(text: "Our Advisers"),
+          const SizedBox(
+            height: 20,
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+            ),
+            child: CarouselSlider.builder(
+              options: CarouselOptions(
+                height: h! / 1.3,
+                enlargeCenterPage: true,
+                autoPlay: true,
+                autoPlayCurve: Curves.fastOutSlowIn,
+                enableInfiniteScroll: true,
+                autoPlayAnimationDuration: const Duration(milliseconds: 800),
+                viewportFraction: 0.8,
+                disableCenter: true,
+              ),
+              itemCount: advisersList.length,
+              itemBuilder: (context, i, realIndex) => Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Container(
+                      width: w! / 1.5,
+                      height: h! / 2,
+                      child: Image.asset(
+                        advisersList[i].imgUrl!,
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  myWidgets.miniBlackTitleText(
+                      text: advisersList[i].name!.toUpperCase()),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

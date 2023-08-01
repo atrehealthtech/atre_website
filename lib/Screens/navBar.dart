@@ -1,6 +1,5 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:atre_website/Routes/web_route_config.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Widgets/onHover.dart';
 import 'package:go_router/go_router.dart';
