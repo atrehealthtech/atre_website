@@ -13,4 +13,5 @@ class MyIcons {
   var LinkedIn_White = "assets/icons/LinkedIn_white.png";
   var Bulls_eye = "assets/icons/Bullseye_icon.png";
   var Light_bulb = "assets/icons/Lightbulb_icon.png";
+  var suitCase = "assets/images/suitCaseIcon.png";
 }

@@ -7,8 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import '../Routes/web_route_constants.dart';
-
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
 
@@ -48,12 +46,8 @@ Widget MobileNavBar() {
 
 Widget DeskTopNavBar(BuildContext context) {
   return Container(
-    decoration: const BoxDecoration(color: Colors.white, boxShadow: [
-      BoxShadow(
-          color: Colors.grey,
-          offset: Offset(0.0, 2.0), //(x,y)
-          blurRadius: 2.0,
-          spreadRadius: 2)
+    decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      BoxShadow(color: Colors.grey.withOpacity(0.3), spreadRadius: 2)
     ]),
     height: 70,
     child: Padding(
@@ -68,7 +62,7 @@ Widget DeskTopNavBar(BuildContext context) {
                   text: 'Home',
                   onTap: () {
                     print("Home");
-                    return context.pushNamed(MyRouteConstants.homeRouteName);
+                    return context.go("/");
                   }),
               const SizedBox(
                 width: 20,
@@ -78,12 +72,18 @@ Widget DeskTopNavBar(BuildContext context) {
                   onTap: () {
                     print("About Us");
 
-                    return context.pushNamed(MyRouteConstants.aboutRouteName);
+                    return context.go("/about_us");
                   }),
               const SizedBox(
                 width: 20,
               ),
-              navButton(text: 'Career', onTap: () {}),
+              navButton(
+                  text: 'Career',
+                  onTap: () {
+                    print("Career");
+
+                    return context.go("/career");
+                  }),
               const SizedBox(
                 width: 20,
               ),

@@ -7,6 +7,8 @@ class MyImages {
       "https://images.pexels.com/photos/8704147/pexels-photo-8704147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
   var atreDeskImg = "assets/images/AtreDesk.png";
   var innovationImg = "assets/images/InnovationImg.png";
+  var groupImg = "assets/images/GroupImage.png";
+  var circleBg = "assets/images/circle.png";
   //Our Team Images
   var balaImg = "assets/images/bala_img.jpg";
   var sachinImg = "assets/images/sachin.jpg";

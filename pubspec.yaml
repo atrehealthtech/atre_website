@@ -47,6 +47,14 @@ flutter:
         - asset: assets/fonts/DMSans-MediumItalic.ttf
         - asset: assets/fonts/DMSans-Regular.ttf
           style: italic
+
+    - family: DancingScript
+      fonts:
+        - asset: assets/fonts/DancingScript-Bold.ttf
+        - asset: assets/fonts/DancingScript-Medium.ttf
+        - asset: assets/fonts/DancingScript-Regular.ttf
+        - asset: assets/fonts/DancingScript-SemiBold.ttf
+          style: italic
           
   #   - family: Trajan Pro
   #     fonts:

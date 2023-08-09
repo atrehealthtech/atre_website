@@ -16,7 +16,6 @@ class ContactUsScreen extends StatelessWidget {
     h = MediaQuery.of(context).size.height;
     w = MediaQuery.of(context).size.width;
     return ScreenTypeLayout.builder(
-      tablet: (_) => MobileContactUs(),
       mobile: (_) => MobileContactUs(),
       desktop: (_) => DeskTopContactUs(),
     );

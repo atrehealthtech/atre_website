@@ -2,6 +2,7 @@ import 'package:atre_website/Routes/web_route_constants.dart';
 import 'package:atre_website/Screens/AboutUs/aboutUs_page.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../Screens/Career/career_page.dart';
 import '../Screens/Home/home_page.dart';
 
 class MyRoutes {
@@ -19,7 +20,7 @@ class MyRoutes {
     GoRoute(
       path: "/career",
       name: MyRouteConstants.careerRouteName,
-      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+      pageBuilder: (context, state) => const MaterialPage(child: CareerPage()),
     ),
     GoRoute(
       path: "/product",

@@ -63,6 +63,26 @@ class MyWidgets {
             fontFamily: "DMSans",
             fontWeight: FontWeight.bold));
   }
+
+  // this widget used for lib/Screens/Career/centerCircleScreen.dart
+  Widget greenDancingText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.primary,
+            fontSize: 43,
+            fontFamily: "DancingScript",
+            fontWeight: FontWeight.bold));
+  }
+
+  // this widget used for lib/Screens/Career/centerCircleScreen.dart
+  Widget dancingMidText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 36,
+            fontFamily: "DancingScript",
+            fontWeight: FontWeight.w200));
+  }
   // this widget used for normal subtitle texts
 
   Widget subTitleText({required String text}) {
@@ -72,6 +92,49 @@ class MyWidgets {
             fontSize: 16,
             fontFamily: "DMSans",
             fontWeight: FontWeight.normal));
+  }
+
+  // this widget used for normal subtitle texts
+
+  Widget subTitleGreyText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.grey,
+            fontSize: 16,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.normal));
+  }
+
+  // this widget used for medium black texts
+
+  Widget midBlackText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.greyText,
+            fontSize: 17,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.w600));
+  }
+
+  // this widget used for medium black texts
+
+  Widget dmSans17Bold({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.greyText,
+            fontSize: 17,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.bold));
+  }
+  // this widget used for medium green texts
+
+  Widget greenDmSans17Bold({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.primary,
+            fontSize: 17,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.bold));
   }
   // this widget is contact us button
 
@@ -118,7 +181,7 @@ class MyWidgets {
             fontFamily: "DMSans",
             fontWeight: FontWeight.bold));
   }
-  // this widget used for medium green subtitle texts
+  // this widget used for medium bold green subtitle texts
 
   Widget greenSubTitleText({required String text, TextDecoration? decoration}) {
     return Text(text,
@@ -128,6 +191,18 @@ class MyWidgets {
             fontSize: 16,
             fontFamily: "DMSans",
             fontWeight: FontWeight.bold));
+  }
+
+  // this widget used for medium green subtitle texts
+
+  Widget greenMiniText({required String text, TextDecoration? decoration}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.primary,
+            decoration: decoration,
+            fontSize: 16,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.normal));
   }
   // this widget used for medium green Medium texts
 
