@@ -25,4 +25,8 @@ class MyImages {
   var arjunImg = "assets/images/Arjun.png";
   var krishnamoortyImg = "assets/images/Krishnamoorty.png";
   var ramalingamImg = "assets/images/Ramalingam.png";
+
+  // 3D Images for product
+  var boosanImg = "assets/images/3D_Images/boosan.glb";
+  var triDiDemoImg = "assets/images/3D_Images/ImageToStl.com_002-ug-2.glb";
 }

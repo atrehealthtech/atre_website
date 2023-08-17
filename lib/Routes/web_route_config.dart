@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../Screens/Career/career_page.dart';
 import '../Screens/Home/home_page.dart';
+import '../Screens/Product/product.dart';
 
 class MyRoutes {
   GoRouter myRouter = GoRouter(routes: [
@@ -25,7 +26,7 @@ class MyRoutes {
     GoRoute(
       path: "/product",
       name: MyRouteConstants.productRouteName,
-      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+      pageBuilder: (context, state) => const MaterialPage(child: ProductPage()),
     ),
     GoRoute(
       path: "/news_articles",

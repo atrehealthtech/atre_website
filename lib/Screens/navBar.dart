@@ -87,7 +87,13 @@ Widget DeskTopNavBar(BuildContext context) {
               const SizedBox(
                 width: 20,
               ),
-              navButton(text: 'Product', onTap: () {}),
+              navButton(
+                  text: 'Product',
+                  onTap: () {
+                    print("Product");
+
+                    return context.go("/product");
+                  }),
               const SizedBox(
                 width: 20,
               ),
