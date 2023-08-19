@@ -10,6 +10,7 @@ class TriDiProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
+      mobile: (_) => Mobile3DProduct(),
       desktop: (_) => Desktop3DProduct(),
     );
   }
@@ -25,14 +26,29 @@ class TriDiProductScreen extends StatelessWidget {
               src: myImages.triDiDemoImg,
               backgroundColor: Palette.white,
               ar: true,
-              arModes: ['scene-viewer', 'webxr', 'quick-look'],
+              arModes: const ['scene-viewer', 'webxr', 'quick-look'],
               autoRotate: true,
               disableZoom: false,
             ),
           ),
-          Expanded(flex: 3, child: Text("data"))
+          const Expanded(flex: 3, child: Text("data"))
         ],
       ),
     );
   }
+}
+
+Widget Mobile3DProduct() {
+  return Column(
+    children: [
+      ModelViewer(
+        src: myImages.triDiDemoImg,
+        backgroundColor: Palette.white,
+        ar: true,
+        arModes: const ['scene-viewer', 'webxr', 'quick-look'],
+        autoRotate: true,
+        disableZoom: false,
+      ),
+    ],
+  );
 }

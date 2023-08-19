@@ -324,7 +324,7 @@ class MyWidgets {
           borderRadius: BorderRadius.circular(8),
           color: Palette.white,
         ),
-        child: Column(children: [
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Container(
             height: 160,
             //  h! / 5,
@@ -353,6 +353,57 @@ class MyWidgets {
           )
         ]),
       ),
+    );
+  }
+
+  Widget articleContainer(
+      {required double containerHeight,
+      required double containerWidth,
+      required String img,
+      required String titleText,
+      required String subtitleText,
+      required String buttonText,
+      required Function onTap}) {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      height: containerHeight,
+      //  h! / 1.7,
+      width: containerWidth,
+      //  w! / 5,
+      decoration: BoxDecoration(
+        border: Border.all(color: Palette.grey),
+        borderRadius: BorderRadius.circular(8),
+        color: Palette.white,
+      ),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Container(
+          height: 160,
+          //  h! / 5,
+          decoration: BoxDecoration(
+              image: DecorationImage(fit: BoxFit.cover, image: AssetImage(img)),
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.black),
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        myWidgets.blackTitleText(text: titleText),
+        const SizedBox(
+          height: 7,
+        ),
+        myWidgets.subTitleText(
+          text: subtitleText,
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        InkWell(
+          onTap: onTap as void Function(),
+          child: myWidgets.blackMidText(
+            text: buttonText,
+          ),
+        )
+      ]),
     );
   }
 }
