@@ -1,7 +1,8 @@
+import 'package:atre_website/News%20And%20Articles/singup_page.dart';
+import 'package:atre_website/Screens/BottomSheet.dart';
 import 'package:atre_website/Screens/navBar.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:flutter/material.dart';
-
 import 'article_page.dart';
 
 class NewsAndArticles extends StatefulWidget {
@@ -19,10 +20,16 @@ class _NewsAndArticlesState extends State<NewsAndArticles> {
       body: const Column(
         children: [
           NavBar(),
-          Column(
-            children: [
-              ArticlePage(),
-            ],
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  ArticlePage(),
+                  SignUpPage(),
+                  AtreBottomSheet() //lib/Screens/BottomSheet.dart
+                ],
+              ),
+            ),
           )
         ],
       ),

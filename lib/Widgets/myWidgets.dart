@@ -246,6 +246,16 @@ class MyWidgets {
             fontFamily: "DMSans",
             fontWeight: FontWeight.w600));
   }
+  // this widget used for bold black title texts
+
+  Widget boldBlackMidText({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 20,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.w600));
+  }
   // this widget used for normal white title texts
 
   Widget whiteTitleText({required String text}) {
@@ -293,13 +303,14 @@ class MyWidgets {
   }
   // this widget used for Mid black title texts
 
-  Widget blackMidText({required String text}) {
+  Widget blackMidText({required String text, TextDecoration? textDecoration}) {
     return Text(text,
         style: TextStyle(
             color: Palette.black,
             fontSize: 16,
             fontFamily: "DMSans",
-            fontWeight: FontWeight.w500));
+            fontWeight: FontWeight.w500,
+            decoration: textDecoration));
   }
 
   // this widget used for technology image container
@@ -360,9 +371,11 @@ class MyWidgets {
       {required double containerHeight,
       required double containerWidth,
       required String img,
+      required String authorText,
       required String titleText,
       required String subtitleText,
       required String buttonText,
+      required String nameText,
       required Function onTap}) {
     return Container(
       padding: const EdgeInsets.all(14),
@@ -382,7 +395,8 @@ class MyWidgets {
           decoration: BoxDecoration(
               image: DecorationImage(fit: BoxFit.cover, image: AssetImage(img)),
               borderRadius: BorderRadius.circular(8),
-              color: Colors.black),
+              border: Border.all(color: Palette.grey),
+              color: Palette.white),
         ),
         const SizedBox(
           height: 10,
@@ -400,7 +414,20 @@ class MyWidgets {
         InkWell(
           onTap: onTap as void Function(),
           child: myWidgets.blackMidText(
+            textDecoration: TextDecoration.underline,
             text: buttonText,
+          ),
+        ),
+        InkWell(
+          onTap: onTap,
+          child: myWidgets.miniBlackTitleText(
+            text: nameText,
+          ),
+        ),
+        InkWell(
+          onTap: onTap,
+          child: myWidgets.miniBlackTitleText(
+            text: authorText,
           ),
         )
       ]),

@@ -4,6 +4,7 @@ import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import '../Utils/Strings.dart';
 
 class ArticlePage extends StatelessWidget {
   const ArticlePage({super.key});
@@ -27,26 +28,27 @@ Widget DeskTopArticle() {
     color: Palette.white,
     child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       myWidgets.articleContainer(
-          containerHeight: 550,
+          authorText: articleString.authorText,
+          nameText: articleString.nameText,
+          containerHeight: 510,
           containerWidth: 400,
           img: myImages.inTecImg,
-          titleText:
-              "INTEC 2022 - International Machine tools & International Trade fair.",
-          subtitleText:
-              "Atre, made a splash at the INTEC 2022 expo in Coimbatore with the successful display of our tele-robotic ultrasound system. The expo, which was attended by healthcare professionals, engineers, and industry leaders, provided the perfect platform for us to showcase our innovative technology.",
-          buttonText: "",
+          titleText: articleString.articleTitleText1,
+          subtitleText: articleString.articleParaText,
+          buttonText: articleString.buttonText,
           onTap: () {}),
       SizedBox(
         width: w! / 20,
       ),
       myWidgets.articleContainer(
-          containerHeight: 550,
+          authorText: articleString.authorText,
+          nameText: articleString.nameText,
+          containerHeight: 510,
           containerWidth: 400,
           img: myImages.nidhiPrays,
-          titleText: "NIDHI PRAYAS - Department of Science and Technology.",
-          subtitleText:
-              "Atre, made a splash at the INTEC 2022 expo in Coimbatore with the successful display of our tele-robotic ultrasound system. The expo, which was attended by healthcare professionals, engineers, and industry leaders, provided the perfect platform for us to showcase our innovative technology.",
-          buttonText: "Published By",
+          titleText: articleString.articleTitleText2,
+          subtitleText: articleString.articleParaText,
+          buttonText: articleString.buttonText,
           onTap: () {})
     ]),
   );
