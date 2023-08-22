@@ -170,6 +170,24 @@ class MyWidgets {
                   fontWeight: FontWeight.w400))),
     );
   }
+
+  // this widget used for article page submit button
+  Widget submitButton({required String text, required Function onTap}) {
+    return InkWell(
+      onTap: onTap as void Function(),
+      child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+          decoration: BoxDecoration(
+              color: Palette.primary, borderRadius: BorderRadius.circular(8)),
+          child: Text(text,
+              style: TextStyle(
+                  color: Palette.white,
+                  fontSize: 16,
+                  fontFamily: "DMSans",
+                  fontWeight: FontWeight.w400))),
+    );
+  }
+
   // this widget used for bold green title texts
 
   Widget greenTitleText({required String text}) {
@@ -367,6 +385,7 @@ class MyWidgets {
     );
   }
 
+  // this widget used for Article Card
   Widget articleContainer(
       {required double containerHeight,
       required double containerWidth,
@@ -431,6 +450,34 @@ class MyWidgets {
           ),
         )
       ]),
+    );
+  }
+
+  // this widget used for Article Textfield
+
+  Widget ArticleTextField() {
+    return Container(
+      height: 70,
+      width: 300,
+      child: TextFormField(
+          cursorColor: Palette.black,
+          cursorWidth: 0.5,
+          decoration: InputDecoration(
+            filled: true,
+            hintText: "Enter Your Email",
+            fillColor: Colors.white,
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(5),
+              borderSide: BorderSide(
+                color: Palette.grey,
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(5),
+                borderSide: BorderSide(
+                  color: Palette.liteGreen,
+                )),
+          )),
     );
   }
 }
