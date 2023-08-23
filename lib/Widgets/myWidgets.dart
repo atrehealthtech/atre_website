@@ -395,61 +395,66 @@ class MyWidgets {
       required String subtitleText,
       required String buttonText,
       required String nameText,
-      required Function onTap}) {
-    return Container(
-      padding: const EdgeInsets.all(14),
-      height: containerHeight,
-      //  h! / 1.7,
-      width: containerWidth,
-      //  w! / 5,
-      decoration: BoxDecoration(
-        border: Border.all(color: Palette.grey),
-        borderRadius: BorderRadius.circular(8),
-        color: Palette.white,
+      required Function onTap,
+      required Function onContainerTap}) {
+    return InkWell(
+      onTap: onContainerTap as void Function(),
+      child: Container(
+        padding: const EdgeInsets.all(14),
+        height: containerHeight,
+        //  h! / 1.7,
+        width: containerWidth,
+        //  w! / 5,
+        decoration: BoxDecoration(
+          border: Border.all(color: Palette.grey),
+          borderRadius: BorderRadius.circular(8),
+          color: Palette.white,
+        ),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Container(
+            height: 160,
+            //  h! / 5,
+            decoration: BoxDecoration(
+                image:
+                    DecorationImage(fit: BoxFit.cover, image: AssetImage(img)),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Palette.grey),
+                color: Palette.white),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          myWidgets.blackTitleText(text: titleText),
+          const SizedBox(
+            height: 7,
+          ),
+          myWidgets.subTitleText(
+            text: subtitleText,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            onTap: onTap as void Function(),
+            child: myWidgets.blackMidText(
+              textDecoration: TextDecoration.underline,
+              text: buttonText,
+            ),
+          ),
+          InkWell(
+            onTap: onTap,
+            child: myWidgets.miniBlackTitleText(
+              text: nameText,
+            ),
+          ),
+          InkWell(
+            onTap: onTap,
+            child: myWidgets.miniBlackTitleText(
+              text: authorText,
+            ),
+          )
+        ]),
       ),
-      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Container(
-          height: 160,
-          //  h! / 5,
-          decoration: BoxDecoration(
-              image: DecorationImage(fit: BoxFit.cover, image: AssetImage(img)),
-              borderRadius: BorderRadius.circular(8),
-              border: Border.all(color: Palette.grey),
-              color: Palette.white),
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        myWidgets.blackTitleText(text: titleText),
-        const SizedBox(
-          height: 7,
-        ),
-        myWidgets.subTitleText(
-          text: subtitleText,
-        ),
-        const SizedBox(
-          height: 10,
-        ),
-        InkWell(
-          onTap: onTap as void Function(),
-          child: myWidgets.blackMidText(
-            textDecoration: TextDecoration.underline,
-            text: buttonText,
-          ),
-        ),
-        InkWell(
-          onTap: onTap,
-          child: myWidgets.miniBlackTitleText(
-            text: nameText,
-          ),
-        ),
-        InkWell(
-          onTap: onTap,
-          child: myWidgets.miniBlackTitleText(
-            text: authorText,
-          ),
-        )
-      ]),
     );
   }
 
@@ -458,7 +463,7 @@ class MyWidgets {
   Widget ArticleTextField() {
     return Container(
       height: 70,
-      width: 300,
+      width: 200,
       child: TextFormField(
           cursorColor: Palette.black,
           cursorWidth: 0.5,
@@ -474,9 +479,7 @@ class MyWidgets {
             ),
             focusedBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(5),
-                borderSide: BorderSide(
-                  color: Palette.liteGreen,
-                )),
+                borderSide: BorderSide(color: Palette.blue)),
           )),
     );
   }

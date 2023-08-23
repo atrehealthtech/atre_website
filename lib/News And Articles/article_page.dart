@@ -1,3 +1,4 @@
+import 'package:atre_website/News%20And%20Articles/intec_page.dart';
 import 'package:atre_website/Utils/Sizes.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/images.dart';
@@ -15,19 +16,24 @@ class ArticlePage extends StatelessWidget {
     w = MediaQuery.of(context).size.width;
     return ScreenTypeLayout.builder(
       mobile: (_) => MobileArticle(),
-      desktop: (_) => DeskTopArticle(),
+      desktop: (_) => DeskTopArticle(context),
     );
   }
 }
 
 // ignore: non_constant_identifier_names
-Widget DeskTopArticle() {
+Widget DeskTopArticle(BuildContext context) {
   return Container(
     padding: const EdgeInsets.symmetric(vertical: 80),
     width: double.infinity,
     color: Palette.white,
     child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       myWidgets.articleContainer(
+          onContainerTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return IntecPage();
+            }));
+          },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
           containerHeight: 510,
@@ -41,6 +47,11 @@ Widget DeskTopArticle() {
         width: w! / 20,
       ),
       myWidgets.articleContainer(
+          onContainerTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return IntecPage();
+            }));
+          },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
           containerHeight: 510,

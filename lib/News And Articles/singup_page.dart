@@ -26,7 +26,7 @@ Widget DeskTopSignUp() {
   return Container(
     color: Palette.paleGreen,
     width: double.infinity,
-    margin: const EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+    margin: const EdgeInsets.symmetric(vertical: 60, horizontal: 10),
     padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 300),
     child: Row(children: [
       Expanded(
@@ -46,7 +46,7 @@ Widget DeskTopSignUp() {
       ),
       Expanded(
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             myWidgets.ArticleTextField(),
             const SizedBox(
@@ -65,5 +65,41 @@ Widget DeskTopSignUp() {
 
 // ignore: non_constant_identifier_names
 Widget MobileSignUp() {
-  return Container();
+  return Container(
+    color: Palette.paleGreen,
+    width: double.infinity,
+    margin: const EdgeInsets.symmetric(vertical: 60, horizontal: 10),
+    padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 100),
+    child: Column(children: [
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          myWidgets.boldBlackMidText(text: articleString.boldText),
+          const SizedBox(
+            height: 5,
+          ),
+          myWidgets.midBlackText(text: articleString.signUpParaText),
+        ],
+      ),
+      const SizedBox(
+        width: 25,
+      ),
+      Column(
+        children: [
+          Row(
+            children: [
+              myWidgets.ArticleTextField(),
+              const SizedBox(
+                width: 25,
+              ),
+              myWidgets.submitButton(onTap: () {}, text: "submit")
+            ],
+          ),
+        ],
+      ),
+      const SizedBox(
+        width: 30,
+      )
+    ]),
+  );
 }
