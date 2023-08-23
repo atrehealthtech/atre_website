@@ -6,6 +6,7 @@ import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '../Utils/Strings.dart';
+import 'nidhiprayas_page.dart';
 
 class ArticlePage extends StatelessWidget {
   const ArticlePage({super.key});
@@ -49,7 +50,7 @@ Widget DeskTopArticle(BuildContext context) {
       myWidgets.articleContainer(
           onContainerTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return IntecPage();
+              return NidhiParayasPage();
             }));
           },
           authorText: articleString.authorText,
