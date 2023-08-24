@@ -1,4 +1,5 @@
 final articleString = ArticleString();
+final intecString = IntetString();
 
 class ArticleString {
   var articleParaText =
@@ -14,4 +15,10 @@ class ArticleString {
       "Be on the front seat of our journey towards responsible healthtech!";
   var signUpParaText =
       "Get our press releases and news pieces delivered to your inbox by signing up for our dedicated news list.";
+}
+
+class IntetString {
+  var titleText =
+      "INTEC 2022 - International Machine tools & International Trade fair.";
+  var smallText = "Published on 14th November 2022";
 }

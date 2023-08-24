@@ -50,7 +50,7 @@ Widget DeskTopArticle(BuildContext context) {
       myWidgets.articleContainer(
           onContainerTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return NidhiParayasPage();
+              return const NidhiParayasPage();
             }));
           },
           authorText: articleString.authorText,

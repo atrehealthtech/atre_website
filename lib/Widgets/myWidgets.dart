@@ -244,6 +244,16 @@ class MyWidgets {
             fontFamily: "DMSans",
             fontWeight: FontWeight.w500));
   }
+  // this widget used for bold black title texts in Intec Text Page
+
+  Widget blackTitle({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 50,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.w500));
+  }
   // this widget used for bold black title texts
 
   Widget miniBlackTitleText({required String text}) {
@@ -252,7 +262,7 @@ class MyWidgets {
             color: Palette.black,
             fontSize: 15,
             fontFamily: "DMSans",
-            fontWeight: FontWeight.w500));
+            fontWeight: FontWeight.bold));
   }
   // this widget used for bold black title texts
 
@@ -329,6 +339,18 @@ class MyWidgets {
             fontFamily: "DMSans",
             fontWeight: FontWeight.w500,
             decoration: textDecoration));
+  }
+  // this widget used for Mid grey title texts
+
+  Widget greyMidText({
+    required String text,
+  }) {
+    return Text(text,
+        style: TextStyle(
+          color: Palette.darkGrey,
+          fontSize: 16,
+          fontFamily: "DMSans",
+        ));
   }
 
   // this widget used for technology image container
