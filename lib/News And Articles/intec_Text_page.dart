@@ -19,7 +19,7 @@ Widget DeskTopIntecTextPage() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 200, vertical: 70),
     child: Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         myWidgets.blackTitle(text: intecString.titleText),
         const SizedBox(
