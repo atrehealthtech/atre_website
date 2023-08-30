@@ -1,11 +1,11 @@
-import 'package:atre_website/News%20And%20Articles/intec_page.dart';
+import 'package:atre_website/Screens/News%20And%20Articles/intec_page.dart';
 import 'package:atre_website/Utils/Sizes.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import '../Utils/Strings.dart';
+import '../../Utils/Strings.dart';
 import 'nidhiprayas_page.dart';
 
 class ArticlePage extends StatelessWidget {

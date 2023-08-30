@@ -22,4 +22,5 @@ class IntetString {
       "INTEC 2022 - International Machine tools & International Trade fair.";
   var smallText = "Published on 14th November 2022";
   var paraText1 = "Atre, made a splash at the INTEC 2022 expo in Coimbatore with the successful display of our tele-robotic ultrasound system. The expo, which was attended by healthcare professionals, engineers, and industry leaders, provided the perfect platform for us to showcase our innovative technology.";
+  var paraText2 ="The tele-robotic ultrasound system, which uses robotic arms to provide real-time remote ultrasound scans, received an overwhelmingly positive response from attendees. Many were stunned by the advanced technology and its potential to revolutionize the field of diagnostic imaging. The system allows trained professionals to operate the robotic arms from remote locations, providing patients in rural and remote areas with access to ultrasound scans, which is a crucial diagnostic tool for many medical conditions";
 }

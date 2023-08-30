@@ -25,8 +25,18 @@ Widget DeskTopIntecTextPage() {
         const SizedBox(
           height: 5,
         ),
-        myWidgets.greyMidText(text: intecString.smallText)
+        myWidgets.greyMidText(text: intecString.smallText),
+         const SizedBox(
+          height: 50,
+        ),
+        myWidgets.greyNormalText(text: intecString.paraText1),
+         const SizedBox(
+          height: 250,
+        ),
+        myWidgets.greyNormalText(text: intecString.paraText2)
       ],
     ),
+    
   );
+  
 }
