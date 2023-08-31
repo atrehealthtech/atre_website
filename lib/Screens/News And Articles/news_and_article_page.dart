@@ -26,7 +26,7 @@ class _NewsAndArticlesState extends State<NewsAndArticles> {
                 children: [
                   ArticlePage(),
                   SignUpPage(),
-                  AtreBottomSheet() //lib/Screens/BottomSheet.dart
+                  AtreBottomSheet() 
                 ],
               ),
             ),
