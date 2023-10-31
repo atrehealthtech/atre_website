@@ -72,10 +72,10 @@ Widget mobileNidhiPrayasTextPage() {
           padding: const EdgeInsets.symmetric(horizontal: 80) ,
           child: myWidgets.greyNormalText(text: nidhiPraysString.paraText2),
         ),
-         const SizedBox(
-          height: 80,
+        Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 80) ,
+          child: myWidgets.greyNormalText(text: nidhiPraysString.paraText3),
         ),
-        myWidgets.greyNormalText(text: nidhiPraysString.paraText3),
           const SizedBox(
           height: 30,
         ),
