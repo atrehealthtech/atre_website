@@ -7,7 +7,7 @@ import '../Screens/Home/home_page.dart';
 import '../Screens/Product/product.dart';
 
 class MyRoutes {
-  GoRouter myRouter = GoRouter(routes: [
+  GoRouter myRouter = GoRouter(initialLocation: "/", routes: [
     GoRoute(
       path: "/",
       name: MyRouteConstants.homeRouteName,
