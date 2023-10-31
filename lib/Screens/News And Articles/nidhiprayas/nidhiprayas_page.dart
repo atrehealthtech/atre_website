@@ -25,7 +25,7 @@ class _NidhiParayasPageState extends State<NidhiParayasPage> {
                 children: [
                   NavBar(),
                    NidhiPrayasImage(),
-                    NidhiPrayasTextPage()
+                    NidhiPrayasTextPage(),
                 ],
               ),
             ),
