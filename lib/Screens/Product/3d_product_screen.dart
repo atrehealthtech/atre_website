@@ -23,7 +23,7 @@ class TriDiProductScreen extends StatelessWidget {
           Expanded(
             flex: 2,
             child: ModelViewer(
-              src: myImages.atreRobotImg,
+              src: myImages.boosanImg,
               backgroundColor: Palette.white,
               ar: true,
               arModes: const ['scene-viewer', 'webxr', 'quick-look'],
