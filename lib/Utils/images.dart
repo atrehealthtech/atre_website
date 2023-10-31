@@ -29,5 +29,8 @@ class MyImages {
   // 3D Images for product
   var boosanImg = "assets/images/3D_Images/boosan.glb";
   var triDiDemoImg = "assets/images/3D_Images/ImageToStl.com_002-ug-2.glb";
-  var atreRobotImg = "assets/images/3D_Images/atreRobot.glb";
+
+  //Article Image
+  var inTecImg = "assets/images/intec.png";
+  var nidhiPrays = "assets/images/nidthi_prayas.png";
 }

@@ -1,3 +1,4 @@
+import 'package:atre_website/News%20And%20Articles/news_and_article_page.dart';
 import 'package:atre_website/Routes/web_route_constants.dart';
 import 'package:atre_website/Screens/AboutUs/aboutUs_page.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,8 @@ class MyRoutes {
     GoRoute(
       path: "/news_articles",
       name: MyRouteConstants.articlesRouteName,
-      pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+      pageBuilder: (context, state) =>
+          const MaterialPage(child: NewsAndArticles()),
     ),
   ]);
 }

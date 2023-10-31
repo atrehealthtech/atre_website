@@ -97,7 +97,13 @@ Widget DeskTopNavBar(BuildContext context) {
               const SizedBox(
                 width: 20,
               ),
-              navButton(text: 'News & Articles', onTap: () {})
+              navButton(
+                  text: 'News & Articles',
+                  onTap: () {
+                    print("News & Articles");
+
+                    return context.go("/news_articles");
+                  })
             ],
           ),
         ],
