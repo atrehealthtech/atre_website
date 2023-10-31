@@ -1,8 +1,8 @@
 import 'package:atre_website/Screens/navBar.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:flutter/material.dart';
-
-import 'nidhiprayas_Image_Screen.dart';
+import 'nidhiprayas_Text_page.dart';
+import 'nidhiprayas_image_screen.dart';
 
 class NidhiParayasPage extends StatefulWidget {
   const NidhiParayasPage({super.key});
@@ -17,7 +17,20 @@ class _NidhiParayasPageState extends State<NidhiParayasPage> {
     return Scaffold(
       backgroundColor: Palette.white,
       body: const Column(
-        children: [NavBar(), NidhiPrayasImage()],
+        children: [
+  
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  NavBar(),
+                   NidhiPrayasImage(),
+                    NidhiPrayasTextPage(),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

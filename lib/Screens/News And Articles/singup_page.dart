@@ -82,7 +82,7 @@ Widget MobileSignUp() {
         ],
       ),
       const SizedBox(
-        width: 25,
+        height: 25,
       ),
       Column(
         children: [

@@ -9,5 +9,6 @@ class Palette {
   static Color black = Colors.black;
   static Color white = Colors.white;
   static Color blue = Colors.blue;
-  static Color darkGrey = const Color(0XFF939196);
+  static Color medGrey = const Color(0XFF7E7C81);
+  static Color darkGrey = const Color(0XFF6E6B72);
 }

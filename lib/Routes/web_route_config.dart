@@ -1,4 +1,4 @@
-import 'package:atre_website/News%20And%20Articles/news_and_article_page.dart';
+import 'package:atre_website/Screens/News%20And%20Articles/news_and_article_page.dart';
 import 'package:atre_website/Routes/web_route_constants.dart';
 import 'package:atre_website/Screens/AboutUs/aboutUs_page.dart';
 import 'package:flutter/material.dart';

@@ -252,7 +252,7 @@ class MyWidgets {
             color: Palette.black,
             fontSize: 50,
             fontFamily: "DMSans",
-            fontWeight: FontWeight.w500));
+            fontWeight: FontWeight.bold));
   }
   // this widget used for bold black title texts
 
@@ -347,8 +347,20 @@ class MyWidgets {
   }) {
     return Text(text,
         style: TextStyle(
-          color: Palette.darkGrey,
+          color: Palette.medGrey,
           fontSize: 16,
+          fontFamily: "DMSans",
+        ));
+  }
+  // this widget used for Normal grey text for Intec Page
+
+  Widget greyNormalText({
+    required String text,
+  }) {
+    return Text(text,
+        style: TextStyle(
+          color: Palette.darkGrey,
+          fontSize: 25,
           fontFamily: "DMSans",
         ));
   }
