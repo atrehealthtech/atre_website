@@ -4,6 +4,7 @@ import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '../../Utils/Strings.dart';
 import 'nidhiprayas/nidhiprayas_page.dart';
@@ -31,9 +32,7 @@ Widget DeskTopArticle(BuildContext context) {
     child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       myWidgets.articleContainer(
           onContainerTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return IntecPage();
-            }));
+            context.go("/news_articles/1");
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
@@ -41,7 +40,7 @@ Widget DeskTopArticle(BuildContext context) {
           containerWidth: 450,
           img: myImages.inTecImg,
           titleText: articleString.articleTitleText1,
-          subtitleText: articleString.articleParaText,
+          dmSans16Grey: articleString.articleParaText,
           buttonText: articleString.buttonText,
           onTap: () {}),
       SizedBox(
@@ -49,9 +48,7 @@ Widget DeskTopArticle(BuildContext context) {
       ),
       myWidgets.articleContainer(
           onContainerTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const NidhiParayasPage();
-            }));
+            context.go("/news_articles/2");
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
@@ -59,7 +56,7 @@ Widget DeskTopArticle(BuildContext context) {
           containerWidth: 450,
           img: myImages.nidhiPrays,
           titleText: articleString.articleTitleText2,
-          subtitleText: articleString.articleParaText,
+          dmSans16Grey: articleString.articleParaText,
           buttonText: articleString.buttonText,
           onTap: () {})
     ]),
@@ -85,11 +82,11 @@ Widget MobileArticle(BuildContext context) {
           containerWidth: 450,
           img: myImages.inTecImg,
           titleText: articleString.articleTitleText1,
-          subtitleText: articleString.articleParaText,
+          dmSans16Grey: articleString.articleParaText,
           buttonText: articleString.buttonText,
           onTap: () {}),
       SizedBox(
-      height:h! / 20 ,
+        height: h! / 20,
       ),
       myWidgets.articleContainer(
           onContainerTap: () {
@@ -103,7 +100,7 @@ Widget MobileArticle(BuildContext context) {
           containerWidth: 450,
           img: myImages.nidhiPrays,
           titleText: articleString.articleTitleText2,
-          subtitleText: articleString.articleParaText,
+          dmSans16Grey: articleString.articleParaText,
           buttonText: articleString.buttonText,
           onTap: () {})
     ]),

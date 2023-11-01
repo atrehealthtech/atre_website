@@ -19,16 +19,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Palette.white,
-      body: const Column(
+      body: Column(
         children: [
-          NavBar(),
+          const NavBar(),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  IntroScreen(), //lib/Screens/Home/IntroScreen.dart
-                  TechnologyScreen(), //lib/Screens/Home/technologyScreen.dart
-                  ContactUsScreen(), //lib/Screens/Home/contactUsScreen.dart
+                  const IntroScreen(), //lib/Screens/Home/IntroScreen.dart
+                  const TechnologyScreen(), //lib/Screens/Home/technologyScreen.dart
+                  const ContactUsScreen(), //lib/Screens/Home/contactUsScreen.dart
                   AtreBottomSheet() //lib/Screens/BottomSheet.dart
                 ],
               ),

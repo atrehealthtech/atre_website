@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../Screens/Career/career_page.dart';
 import '../Screens/Home/home_page.dart';
-import '../Screens/Product/product.dart';
+import '../Screens/News And Articles/intec/intec_page.dart';
+import '../Screens/News And Articles/nidhiprayas/nidhiprayas_page.dart';
+import '../Screens/Product/productPage.dart';
 
 class MyRoutes {
   GoRouter myRouter = GoRouter(initialLocation: "/", routes: [
@@ -34,6 +36,17 @@ class MyRoutes {
       name: MyRouteConstants.articlesRouteName,
       pageBuilder: (context, state) =>
           const MaterialPage(child: NewsAndArticles()),
+    ),
+    GoRoute(
+      path: "/news_articles/1",
+      name: MyRouteConstants.articleIntec,
+      pageBuilder: (context, state) => const MaterialPage(child: IntecPage()),
+    ),
+    GoRoute(
+      path: "/news_articles/2",
+      name: MyRouteConstants.articleNidhiPrayas,
+      pageBuilder: (context, state) =>
+          const MaterialPage(child: NidhiParayasPage()),
     ),
   ]);
 }

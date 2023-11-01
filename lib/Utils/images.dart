@@ -1,17 +1,19 @@
+// ignore_for_file: non_constant_identifier_names
+
 final myImages = MyImages();
 
 class MyImages {
-  var technologyImg_1 =
-      "https://images.pexels.com/photos/7088530/pexels-photo-7088530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
-  var technologyImg_2 =
-      "https://images.pexels.com/photos/8704147/pexels-photo-8704147.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+  var appLogo = "assets/images/App_Logo.png";
+
+  var technologyImg_1 = "assets/images/tech_1.png";
+  var technologyImg_2 = "assets/images/tech_2.png";
   var atreDeskImg = "assets/images/AtreDesk.png";
-  var innovationImg = "assets/images/InnovationImg.png";
+  var innovationImg = "assets/images/team.jpg";
   var groupImg = "assets/images/GroupImage.png";
   var circleBg = "assets/images/circle.png";
   //Our Team Images
   var balaImg = "assets/images/bala_img.jpg";
-  var sachinImg = "assets/images/sachin.jpg";
+  var sachinImg = "assets/images/sachinabs.jpg";
   var suganImg = "assets/images/sugan.jpeg";
   var velImg = "assets/images/vel.jpg";
   var gowsiImg = "assets/images/gowsalya.png";
@@ -26,11 +28,22 @@ class MyImages {
   var krishnamoortyImg = "assets/images/Krishnamoorty.png";
   var ramalingamImg = "assets/images/Ramalingam.png";
 
-  // 3D Images for product
+  // Robot Images for product
   var boosanImg = "assets/images/3D_Images/boosan.glb";
   var triDiDemoImg = "assets/images/3D_Images/ImageToStl.com_002-ug-2.glb";
+  var ourRobot = "assets/images/our_robot.png";
+  var robot_without_circle = "assets/images/robot.png";
 
   //Article Image
   var inTecImg = "assets/images/intec.png";
   var nidhiPrays = "assets/images/nidthi_prayas.png";
+
+  // Background Circle and images
+  var circle = "assets/images/circle.png";
+  var bg_circle_1 = "assets/images/bg_circle_1.png";
+  var bg_circle_2 = "assets/images/bg_circle_2.png";
+
+  // Product images
+  var pedestal = "assets/images/Pedestal.JPG";
+  var dr_ramalingam = "assets/images/dr_ramalingam.png";
 }

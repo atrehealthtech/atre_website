@@ -85,7 +85,7 @@ class MyWidgets {
   }
   // this widget used for normal subtitle texts
 
-  Widget subTitleText({required String text}) {
+  Widget dmSans16Grey({required String text}) {
     return Text(text,
         style: TextStyle(
             color: Palette.greyText,
@@ -121,10 +121,43 @@ class MyWidgets {
   Widget dmSans17Bold({required String text}) {
     return Text(text,
         style: TextStyle(
-            color: Palette.greyText,
+            color: Palette.black,
             fontSize: 17,
             fontFamily: "DMSans",
             fontWeight: FontWeight.bold));
+  }
+
+  // this widget used for Bold 32 black texts
+
+  Widget dmSans32Bold({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 32,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.bold));
+  }
+
+  // this widget used for Bold 48 black texts
+
+  Widget dmSans48Bold({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 48,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.bold));
+  }
+
+  // this widget used for Bold 36 black texts
+
+  Widget dmSans36Bold({required String text}) {
+    return Text(text,
+        style: TextStyle(
+            color: Palette.black,
+            fontSize: 36,
+            fontFamily: "DMSans",
+            fontWeight: FontWeight.w500));
   }
   // this widget used for medium green texts
 
@@ -201,7 +234,7 @@ class MyWidgets {
   }
   // this widget used for medium bold green subtitle texts
 
-  Widget greenSubTitleText({required String text, TextDecoration? decoration}) {
+  Widget greendmSans16Grey({required String text, TextDecoration? decoration}) {
     return Text(text,
         style: TextStyle(
             color: Palette.primary,
@@ -319,14 +352,17 @@ class MyWidgets {
   }
   // this widget used for Mid White text
 
-  Widget hoverWhiteText({required String text}) {
+  Widget hoverWhiteText({required String text, required Function onTap}) {
     return OnHover(
-      builder: (isHovered) => Text(text,
-          style: TextStyle(
-              color: !isHovered ? Palette.white : Palette.primary,
-              fontSize: 16,
-              fontFamily: "DMSans",
-              fontWeight: FontWeight.normal)),
+      builder: (isHovered) => InkWell(
+        onTap: onTap as void Function(),
+        child: Text(text,
+            style: TextStyle(
+                color: !isHovered ? Palette.white : Palette.primary,
+                fontSize: 16,
+                fontFamily: "DMSans",
+                fontWeight: FontWeight.normal)),
+      ),
     );
   }
   // this widget used for Mid black title texts
@@ -372,7 +408,7 @@ class MyWidgets {
       required double containerWidth,
       required String img,
       required String titleText,
-      required String subtitleText,
+      required String dmSans16Grey,
       required String buttonText,
       required Function onTap}) {
     return HoverTechContainer(
@@ -392,8 +428,8 @@ class MyWidgets {
             height: 160,
             //  h! / 5,
             decoration: BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover, image: NetworkImage(img)),
+                image:
+                    DecorationImage(fit: BoxFit.cover, image: AssetImage(img)),
                 borderRadius: BorderRadius.circular(8),
                 color: Colors.black),
           ),
@@ -404,13 +440,13 @@ class MyWidgets {
           const SizedBox(
             height: 7,
           ),
-          myWidgets.subTitleText(text: subtitleText),
+          myWidgets.dmSans16Grey(text: dmSans16Grey),
           const SizedBox(
             height: 10,
           ),
           InkWell(
             onTap: onTap as void Function(),
-            child: myWidgets.greenSubTitleText(
+            child: myWidgets.greendmSans16Grey(
               text: buttonText,
             ),
           )
@@ -426,7 +462,7 @@ class MyWidgets {
       required String img,
       required String authorText,
       required String titleText,
-      required String subtitleText,
+      required String dmSans16Grey,
       required String buttonText,
       required String nameText,
       required Function onTap,
@@ -462,8 +498,8 @@ class MyWidgets {
           const SizedBox(
             height: 7,
           ),
-          myWidgets.subTitleText(
-            text: subtitleText,
+          myWidgets.dmSans16Grey(
+            text: dmSans16Grey,
           ),
           const SizedBox(
             height: 10,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
+import 'package:svg_flutter/svg.dart';
 
 import '../Utils/colors.dart';
 import '../Utils/icons.dart';
@@ -57,7 +58,7 @@ Widget hoverJobContainer(
             ]),
         child: Row(
           children: [
-            Expanded(child: Image.asset(myIcons.suitCase)),
+            Expanded(child: SvgPicture.asset(myIcons.career)),
             Expanded(
                 flex: 3,
                 child: Column(
@@ -65,7 +66,7 @@ Widget hoverJobContainer(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     myWidgets.midBlackText(text: role),
-                    myWidgets.subTitleText(text: subRole)
+                    myWidgets.dmSans16Grey(text: subRole)
                   ],
                 )),
             Expanded(
@@ -96,7 +97,7 @@ Widget hoverJobContainer(
             )),
         child: Row(
           children: [
-            Expanded(child: Image.asset(myIcons.suitCase)),
+            Expanded(child: SvgPicture.asset(myIcons.career)),
             Expanded(
                 flex: 3,
                 child: Column(
@@ -104,7 +105,7 @@ Widget hoverJobContainer(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     myWidgets.midBlackText(text: role),
-                    myWidgets.subTitleText(text: subRole)
+                    myWidgets.dmSans16Grey(text: subRole)
                   ],
                 )),
             Expanded(

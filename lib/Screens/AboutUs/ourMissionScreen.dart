@@ -5,6 +5,7 @@ import 'package:atre_website/Utils/icons.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:svg_flutter/svg.dart';
 
 class OurMissionScreen extends StatelessWidget {
   const OurMissionScreen({super.key});
@@ -43,11 +44,7 @@ class OurMissionScreen extends StatelessWidget {
                             blurRadius: 10.0,
                           )
                         ]),
-                        child: CircleAvatar(
-                          backgroundColor: Palette.white,
-                          radius: 30,
-                          child: Image.asset(myIcons.Light_bulb),
-                        ),
+                        child: SvgPicture.asset(myIcons.lightBulb),
                       )),
                       Expanded(
                           flex: 3,
@@ -55,7 +52,7 @@ class OurMissionScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               myWidgets.blackMidText(text: "Mission"),
-                              myWidgets.subTitleText(
+                              myWidgets.dmSans16Grey(
                                   text:
                                       "Our mission is to be at the forefront of advancing health responsibly through the development and deployment of cutting-edge medical robotics technology.")
                             ],
@@ -75,11 +72,7 @@ class OurMissionScreen extends StatelessWidget {
                           blurRadius: 10.0,
                         )
                       ]),
-                      child: CircleAvatar(
-                        backgroundColor: Palette.white,
-                        radius: 30,
-                        child: Image.asset(myIcons.Bulls_eye),
-                      ),
+                      child: SvgPicture.asset(myIcons.bulls_eye),
                     )),
                     Expanded(
                         flex: 3,
@@ -87,7 +80,7 @@ class OurMissionScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             myWidgets.blackMidText(text: "Vision"),
-                            myWidgets.subTitleText(
+                            myWidgets.dmSans16Grey(
                                 text:
                                     "We envision a future where medical robotics plays a crucial role in delivering efficient, effective and accurate medical care to improve the lives of patients worldwide")
                           ],
@@ -127,11 +120,7 @@ class OurMissionScreen extends StatelessWidget {
                           blurRadius: 10.0,
                         )
                       ]),
-                      child: CircleAvatar(
-                        backgroundColor: Palette.white,
-                        radius: 30,
-                        child: Image.asset(myIcons.Light_bulb),
-                      ),
+                      child: SvgPicture.asset(myIcons.lightBulb),
                     )),
                     Expanded(
                         flex: 3,
@@ -139,7 +128,7 @@ class OurMissionScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             myWidgets.blackMidText(text: "Mission"),
-                            myWidgets.subTitleText(
+                            myWidgets.dmSans16Grey(
                                 text:
                                     "Our mission is to be at the forefront of advancing health responsibly through the development and deployment of cutting-edge medical robotics technology.")
                           ],
@@ -160,11 +149,7 @@ class OurMissionScreen extends StatelessWidget {
                           blurRadius: 10.0,
                         )
                       ]),
-                      child: CircleAvatar(
-                        backgroundColor: Palette.white,
-                        radius: 30,
-                        child: Image.asset(myIcons.Bulls_eye),
-                      ),
+                      child: SvgPicture.asset(myIcons.bulls_eye),
                     )),
                     Expanded(
                         flex: 3,
@@ -172,7 +157,7 @@ class OurMissionScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             myWidgets.blackMidText(text: "Vision"),
-                            myWidgets.subTitleText(
+                            myWidgets.dmSans16Grey(
                                 text:
                                     "We envision a future where medical robotics plays a crucial role in delivering efficient, effective and accurate medical care to improve the lives of patients worldwide")
                           ],

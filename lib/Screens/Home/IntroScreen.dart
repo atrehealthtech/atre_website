@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:atre_website/Utils/colors.dart';
+import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -22,8 +23,6 @@ class IntroScreen extends StatelessWidget {
 
   Widget DeskTopIntro() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: h! / 5),
-      // height: h! / 1.085,
       color: Palette.liteGreen,
       child: Row(
         children: [
@@ -39,7 +38,7 @@ class IntroScreen extends StatelessWidget {
                 SizedBox(
                   height: h! / 100,
                 ),
-                myWidgets.subTitleText(
+                myWidgets.dmSans16Grey(
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
                 SizedBox(
@@ -49,7 +48,10 @@ class IntroScreen extends StatelessWidget {
               ],
             ),
           )),
-          Expanded(child: Image.asset("assets/images/doosan_robo.png"))
+          Expanded(
+              child: Image.asset(
+            myImages.ourRobot,
+          ))
         ],
       ),
     );
@@ -71,7 +73,7 @@ class IntroScreen extends StatelessWidget {
                 SizedBox(
                   height: h! / 100,
                 ),
-                myWidgets.subTitleText(
+                myWidgets.dmSans16Grey(
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
                 SizedBox(
@@ -81,7 +83,9 @@ class IntroScreen extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset("assets/images/doosan_robo.png")
+          Image.asset(
+            myImages.ourRobot,
+          )
         ],
       ),
     );

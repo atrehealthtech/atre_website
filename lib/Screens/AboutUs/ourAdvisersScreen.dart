@@ -5,6 +5,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:svg_flutter/svg.dart';
 
 import '../../Utils/Sizes.dart';
 import '../../Utils/icons.dart';
@@ -38,10 +39,9 @@ class OurAdvisersScreen extends StatelessWidget {
           child: CarouselSlider.builder(
             options: CarouselOptions(
               height: h! / 1.3,
-              disableCenter: true,
-              viewportFraction: 0.3,
-
-              // autoPlay: true,
+              viewportFraction: 0.33,
+              enableInfiniteScroll: false,
+              padEnds: false,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
             ),
             itemCount: advisersList.length,
@@ -68,9 +68,9 @@ class OurAdvisersScreen extends StatelessWidget {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    myWidgets.subTitleText(
+                                    myWidgets.dmSans16Grey(
                                         text: advisersList[i].content),
-                                    Image.asset(myIcons.LinkedIn_black),
+                                    SvgPicture.asset(myIcons.linkedIn_black),
                                   ],
                                 ),
                               ),
@@ -129,7 +129,6 @@ class OurAdvisersScreen extends StatelessWidget {
                 enlargeCenterPage: true,
                 autoPlay: true,
                 autoPlayCurve: Curves.fastOutSlowIn,
-                enableInfiniteScroll: true,
                 autoPlayAnimationDuration: const Duration(milliseconds: 800),
                 viewportFraction: 0.8,
                 disableCenter: true,

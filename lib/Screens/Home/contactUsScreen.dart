@@ -99,7 +99,7 @@ class ContactUsScreen extends StatelessWidget {
                   children: [
                     myWidgets.blackTitleText(text: "Write to us"),
                     myWidgets.greenMidText(text: "info@atrehealthtech.com"),
-                    myWidgets.subTitleText(
+                    myWidgets.dmSans16Grey(
                         text: "We will back with in 2 business days."),
                     const SizedBox(
                       height: 40,
@@ -121,8 +121,8 @@ class ContactUsScreen extends StatelessWidget {
                           const SizedBox(
                             height: 10,
                           ),
-                          myWidgets.subTitleText(text: "Atre Health Tech"),
-                          myWidgets.subTitleText(
+                          myWidgets.dmSans16Grey(text: "Atre Health Tech"),
+                          myWidgets.dmSans16Grey(
                               text:
                                   "45, Kamaraj Road, \nRed Fields, Coimbatore, \nCoimbatore, Tamil Nadu."),
                           const SizedBox(
@@ -224,7 +224,7 @@ class ContactUsScreen extends StatelessWidget {
                 children: [
                   myWidgets.blackTitleText(text: "Write to us"),
                   myWidgets.greenMidText(text: "info@atrehealthtech.com"),
-                  myWidgets.subTitleText(
+                  myWidgets.dmSans16Grey(
                       text: "We will back with in 2 business days."),
                   const SizedBox(
                     height: 40,
@@ -246,8 +246,8 @@ class ContactUsScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        myWidgets.subTitleText(text: "Atre Health Tech"),
-                        myWidgets.subTitleText(
+                        myWidgets.dmSans16Grey(text: "Atre Health Tech"),
+                        myWidgets.dmSans16Grey(
                             text:
                                 "45, Kamaraj Road, \nRed Fields, Coimbatore, \nCoimbatore, Tamil Nadu."),
                         const SizedBox(

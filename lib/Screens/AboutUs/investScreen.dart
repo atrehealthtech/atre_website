@@ -27,10 +27,10 @@ class InvestScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "We are on a mission to bring advancements to healthcare that benefit every stakeholder."),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "We can’t do it without our visionary investors, who steer us toward a bright, renewable future."),
           const SizedBox(

@@ -15,126 +15,156 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
+  // Selected menu item
+
+  int selectedItem = 0;
+
+  //  Nav Bar Items
+  List<NavBarDetail> navBarList = [
+    NavBarDetail(id: 1, title: "Home", navigation: "/"),
+    NavBarDetail(id: 2, title: "About Us", navigation: "/about_us"),
+    NavBarDetail(id: 3, title: "Career", navigation: "/career"),
+    NavBarDetail(id: 4, title: "Product", navigation: "/product"),
+    NavBarDetail(id: 5, title: "News & Article", navigation: "/news_articles")
+  ];
+
+  bool isMenuClick = false;
+
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
       mobile: (_) => MobileNavBar(),
-      desktop: (_) => DeskTopNavBar(context),
+      desktop: (_) => DeskTopNavBar(),
     );
   }
-}
 
-Widget MobileNavBar() {
-  return Container(
-    decoration: const BoxDecoration(color: Colors.white, boxShadow: [
-      BoxShadow(
-          color: Colors.grey,
-          offset: Offset(0.0, 2.0), //(x,y)
-          blurRadius: 2.0,
-          spreadRadius: 2)
-    ]),
-    height: 70,
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [navLogo(), const Icon(Icons.menu)],
-      ),
-    ),
-  );
-}
+// ! Mobile Menu Bar
 
-Widget DeskTopNavBar(BuildContext context) {
-  return Container(
-    decoration: BoxDecoration(color: Colors.white, boxShadow: [
-      BoxShadow(color: Colors.grey.withOpacity(0.3), spreadRadius: 2)
-    ]),
-    height: 70,
-    child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 140),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  Widget MobileNavBar() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      decoration: const BoxDecoration(color: Colors.white, boxShadow: [
+        BoxShadow(
+            color: Colors.grey,
+            offset: Offset(0.0, 2.0), //(x,y)
+            blurRadius: 2.0,
+            spreadRadius: 2)
+      ]),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          navLogo(),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              navButton(
-                  text: 'Home',
+              navLogo(),
+              InkWell(
                   onTap: () {
-                    print("Home");
-                    return context.go("/");
-                  }),
-              const SizedBox(
-                width: 20,
-              ),
-              navButton(
-                  text: 'About Us',
-                  onTap: () {
-                    print("About Us");
-
-                    return context.go("/about_us");
-                  }),
-              const SizedBox(
-                width: 20,
-              ),
-              navButton(
-                  text: 'Career',
-                  onTap: () {
-                    print("Career");
-
-                    return context.go("/career");
-                  }),
-              const SizedBox(
-                width: 20,
-              ),
-              navButton(
-                  text: 'Product',
-                  onTap: () {
-                    print("Product");
-
-                    return context.go("/product");
-                  }),
-              const SizedBox(
-                width: 20,
-              ),
-              navButton(
-                  text: 'News & Articles',
-                  onTap: () {
-                    print("News & Articles");
-
-                    return context.go("/news_articles");
-                  })
+                    setState(() {
+                      isMenuClick = !isMenuClick;
+                      print(isMenuClick);
+                    });
+                  },
+                  child: const Icon(Icons.menu))
             ],
+          ),
+          Visibility(
+            visible: isMenuClick,
+            child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: navBarList.length,
+                itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 05),
+                      child: navButton(
+                          color: selectedItem == navBarList[index].id
+                              ? Palette.primary
+                              : Palette.black,
+                          text: navBarList[index].title,
+                          onTap: () {
+                            setState(() {
+                              selectedItem = navBarList[index].id;
+                            });
+                            Future.delayed(const Duration(seconds: 1),
+                                () => context.go(navBarList[index].navigation));
+                          }),
+                    )),
           ),
         ],
       ),
-    ),
-  );
-}
+    );
+  }
 
-Widget navButton({required String text, required Function onTap}) {
-  return Container(
-    margin: const EdgeInsets.symmetric(horizontal: 12),
-    child: OnHover(
+// ! Desktop Nav bar
+
+  Widget DeskTopNavBar() {
+    return Container(
+      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+        BoxShadow(color: Colors.grey.withOpacity(0.3), spreadRadius: 2)
+      ]),
+      height: 70,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 140),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            navLogo(),
+            ListView.builder(
+                shrinkWrap: true,
+                itemCount: navBarList.length,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (context, index) => Center(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: navButton(
+                            color: selectedItem == navBarList[index].id
+                                ? Palette.primary
+                                : Palette.black,
+                            text: navBarList[index].title,
+                            onTap: () {
+                              setState(() {
+                                selectedItem = navBarList[index].id;
+                                context.go(navBarList[index].navigation);
+                              });
+                            }),
+                      ),
+                    ))
+          ],
+        ),
+      ),
+    );
+  }
+
+// ! Widgets
+
+  Widget navButton(
+      {required String text, required Function onTap, required Color color}) {
+    return OnHover(
       builder: (bool isHovered) {
         return GestureDetector(
           onTap: onTap as void Function(),
           child: Text(text,
               style: TextStyle(
-                  color: !isHovered ? Colors.black : Palette.primary,
+                  color: !isHovered ? color : Palette.primary,
                   fontSize: 16,
                   fontFamily: "DMSans",
                   fontWeight: FontWeight.normal)),
         );
       },
-    ),
-  );
+    );
+  }
+
+  Widget navLogo() {
+    return Text(
+      "atre",
+      style: GoogleFonts.jost(
+          color: Palette.primary, fontWeight: FontWeight.w500, fontSize: 32),
+    );
+  }
 }
 
-Widget navLogo() {
-  return Text(
-    "atre",
-    style: GoogleFonts.jost(
-        color: Palette.primary, fontWeight: FontWeight.w500, fontSize: 32),
-  );
+class NavBarDetail {
+  int id;
+  String title;
+  String navigation;
+  NavBarDetail(
+      {required this.id, required this.title, required this.navigation});
 }

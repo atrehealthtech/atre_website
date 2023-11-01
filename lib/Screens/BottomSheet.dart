@@ -1,15 +1,27 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, must_be_immutable
 
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/icons.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:svg_flutter/svg.dart';
 
 import '../Utils/Sizes.dart';
+import 'navBar.dart';
 
 class AtreBottomSheet extends StatelessWidget {
-  const AtreBottomSheet({super.key});
+  AtreBottomSheet({super.key});
+
+  //  Nav Bar Items
+  List<NavBarDetail> navBarList = [
+    NavBarDetail(id: 1, title: "Home", navigation: "/"),
+    NavBarDetail(id: 2, title: "About Us", navigation: "/about_us"),
+    NavBarDetail(id: 3, title: "Career", navigation: "/career"),
+    NavBarDetail(id: 4, title: "Product", navigation: "/product"),
+    NavBarDetail(id: 5, title: "News & Article", navigation: "/news_articles")
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -52,16 +64,14 @@ class AtreBottomSheet extends StatelessWidget {
                     myWidgets.whiteTitleText(text: "QUICK LINKS"),
                     Padding(
                       padding: const EdgeInsets.only(top: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          myWidgets.hoverWhiteText(text: "Home"),
-                          myWidgets.hoverWhiteText(text: "About us"),
-                          myWidgets.hoverWhiteText(text: "Career"),
-                          myWidgets.hoverWhiteText(text: "Product"),
-                          myWidgets.hoverWhiteText(text: "News & Articles"),
-                        ],
-                      ),
+                      child: ListView.builder(
+                          shrinkWrap: true,
+                          itemCount: navBarList.length,
+                          itemBuilder: (context, i) => myWidgets.hoverWhiteText(
+                              text: navBarList[i].title,
+                              onTap: () {
+                                context.go(navBarList[i].navigation);
+                              })),
                     )
                   ],
                 )),
@@ -74,16 +84,16 @@ class AtreBottomSheet extends StatelessWidget {
                       children: [
                         IconButton(
                             onPressed: () {},
-                            icon: Image.asset(myIcons.LinkedIn_White)),
+                            icon: SvgPicture.asset(myIcons.linkedIn_White)),
                         IconButton(
                             onPressed: () {},
-                            icon: Image.asset(myIcons.Twitter_White)),
+                            icon: SvgPicture.asset(myIcons.twitter_White)),
                         IconButton(
                             onPressed: () {},
-                            icon: Image.asset(myIcons.Facebook_White)),
+                            icon: SvgPicture.asset(myIcons.facebook_White)),
                         IconButton(
                             onPressed: () {},
-                            icon: Image.asset(myIcons.Insta_White))
+                            icon: SvgPicture.asset(myIcons.insta_White))
                       ],
                     )
                   ],
@@ -92,9 +102,12 @@ class AtreBottomSheet extends StatelessWidget {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    myWidgets.hoverWhiteText(text: "Terms & Service"),
-                    myWidgets.hoverWhiteText(text: "Privacy Policy"),
-                    myWidgets.hoverWhiteText(text: "Cookie Policy"),
+                    myWidgets.hoverWhiteText(
+                        text: "Terms & Service", onTap: () {}),
+                    myWidgets.hoverWhiteText(
+                        text: "Privacy Policy", onTap: () {}),
+                    myWidgets.hoverWhiteText(
+                        text: "Cookie Policy", onTap: () {}),
                   ],
                 ))
               ],
@@ -128,16 +141,16 @@ class AtreBottomSheet extends StatelessWidget {
             myWidgets.whiteTitleText(text: "QUICK LINKS"),
             Padding(
               padding: const EdgeInsets.only(top: 10),
-              child: Column(
-                // crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  myWidgets.hoverWhiteText(text: "Home"),
-                  myWidgets.hoverWhiteText(text: "About us"),
-                  myWidgets.hoverWhiteText(text: "Career"),
-                  myWidgets.hoverWhiteText(text: "Product"),
-                  myWidgets.hoverWhiteText(text: "News & Articles"),
-                ],
-              ),
+              child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: navBarList.length,
+                  itemBuilder: (context, i) => Center(
+                        child: myWidgets.hoverWhiteText(
+                            text: navBarList[i].title,
+                            onTap: () {
+                              context.go(navBarList[i].navigation);
+                            }),
+                      )),
             ),
             myWidgets.whiteTitleText(text: "FOLLOW US"),
             Row(
@@ -145,19 +158,21 @@ class AtreBottomSheet extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {},
-                    icon: Image.asset(myIcons.LinkedIn_White)),
-                IconButton(
-                    onPressed: () {}, icon: Image.asset(myIcons.Twitter_White)),
+                    icon: SvgPicture.asset(myIcons.linkedIn_White)),
                 IconButton(
                     onPressed: () {},
-                    icon: Image.asset(myIcons.Facebook_White)),
+                    icon: SvgPicture.asset(myIcons.twitter_White)),
                 IconButton(
-                    onPressed: () {}, icon: Image.asset(myIcons.Insta_White))
+                    onPressed: () {},
+                    icon: SvgPicture.asset(myIcons.facebook_White)),
+                IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(myIcons.insta_White))
               ],
             ),
-            myWidgets.hoverWhiteText(text: "Terms & Service"),
-            myWidgets.hoverWhiteText(text: "Privacy Policy"),
-            myWidgets.hoverWhiteText(text: "Cookie Policy"),
+            myWidgets.hoverWhiteText(text: "Terms & Service", onTap: () {}),
+            myWidgets.hoverWhiteText(text: "Privacy Policy", onTap: () {}),
+            myWidgets.hoverWhiteText(text: "Cookie Policy", onTap: () {}),
             const SizedBox(
               height: 30,
             ),

@@ -26,10 +26,10 @@ class GroupImgScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "Through innovation, dedication, and daring, we are shaping the future. We have a clear vision."),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "To develop advanced, responsible technology solutions for healthcare. Be a part of innovative tech of the future!"),
           const SizedBox(
@@ -55,13 +55,13 @@ class GroupImgScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "Through innovation, dedication, and daring, we are shaping the future. We have a clear vision."),
           const SizedBox(
             height: 5,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "To develop advanced, responsible technology solutions for healthcare. Be a part of innovative tech of the future!"),
           const SizedBox(

@@ -48,11 +48,7 @@ Widget DeskTopSignUp() {
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            myWidgets.ArticleTextField(),
-            const SizedBox(
-              width: 25,
-            ),
-            myWidgets.submitButton(onTap: () {}, text: "submit")
+            buildSubmit(),
           ],
         ),
       ),
@@ -88,11 +84,7 @@ Widget MobileSignUp() {
         children: [
           Row(
             children: [
-              myWidgets.ArticleTextField(),
-              const SizedBox(
-                width: 25,
-              ),
-              myWidgets.submitButton(onTap: () {}, text: "submit")
+              buildSubmit(),
             ],
           ),
         ],
@@ -103,3 +95,52 @@ Widget MobileSignUp() {
     ]),
   );
 }
+// ! Widgets
+
+Widget buildSubmit() => Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        // Email Field
+        SizedBox(
+          width: 200,
+          child: TextFormField(
+              cursorColor: Palette.black,
+              cursorWidth: 0.5,
+              decoration: InputDecoration(
+                filled: true,
+                hintText: "Enter Your Email",
+                fillColor: Colors.white,
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(5),
+                  borderSide: BorderSide(
+                    color: Palette.grey,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(5),
+                    borderSide: BorderSide(color: Palette.blue)),
+              )),
+        ),
+        const SizedBox(
+          width: 10,
+        ),
+
+        //  Submit button
+
+        InkWell(
+          onTap: () {},
+          child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+              decoration: BoxDecoration(
+                  color: Palette.primary,
+                  borderRadius: BorderRadius.circular(8)),
+              child: Text("Submit",
+                  style: TextStyle(
+                      color: Palette.white,
+                      fontSize: 16,
+                      fontFamily: "DMSans",
+                      fontWeight: FontWeight.w400))),
+        )
+      ],
+    );

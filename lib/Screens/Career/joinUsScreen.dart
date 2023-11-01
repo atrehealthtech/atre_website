@@ -32,7 +32,7 @@ class JoinUsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   myWidgets.blackMidText(text: "Innovation"),
-                  myWidgets.subTitleText(
+                  myWidgets.dmSans16Grey(
                       text:
                           "From ideation to execution, innovation is at the heart of everything we do.")
                 ],
@@ -45,7 +45,7 @@ class JoinUsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   myWidgets.blackMidText(text: "Flexible working hours"),
-                  myWidgets.subTitleText(
+                  myWidgets.dmSans16Grey(
                       text:
                           "Your time, your way - take control of your schedule with our flexible working hours.")
                 ],
@@ -58,7 +58,7 @@ class JoinUsScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   myWidgets.blackMidText(text: "Great learning environment"),
-                  myWidgets.subTitleText(
+                  myWidgets.dmSans16Grey(
                       text:
                           "Learning is a journey, and we provide the perfect environment for yours.")
                 ],
@@ -82,21 +82,21 @@ class JoinUsScreen extends StatelessWidget {
             height: 20,
           ),
           myWidgets.blackMidText(text: "Innovation"),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "From ideation to execution, innovation is at the heart of everything we do."),
           const SizedBox(
             height: 10,
           ),
           myWidgets.blackMidText(text: "Flexible working hours"),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "Your time, your way - take control of your schedule with our flexible working hours."),
           const SizedBox(
             height: 10,
           ),
           myWidgets.blackMidText(text: "Great learning environment"),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "Learning is a journey, and we provide the perfect environment for yours.")
         ],

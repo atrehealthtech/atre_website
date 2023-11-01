@@ -23,7 +23,7 @@ class OurPositionsScreen extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text: "We're always on the lookout for talented people."),
           const SizedBox(
             height: 50,
@@ -69,7 +69,7 @@ class OurPositionsScreen extends StatelessWidget {
           const SizedBox(
             height: 8,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text: "We're always on the lookout for talented people."),
           const SizedBox(
             height: 50,

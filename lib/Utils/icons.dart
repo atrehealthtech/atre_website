@@ -3,15 +3,29 @@
 final myIcons = MyIcons();
 
 class MyIcons {
-  var Twitter_black = "assets/icons/Twitter_black.png";
-  var Insta_black = "assets/icons/Insta_black.png";
-  var Facebook_black = "assets/icons/Facebook_black.png";
-  var LinkedIn_black = "assets/icons/LinkedIn_black.png";
-  var Twitter_White = "assets/icons/Twitter_white.png";
-  var Insta_White = "assets/icons/Insta_white.png";
-  var Facebook_White = "assets/icons/Facebook_white.png";
-  var LinkedIn_White = "assets/icons/LinkedIn_white.png";
-  var Bulls_eye = "assets/icons/Bullseye_icon.png";
-  var Light_bulb = "assets/icons/Lightbulb_icon.png";
-  var suitCase = "assets/images/suitCaseIcon.png";
+  // Social Media
+  var twitter_black = "assets/icons/social/twitter_b.svg";
+  var insta_black = "assets/icons/social/insta_b.svg";
+  var facebook_black = "assets/icons/social/facebook_b.svg";
+  var linkedIn_black = "assets/icons/social/linkedin_b.svg";
+  var twitter_White = "assets/icons/social/twitter_w.svg";
+  var insta_White = "assets/icons/social/insta_w.svg";
+  var facebook_White = "assets/icons/social/facebook_w.svg";
+  var linkedIn_White = "assets/icons/social/linkedIn_w.svg";
+
+  // About Us Icons
+  var bulls_eye = "assets/icons/about/bulls_eye.svg";
+  var lightBulb = "assets/icons/about/bulb.svg";
+
+  // Career Icons
+  var career = "assets/icons/product/career.svg";
+
+  // Product Icons
+  var doctor = "assets/icons/product/doctor.svg";
+  var patient = "assets/icons/product/patient.svg";
+  var usg_robot = "assets/icons/product/usg_robot.svg";
+  var voice_versa = "assets/icons/product/voice_versa.svg";
+  var remote = "assets/icons/product/remote.svg";
+  var agile = "assets/icons/product/agile.svg";
+  var hospital = "assets/icons/product/hospital.svg";
 }

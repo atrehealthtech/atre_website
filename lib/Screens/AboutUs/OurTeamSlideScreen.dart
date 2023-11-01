@@ -7,6 +7,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:svg_flutter/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../Utils/Sizes.dart';
@@ -75,10 +76,10 @@ class OurTeamSlideScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   slideList[i].content != ""
-                                      ? myWidgets.subTitleText(
+                                      ? myWidgets.dmSans16Grey(
                                           text: slideList[i].content!)
                                       : Container(),
-                                  Image.asset(myIcons.LinkedIn_black),
+                                  SvgPicture.asset(myIcons.linkedIn_black),
                                 ],
                               ),
                             ))),
@@ -104,7 +105,7 @@ class OurTeamSlideScreen extends StatelessWidget {
                     children: [
                       myWidgets.miniBlackTitleText(
                           text: slideList[i].name!.toUpperCase()),
-                      myWidgets.subTitleText(text: slideList[i].role!)
+                      myWidgets.dmSans16Grey(text: slideList[i].role!)
                     ],
                   ),
                 )
@@ -161,7 +162,7 @@ class OurTeamSlideScreen extends StatelessWidget {
                   ),
                   myWidgets.miniBlackTitleText(
                       text: slideList[i].name!.toUpperCase()),
-                  myWidgets.subTitleText(text: slideList[i].role!)
+                  myWidgets.dmSans16Grey(text: slideList[i].role!)
                 ],
               ),
             ),
@@ -206,49 +207,49 @@ List<OurTeam> slideList = [
       content: ""),
   OurTeam(
       name: "Balachandar P",
-      role: "Robotic Engineer",
+      role: "Jr.Robotic Engineer",
       imgUrl: myImages.balaImg,
       linkedInUrl: "bala-chandar-95b9a5185/",
       content: ""),
   OurTeam(
       name: "Sugan S",
-      role: "Design Engineer",
+      role: "Jr.Design Engineer",
       imgUrl: myImages.suganImg,
       linkedInUrl: "sugan-subramanian/",
       content: ""),
   OurTeam(
-      name: "Sachin",
-      role: "Ux & Backend Engineer",
+      name: "ANISH BALA SACHIN R",
+      role: "Lead Software Developer",
       imgUrl: myImages.sachinImg,
       linkedInUrl: "anish-bala-sachin-119586199/",
       content: ""),
   OurTeam(
-      name: "Manisha",
-      role: "Junior Backend Engineer",
+      name: "MANISHA A C",
+      role: "Jr.Backend Developer",
       imgUrl: myImages.manisha,
       linkedInUrl: "manisha-a-c-8a0294230/",
       content: ""),
   OurTeam(
       name: "Jeeva P",
-      role: "Junior Robotic Engineer",
+      role: "Jr.Robotics Engineer",
       imgUrl: myImages.jeevaImg,
       linkedInUrl: "",
       content: ""),
   OurTeam(
-      name: "Malavika",
-      role: "Junior Frontend Developer",
+      name: "Malavika a c",
+      role: "Jr. Front End Developer",
       imgUrl: myImages.malaImg,
       linkedInUrl: "malavika-a-c-539346236/",
       content: ""),
   OurTeam(
-      name: "Gowsalya",
-      role: "Junior Frontend Developer",
+      name: "GOWSALYA N",
+      role: "Jr. Front End Developer",
       imgUrl: myImages.gowsiImg,
       linkedInUrl: "gowsalya-natraj-909896243/",
       content: ""),
   OurTeam(
       name: "Velmurugan R",
-      role: "Frontend Developer",
+      role: "Front End Developer",
       imgUrl: myImages.velImg,
       linkedInUrl: "velmurugan-ravindran-a83438286/",
       content: ""),

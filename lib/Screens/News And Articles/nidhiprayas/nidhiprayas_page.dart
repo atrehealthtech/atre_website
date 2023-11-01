@@ -1,6 +1,7 @@
 import 'package:atre_website/Screens/navBar.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:flutter/material.dart';
+import '../../BottomSheet.dart';
 import 'nidhiprayas_Text_page.dart';
 import 'nidhiprayas_image_screen.dart';
 
@@ -16,16 +17,16 @@ class _NidhiParayasPageState extends State<NidhiParayasPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Palette.white,
-      body: const Column(
+      body: Column(
         children: [
-  
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  NavBar(),
-                   NidhiPrayasImage(),
-                    NidhiPrayasTextPage(),
+                  const NavBar(),
+                  const NidhiPrayasImage(),
+                  const NidhiPrayasTextPage(),
+                  AtreBottomSheet()
                 ],
               ),
             ),

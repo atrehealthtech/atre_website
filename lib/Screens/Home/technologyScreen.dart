@@ -32,7 +32,7 @@ class TechnologyScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "From concept to product, and from edge to cloud!\n     We deliver cutting edge technology solutions."),
           const SizedBox(
@@ -47,7 +47,7 @@ class TechnologyScreen extends StatelessWidget {
                   containerWidth: 300,
                   img: myImages.technologyImg_1,
                   titleText: "Tele-robotic Ultrasound System",
-                  subtitleText:
+                  dmSans16Grey:
                       "Tele-robotic ultrasound system, which allows trained sonographers or radiologists to operate the ultrasound machine remotely, while the patient is examined by a local healthcare worker.",
                   buttonText: "Know More",
                   onTap: () {}),
@@ -60,7 +60,7 @@ class TechnologyScreen extends StatelessWidget {
                   containerWidth: 300,
                   img: myImages.technologyImg_2,
                   titleText: "Surgical simulator",
-                  subtitleText:
+                  dmSans16Grey:
                       "Surgical simulator, which provides a realistic and interactive training experience for surgeons. The simulator allows surgeons to practice procedures in a safe and controlled.",
                   buttonText: "Coming Soon",
                   onTap: () {}),
@@ -88,7 +88,7 @@ class TechnologyScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          myWidgets.subTitleText(
+          myWidgets.dmSans16Grey(
               text:
                   "From concept to product, and from edge to cloud!\n     We deliver cutting edge technology solutions."),
           const SizedBox(
@@ -103,7 +103,7 @@ class TechnologyScreen extends StatelessWidget {
                   containerWidth: 300,
                   img: myImages.technologyImg_1,
                   titleText: "Tele-robotic Ultrasound System",
-                  subtitleText:
+                  dmSans16Grey:
                       "Tele-robotic ultrasound system, which allows trained sonographers or radiologists to operate the ultrasound machine remotely, while the patient is examined by a local healthcare worker.",
                   buttonText: "Know More",
                   onTap: () {}),
@@ -116,7 +116,7 @@ class TechnologyScreen extends StatelessWidget {
                   containerWidth: 300,
                   img: myImages.technologyImg_2,
                   titleText: "Surgical simulator",
-                  subtitleText:
+                  dmSans16Grey:
                       "Surgical simulator, which provides a realistic and interactive training experience for surgeons. The simulator allows surgeons to practice procedures in a safe and controlled.",
                   buttonText: "Coming Soon",
                   onTap: () {}),
