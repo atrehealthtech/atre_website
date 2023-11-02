@@ -4,6 +4,11 @@ final articleString = ArticleString();
 final intecString = IntetString();
 final nidhiPraysString = NidhiPraysString();
 final productString = ProductString();
+final homeStrings = HomeStrings();
+
+class HomeStrings {
+  var introTitle = "Advancing \nHealth \nResponsibly";
+}
 
 class ArticleString {
   var articleParaText =

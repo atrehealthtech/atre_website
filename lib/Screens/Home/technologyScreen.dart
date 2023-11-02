@@ -5,7 +5,7 @@ import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
+import 'package:go_router/go_router.dart';
 import '../../Utils/Sizes.dart';
 
 class TechnologyScreen extends StatelessWidget {
@@ -16,12 +16,12 @@ class TechnologyScreen extends StatelessWidget {
     h = MediaQuery.of(context).size.height;
     w = MediaQuery.of(context).size.width;
     return ScreenTypeLayout.builder(
-      mobile: (_) => MobileTechnology(),
-      desktop: (_) => DeskTopTechnology(),
+      mobile: (_) => MobileTechnology(context),
+      desktop: (_) => DeskTopTechnology(context),
     );
   }
 
-  Widget DeskTopTechnology() {
+  Widget DeskTopTechnology(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 80),
       width: double.infinity,
@@ -50,7 +50,9 @@ class TechnologyScreen extends StatelessWidget {
                   dmSans16Grey:
                       "Tele-robotic ultrasound system, which allows trained sonographers or radiologists to operate the ultrasound machine remotely, while the patient is examined by a local healthcare worker.",
                   buttonText: "Know More",
-                  onTap: () {}),
+                  onTap: () {
+                    context.go("/product");
+                  }),
               SizedBox(
                 width: w! / 20,
               ),
@@ -63,7 +65,9 @@ class TechnologyScreen extends StatelessWidget {
                   dmSans16Grey:
                       "Surgical simulator, which provides a realistic and interactive training experience for surgeons. The simulator allows surgeons to practice procedures in a safe and controlled.",
                   buttonText: "Coming Soon",
-                  onTap: () {}),
+                  onTap: () {
+                    context.go("/product");
+                  }),
             ],
           ),
           const SizedBox(
@@ -74,7 +78,7 @@ class TechnologyScreen extends StatelessWidget {
     );
   }
 
-  Widget MobileTechnology() {
+  Widget MobileTechnology(BuildContext context) {
     return Container(
       // height: h! / 1.085,
       margin: const EdgeInsetsDirectional.symmetric(horizontal: 10),
@@ -106,7 +110,9 @@ class TechnologyScreen extends StatelessWidget {
                   dmSans16Grey:
                       "Tele-robotic ultrasound system, which allows trained sonographers or radiologists to operate the ultrasound machine remotely, while the patient is examined by a local healthcare worker.",
                   buttonText: "Know More",
-                  onTap: () {}),
+                  onTap: () {
+                    context.go("/product");
+                  }),
               SizedBox(
                 height: h! / 20,
               ),
@@ -118,7 +124,9 @@ class TechnologyScreen extends StatelessWidget {
                   dmSans16Grey:
                       "Surgical simulator, which provides a realistic and interactive training experience for surgeons. The simulator allows surgeons to practice procedures in a safe and controlled.",
                   buttonText: "Coming Soon",
-                  onTap: () {}),
+                  onTap: () {
+                    context.go("/product");
+                  }),
             ],
           ),
           const SizedBox(

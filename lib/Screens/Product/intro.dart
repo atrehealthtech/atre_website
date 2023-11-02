@@ -22,119 +22,134 @@ class ProductIntro extends StatelessWidget {
   //!  Desktop UI
 
   Widget DeskTopIntro() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 70),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              // Product Image
-              Expanded(
-                  child: SizedBox(
-                height: 500,
-                child: Image.asset(
-                  myImages.robot_without_circle,
-                ),
-              )),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          alignment: Alignment.centerRight,
+          image: AssetImage(
+            myImages.bg_circle_2,
+          ),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 70),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                // Product Image
+                Expanded(
+                    child: SizedBox(
+                  height: 500,
+                  child: Image.asset(
+                    myImages.robot_without_circle,
+                  ),
+                )),
 
-              // Product Content
-              Expanded(
-                  flex: 2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      myWidgets.dmSans32Bold(text: productString.productTitle),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      myWidgets.dmSans16Grey(text: productString.productDesc),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      _buildFeatureWithIcon(
-                          icon: myIcons.usg_robot,
-                          content: productString.productFeature_1),
-                      _buildFeatureWithIcon(
-                          icon: myIcons.voice_versa,
-                          content: productString.productFeature_2),
-                      _buildFeatureWithIcon(
-                          icon: myIcons.remote,
-                          content: productString.productFeature_3),
-                      _buildFeatureWithIcon(
-                          icon: myIcons.agile,
-                          content: productString.productFeature_4),
-                    ],
-                  )),
-            ],
-          ),
-          const SizedBox(
-            height: 100,
-          ),
-          myWidgets.dmSans32Bold(text: "These 2 components make up TRUS"),
-          const SizedBox(
-            height: 50,
-          ),
+                // Product Content
+                Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        myWidgets.dmSans32Bold(
+                            text: productString.productTitle),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        myWidgets.dmSans16Grey(text: productString.productDesc),
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        _buildFeatureWithIcon(
+                            icon: myIcons.usg_robot,
+                            content: productString.productFeature_1),
+                        _buildFeatureWithIcon(
+                            icon: myIcons.voice_versa,
+                            content: productString.productFeature_2),
+                        _buildFeatureWithIcon(
+                            icon: myIcons.remote,
+                            content: productString.productFeature_3),
+                        _buildFeatureWithIcon(
+                            icon: myIcons.agile,
+                            content: productString.productFeature_4),
+                      ],
+                    )),
+              ],
+            ),
+            const SizedBox(
+              height: 100,
+            ),
+            myWidgets.dmSans32Bold(text: "These 2 components make up TRUS"),
+            const SizedBox(
+              height: 50,
+            ),
 
-          //  1ST Component
-          Row(
-            children: [
-              Expanded(
-                  flex: 2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      myWidgets.dmSans17Bold(text: productString.component_2),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      myWidgets.dmSans16Grey(
-                          text: productString.component_desc_2)
-                    ],
-                  )),
-              Expanded(
-                  child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 30),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(myImages.pedestal),
-                ),
-              ))
-            ],
-          ),
-          const SizedBox(
-            height: 50,
-          ),
+            //  1ST Component
+            Row(
+              children: [
+                Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        myWidgets.dmSans17Bold(text: productString.component_2),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        myWidgets.dmSans16Grey(
+                            text: productString.component_desc_2)
+                      ],
+                    )),
+                Expanded(
+                    child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 30),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: Image.asset(myImages.pedestal),
+                  ),
+                ))
+              ],
+            ),
+            const SizedBox(
+              height: 50,
+            ),
 
-          // 2ND Component
+            // 2ND Component
 
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Expanded(
-                  child: Container(
-                margin: const EdgeInsets.symmetric(horizontal: 30),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(myImages.dr_ramalingam),
-                ),
-              )),
-              Expanded(
-                  flex: 2,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      myWidgets.dmSans17Bold(text: productString.component_1),
-                      const SizedBox(
-                        height: 10,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Expanded(
+                    child: Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 30),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(20),
+                    child: SizedBox(
+                      child: Image.asset(
+                        myImages.dr_ramalingam,
                       ),
-                      myWidgets.dmSans16Grey(
-                          text: productString.component_desc_1)
-                    ],
-                  )),
-            ],
-          )
-        ],
+                    ),
+                  ),
+                )),
+                Expanded(
+                    flex: 2,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        myWidgets.dmSans17Bold(text: productString.component_1),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        myWidgets.dmSans16Grey(
+                            text: productString.component_desc_1)
+                      ],
+                    )),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

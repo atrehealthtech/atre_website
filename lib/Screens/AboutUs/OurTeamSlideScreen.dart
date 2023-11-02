@@ -43,7 +43,7 @@ class OurTeamSlideScreen extends StatelessWidget {
             options: CarouselOptions(
               height: h! / 1.3,
               disableCenter: true,
-              viewportFraction: 0.4,
+              viewportFraction: 0.3,
               autoPlay: true,
               autoPlayAnimationDuration: const Duration(milliseconds: 800),
             ),
@@ -252,6 +252,12 @@ List<OurTeam> slideList = [
       role: "Front End Developer",
       imgUrl: myImages.velImg,
       linkedInUrl: "velmurugan-ravindran-a83438286/",
+      content: ""),
+  OurTeam(
+      name: "Rohith S",
+      role: "Testing",
+      imgUrl: myImages.rohithImg,
+      linkedInUrl: "",
       content: ""),
   OurTeam(
       name: "Ms. Amritha Krishnaraj",

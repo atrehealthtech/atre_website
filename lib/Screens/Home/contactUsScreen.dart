@@ -37,7 +37,7 @@ class ContactUsScreen extends StatelessWidget {
               Container(
                   width: 500,
                   alignment: Alignment.topRight,
-                  margin: const EdgeInsets.only(left: 200, right: 50),
+                  margin: const EdgeInsets.only(left: 250, right: 50),
                   padding: const EdgeInsets.all(30),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7),
@@ -122,7 +122,7 @@ class ContactUsScreen extends StatelessWidget {
                           myWidgets.dmSans16Grey(text: "Atre Health Tech"),
                           myWidgets.dmSans16Grey(
                               text:
-                                  "45, Kamaraj Road, \nRed Fields, Coimbatore, \nCoimbatore, Tamil Nadu."),
+                                  "45, Avinashi Road, \nPSG Foundry, Neelambur, \nCoimbatore, Tamil Nadu."),
                           const SizedBox(
                             height: 20,
                           ),
@@ -228,7 +228,7 @@ class ContactUsScreen extends StatelessWidget {
                         myWidgets.dmSans16Grey(text: "Atre Health Tech"),
                         myWidgets.dmSans16Grey(
                             text:
-                                "45, Kamaraj Road, \nRed Fields, Coimbatore, \nCoimbatore, Tamil Nadu."),
+                                "45, Avinashi Road, \nPSG Foundry, Neelambur, \nCoimbatore, Tamil Nadu."),
                         const SizedBox(
                           height: 20,
                         ),
@@ -240,7 +240,10 @@ class ContactUsScreen extends StatelessWidget {
                             child: const HtmlWidget(
                                 '''<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15662.846436905396!2d77.092782!3d11.060235!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857b021b5c403%3A0x249dd10bf4756b37!2sAtre%20Health%20tech!5e0!3m2!1sen!2sin!4v1690441436343!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'''),
                           ),
-                        )
+                        ),
+                        const SizedBox(
+                          height: 20,
+                        ),
                       ],
                     ),
                   ),

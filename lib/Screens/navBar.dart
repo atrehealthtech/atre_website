@@ -1,10 +1,12 @@
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, must_be_immutable
 
+import 'package:atre_website/Provider/nav_bar_provider.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Widgets/onHover.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class NavBar extends StatefulWidget {
@@ -15,19 +17,6 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  // Selected menu item
-
-  int selectedItem = 0;
-
-  //  Nav Bar Items
-  List<NavBarDetail> navBarList = [
-    NavBarDetail(id: 1, title: "Home", navigation: "/"),
-    NavBarDetail(id: 2, title: "About Us", navigation: "/about_us"),
-    NavBarDetail(id: 3, title: "Career", navigation: "/career"),
-    NavBarDetail(id: 4, title: "Product", navigation: "/product"),
-    NavBarDetail(id: 5, title: "News & Article", navigation: "/news_articles")
-  ];
-
   bool isMenuClick = false;
 
   @override
@@ -46,7 +35,7 @@ class _NavBarState extends State<NavBar> {
       decoration: const BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(
             color: Colors.grey,
-            offset: Offset(0.0, 2.0), //(x,y)
+            offset: Offset(2.0, 0.0), //(x,y)
             blurRadius: 2.0,
             spreadRadius: 2)
       ]),
@@ -56,7 +45,7 @@ class _NavBarState extends State<NavBar> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              navLogo(),
+              navLogo(onTap: () => context.go("/")),
               InkWell(
                   onTap: () {
                     setState(() {
@@ -67,27 +56,27 @@ class _NavBarState extends State<NavBar> {
                   child: const Icon(Icons.menu))
             ],
           ),
-          Visibility(
-            visible: isMenuClick,
-            child: ListView.builder(
-                shrinkWrap: true,
-                itemCount: navBarList.length,
-                itemBuilder: (context, index) => Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 05),
-                      child: navButton(
-                          color: selectedItem == navBarList[index].id
-                              ? Palette.primary
-                              : Palette.black,
-                          text: navBarList[index].title,
-                          onTap: () {
-                            setState(() {
-                              selectedItem = navBarList[index].id;
-                            });
-                            Future.delayed(const Duration(seconds: 1),
-                                () => context.go(navBarList[index].navigation));
-                          }),
-                    )),
-          ),
+          // Visibility(
+          //   visible: isMenuClick,
+          //   child: ListView.builder(
+          //       shrinkWrap: true,
+          //       itemCount: navBarList.length,
+          //       itemBuilder: (context, i) => Padding(
+          //             padding: const EdgeInsets.symmetric(vertical: 05),
+          //             child: NavButton(
+          //               onTap: () {
+          //                 context.go(navBarList[i].navigation);
+          //                 // Selected item
+          //                 setState(() {
+          //                   select(i);
+          //                 });
+          //               },
+          //               navigation: navBarList[i].navigation,
+          //               selected: selected[i],
+          //               text: navBarList[i].title,
+          //             ),
+          //           )),
+          // ),
         ],
       ),
     );
@@ -96,6 +85,7 @@ class _NavBarState extends State<NavBar> {
 // ! Desktop Nav bar
 
   Widget DeskTopNavBar() {
+    NavBarProvider provider = context.watch<NavBarProvider>();
     return Container(
       decoration: BoxDecoration(color: Colors.white, boxShadow: [
         BoxShadow(color: Colors.grey.withOpacity(0.3), spreadRadius: 2)
@@ -106,25 +96,26 @@ class _NavBarState extends State<NavBar> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            navLogo(),
+            navLogo(onTap: () {
+              context.go("/");
+            }),
             ListView.builder(
                 shrinkWrap: true,
-                itemCount: navBarList.length,
+                itemCount: provider.navBarList.length,
                 scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) => Center(
+                itemBuilder: (context, i) => Center(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: navButton(
-                            color: selectedItem == navBarList[index].id
-                                ? Palette.primary
-                                : Palette.black,
-                            text: navBarList[index].title,
-                            onTap: () {
-                              setState(() {
-                                selectedItem = navBarList[index].id;
-                                context.go(navBarList[index].navigation);
-                              });
-                            }),
+                        child: NavButton(
+                          onTap: () {
+                            // Selected item
+
+                            provider.select(i);
+                          },
+                          selected: provider.selected[i],
+                          text: provider.navBarList[i].title,
+                          navigation: provider.navBarList[i].navigation,
+                        ),
                       ),
                     ))
           ],
@@ -135,36 +126,57 @@ class _NavBarState extends State<NavBar> {
 
 // ! Widgets
 
-  Widget navButton(
-      {required String text, required Function onTap, required Color color}) {
-    return OnHover(
-      builder: (bool isHovered) {
-        return GestureDetector(
-          onTap: onTap as void Function(),
-          child: Text(text,
-              style: TextStyle(
-                  color: !isHovered ? color : Palette.primary,
-                  fontSize: 16,
-                  fontFamily: "DMSans",
-                  fontWeight: FontWeight.normal)),
-        );
-      },
-    );
-  }
-
-  Widget navLogo() {
-    return Text(
-      "atre",
-      style: GoogleFonts.jost(
-          color: Palette.primary, fontWeight: FontWeight.w500, fontSize: 32),
+  Widget navLogo({required Function onTap}) {
+    return InkWell(
+      onTap: onTap as void Function(),
+      child: Text(
+        "atre",
+        style: GoogleFonts.jost(
+            color: Palette.primary, fontWeight: FontWeight.w500, fontSize: 32),
+      ),
     );
   }
 }
 
-class NavBarDetail {
-  int id;
-  String title;
+class NavButton extends StatefulWidget {
+  NavButton(
+      {required this.text,
+      required this.onTap,
+      required this.selected,
+      required this.navigation,
+      super.key});
+  String text;
+  Function onTap;
+  bool selected;
   String navigation;
-  NavBarDetail(
-      {required this.id, required this.title, required this.navigation});
+
+  @override
+  State<NavButton> createState() => _NavButtonState();
+}
+
+class _NavButtonState extends State<NavButton> {
+  @override
+  Widget build(BuildContext context) {
+    return OnHover(
+      builder: (bool isHovered) {
+        return GestureDetector(
+          onTap: () {
+            context.go(widget.navigation);
+            widget.onTap();
+          },
+          child: Text(widget.text,
+              style: TextStyle(
+                  color: !isHovered
+                      ? widget.selected
+                          ? Palette.primary
+                          : Palette.black
+                      : Palette.primary,
+                  fontSize: 16,
+                  fontFamily: "DMSans",
+                  fontWeight:
+                      widget.selected ? FontWeight.w500 : FontWeight.normal)),
+        );
+      },
+    );
+  }
 }

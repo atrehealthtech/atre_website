@@ -5,7 +5,7 @@ import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
+import 'package:svg_flutter/svg.dart';
 import '../../Utils/Sizes.dart';
 
 class IntroScreen extends StatelessWidget {
@@ -26,31 +26,44 @@ class IntroScreen extends StatelessWidget {
       color: Palette.liteGreen,
       child: Row(
         children: [
+          // Intro Content
+
           Expanded(
               child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 100),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 100,
+            ),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                myWidgets.titleText(
-                    text: "Want anything to be easy with Doosan."),
+                SvgPicture.asset(
+                  myImages.intro_title,
+                ),
                 SizedBox(
-                  height: h! / 100,
+                  height: h! / 30,
                 ),
                 myWidgets.dmSans16Grey(
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
-                SizedBox(
-                  height: h! / 30,
-                ),
-                myWidgets.contactUsButton()
               ],
             ),
           )),
+
+          // Intro Image
+
           Expanded(
-              child: Image.asset(
-            myImages.ourRobot,
+              child: Column(
+            children: [
+              const SizedBox(
+                height: 100,
+              ),
+              SizedBox(
+                height: 600,
+                child: Image.asset(
+                  myImages.intro_robot,
+                ),
+              ),
+            ],
           ))
         ],
       ),
@@ -66,25 +79,22 @@ class IntroScreen extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                myWidgets.titleText(
-                    text: "Want anything to be easy with Doosan."),
-                SizedBox(
-                  height: h! / 100,
+                SvgPicture.asset(
+                  myImages.intro_title,
                 ),
                 myWidgets.dmSans16Grey(
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
-                SizedBox(
-                  height: h! / 70,
-                ),
-                myWidgets.contactUsButton()
               ],
             ),
           ),
+          const SizedBox(
+            height: 50,
+          ),
           Image.asset(
-            myImages.ourRobot,
+            myImages.intro_robot,
           )
         ],
       ),

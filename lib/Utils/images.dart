@@ -3,10 +3,11 @@
 final myImages = MyImages();
 
 class MyImages {
-  var appLogo = "assets/images/App_Logo.png";
+  var appLogo = "assets/images/logo.png";
+  var intro_title = "assets/images/intro_title.svg";
 
-  var technologyImg_1 = "assets/images/tech_1.png";
-  var technologyImg_2 = "assets/images/tech_2.png";
+  var technologyImg_1 = "assets/images/dr_ramalingam.png";
+  var technologyImg_2 = "assets/images/tech_2.jpg";
   var atreDeskImg = "assets/images/AtreDesk.png";
   var innovationImg = "assets/images/team.jpg";
   var groupImg = "assets/images/GroupImage.png";
@@ -22,6 +23,7 @@ class MyImages {
   var malaImg = "assets/images/malavika.png";
   var manisha = "assets/images/manisha.png";
   var jeevaImg = "assets/images/jeeva.png";
+  var rohithImg = "assets/images/s_rohith.jpeg";
 
   // Our Advisers Images
   var arjunImg = "assets/images/Arjun.png";
@@ -33,6 +35,7 @@ class MyImages {
   var triDiDemoImg = "assets/images/3D_Images/ImageToStl.com_002-ug-2.glb";
   var ourRobot = "assets/images/our_robot.png";
   var robot_without_circle = "assets/images/robot.png";
+  var intro_robot = "assets/images/intro_robo.png";
 
   //Article Image
   var inTecImg = "assets/images/intec.png";

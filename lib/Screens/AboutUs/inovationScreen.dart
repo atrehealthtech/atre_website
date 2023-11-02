@@ -70,15 +70,16 @@ class InnovationScreen extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       child: Column(
-        // crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
             child: Image.asset(myImages.innovationImg),
           ),
           Column(
-            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const SizedBox(
+                height: 10,
+              ),
               myWidgets.boldBlackText(
                   text: "Leading through innovation and creativity"),
               const SizedBox(

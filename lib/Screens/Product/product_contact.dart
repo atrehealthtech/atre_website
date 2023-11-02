@@ -25,10 +25,10 @@ class ProductContact extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(
-              myImages.circleBg,
-            ),
-          ),
+              image: AssetImage(
+                myImages.circleBg,
+              ),
+              fit: BoxFit.fitWidth),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +46,7 @@ class ProductContact extends StatelessWidget {
 
   Widget MobileUI() => Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 40),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(

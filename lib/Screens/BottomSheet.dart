@@ -1,29 +1,26 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable
 
+import 'package:atre_website/Provider/nav_bar_provider.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/icons.dart';
 import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:svg_flutter/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Utils/Sizes.dart';
-import 'navBar.dart';
 
-class AtreBottomSheet extends StatelessWidget {
-  AtreBottomSheet({super.key});
+class AtreBottomSheet extends StatefulWidget {
+  const AtreBottomSheet({super.key});
 
-  //  Nav Bar Items
-  List<NavBarDetail> navBarList = [
-    NavBarDetail(id: 1, title: "Home", navigation: "/"),
-    NavBarDetail(id: 2, title: "About Us", navigation: "/about_us"),
-    NavBarDetail(id: 3, title: "Career", navigation: "/career"),
-    NavBarDetail(id: 4, title: "Product", navigation: "/product"),
-    NavBarDetail(id: 5, title: "News & Article", navigation: "/news_articles")
-  ];
+  @override
+  State<AtreBottomSheet> createState() => _AtreBottomSheetState();
+}
 
+class _AtreBottomSheetState extends State<AtreBottomSheet> {
   @override
   Widget build(BuildContext context) {
     h = MediaQuery.of(context).size.height;
@@ -35,6 +32,7 @@ class AtreBottomSheet extends StatelessWidget {
   }
 
   Widget DeskTopBottomSheet() {
+    NavBarProvider provider = context.watch<NavBarProvider>();
     return Container(
       // height: 300,
       color: Palette.black,
@@ -67,11 +65,11 @@ class AtreBottomSheet extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 10),
                       child: ListView.builder(
                           shrinkWrap: true,
-                          itemCount: navBarList.length,
+                          itemCount: provider.navBarList.length,
                           itemBuilder: (context, i) => myWidgets.hoverWhiteText(
-                              text: navBarList[i].title,
+                              text: provider.navBarList[i].title,
                               onTap: () {
-                                context.go(navBarList[i].navigation);
+                                context.go(provider.navBarList[i].navigation);
                               })),
                     )
                   ],
@@ -131,6 +129,8 @@ class AtreBottomSheet extends StatelessWidget {
   }
 
   Widget MobileBottomSheet() {
+    NavBarProvider provider = context.watch<NavBarProvider>();
+
     return Container(
       color: Palette.black,
       child: Padding(
@@ -149,12 +149,12 @@ class AtreBottomSheet extends StatelessWidget {
               padding: const EdgeInsets.only(top: 10),
               child: ListView.builder(
                   shrinkWrap: true,
-                  itemCount: navBarList.length,
+                  itemCount: provider.navBarList.length,
                   itemBuilder: (context, i) => Center(
                         child: myWidgets.hoverWhiteText(
-                            text: navBarList[i].title,
+                            text: provider.navBarList[i].title,
                             onTap: () {
-                              context.go(navBarList[i].navigation);
+                              context.go(provider.navBarList[i].navigation);
                             }),
                       )),
             ),

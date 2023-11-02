@@ -2,6 +2,7 @@ import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Widgets/hoverContainer.dart';
 import 'package:atre_website/Widgets/onHover.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 final myWidgets = MyWidgets();
 
@@ -551,6 +552,20 @@ class MyWidgets {
                 borderRadius: BorderRadius.circular(5),
                 borderSide: BorderSide(color: Palette.blue)),
           )),
+    );
+  }
+
+  // this widget used for Intro dongle text
+
+  Widget dongle96Normal({
+    required String text,
+  }) {
+    return Text(
+      text,
+      style: GoogleFonts.dongle(
+        color: Palette.primary,
+        fontSize: 96,
+      ),
     );
   }
 }
