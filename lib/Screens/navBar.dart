@@ -30,6 +30,8 @@ class _NavBarState extends State<NavBar> {
 // ! Mobile Menu Bar
 
   Widget MobileNavBar() {
+    NavBarProvider provider = context.watch<NavBarProvider>();
+
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       decoration: const BoxDecoration(color: Colors.white, boxShadow: [
@@ -56,27 +58,25 @@ class _NavBarState extends State<NavBar> {
                   child: const Icon(Icons.menu))
             ],
           ),
-          // Visibility(
-          //   visible: isMenuClick,
-          //   child: ListView.builder(
-          //       shrinkWrap: true,
-          //       itemCount: navBarList.length,
-          //       itemBuilder: (context, i) => Padding(
-          //             padding: const EdgeInsets.symmetric(vertical: 05),
-          //             child: NavButton(
-          //               onTap: () {
-          //                 context.go(navBarList[i].navigation);
-          //                 // Selected item
-          //                 setState(() {
-          //                   select(i);
-          //                 });
-          //               },
-          //               navigation: navBarList[i].navigation,
-          //               selected: selected[i],
-          //               text: navBarList[i].title,
-          //             ),
-          //           )),
-          // ),
+          Visibility(
+            visible: isMenuClick,
+            child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: provider.navBarList.length,
+                itemBuilder: (context, i) => Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 05),
+                      child: NavButton(
+                        onTap: () {
+                          // Selected item
+
+                          provider.select(i);
+                        },
+                        selected: provider.selected[i],
+                        text: provider.navBarList[i].title,
+                        navigation: provider.navBarList[i].navigation,
+                      ),
+                    )),
+          ),
         ],
       ),
     );

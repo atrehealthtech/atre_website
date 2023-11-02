@@ -458,8 +458,8 @@ class MyWidgets {
 
   // this widget used for Article Card
   Widget articleContainer(
-      {required double containerHeight,
-      required double containerWidth,
+      {double? containerHeight,
+      double? containerWidth,
       required String img,
       required String authorText,
       required String titleText,

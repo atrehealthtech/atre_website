@@ -36,11 +36,10 @@ Widget DeskTopArticle(BuildContext context) {
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
-          containerHeight: 510,
-          containerWidth: 450,
+          containerWidth: 370,
           img: myImages.inTecImg,
           titleText: articleString.articleTitleText1,
-          dmSans16Grey: articleString.articleParaText,
+          dmSans16Grey: intecString.intecParaText,
           buttonText: articleString.buttonText,
           onTap: () {}),
       SizedBox(
@@ -52,8 +51,7 @@ Widget DeskTopArticle(BuildContext context) {
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
-          containerHeight: 510,
-          containerWidth: 450,
+          containerWidth: 370,
           img: myImages.nidhiPrays,
           titleText: articleString.articleTitleText2,
           dmSans16Grey: articleString.articleParaText,
@@ -66,19 +64,18 @@ Widget DeskTopArticle(BuildContext context) {
 // ignore: non_constant_identifier_names
 Widget MobileArticle(BuildContext context) {
   return Container(
-    padding: const EdgeInsets.symmetric(vertical: 80),
+    padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
     width: double.infinity,
     color: Palette.white,
     child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       myWidgets.articleContainer(
           onContainerTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return IntecPage();
+              return const IntecPage();
             }));
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
-          containerHeight: 510,
           containerWidth: 450,
           img: myImages.inTecImg,
           titleText: articleString.articleTitleText1,
@@ -96,7 +93,6 @@ Widget MobileArticle(BuildContext context) {
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
-          containerHeight: 510,
           containerWidth: 450,
           img: myImages.nidhiPrays,
           titleText: articleString.articleTitleText2,

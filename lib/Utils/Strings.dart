@@ -4,17 +4,12 @@ final articleString = ArticleString();
 final intecString = IntetString();
 final nidhiPraysString = NidhiPraysString();
 final productString = ProductString();
-final homeStrings = HomeStrings();
-
-class HomeStrings {
-  var introTitle = "Advancing \nHealth \nResponsibly";
-}
 
 class ArticleString {
   var articleParaText =
-      "Atre, made a splash at the INTEC 2022 expo in Coimbatore with the successful display of our tele-robotic ultrasound system. The expo, which was attended by healthcare professionals, engineers, and industry leaders, provided the perfect platform for us to showcase our innovative technology.";
+      "The NIDHI PRAYAS grant is a highly prestigious grant that is awarded to startups with innovative ideas and technologies in the field of healthcare. It is a part of the NIDHI scheme which is an initiative of the Department of Science and Technology (DST), Government of India. The grant will be used to develop the tele-robotic ultrasound system, which will provide real-time remote ultrasound scans to patients. The system will be operated by trained professionals from remote locations using robotic arms.";
   var articleTitleText1 =
-      "INTEC 2022 - International Machine tools & International Trade fair.";
+      "International Machine tools & International Trade fair.";
   var articleTitleText2 =
       "NIDHI PRAYAS - Department of Science and Technology.";
   var nameText = "MS. AMRITA KRISHNARAJ";
@@ -30,8 +25,8 @@ class IntetString {
   var titleText =
       "INTEC 2022 - International Machine tools & International Trade fair.";
   var smallText = "Published on 14th November 2022";
-  var paraText1 =
-      "Atre, made a splash at the INTEC 2022 expo in Coimbatore with the successful display of our tele-robotic ultrasound system. The expo, which was attended by healthcare professionals, engineers, and industry leaders, provided the perfect platform for us to showcase our innovative technology.";
+  var intecParaText =
+      "The tele-robotic ultrasound system, which uses robotic arms to provide real-time remote ultrasound scans, received an overwhelmingly positive response from attendees. Many were stunned by the advanced technology and its potential to revolutionize the field of diagnostic imaging. The system allows trained professionals to operate the robotic arms from remote locations, providing patients in rural and remote areas with access to ultrasound scans.";
   var paraText2 =
       '"The tele-robotic ultrasound system, which uses robotic arms to provide real-time remote ultrasound scans, received an overwhelmingly positive response from attendees. Many were stunned by the advanced technology and its potential to revolutionize the field of diagnostic imaging. The system allows trained professionals to operate the robotic arms from remote locations, providing patients in rural and remote areas with access to ultrasound scans, which is a crucial diagnostic tool for many medical conditions".';
   var paraText3 =

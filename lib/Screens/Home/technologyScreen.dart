@@ -73,9 +73,7 @@ class TechnologyScreen extends StatelessWidget {
                   dmSans16Grey:
                       "Surgical simulator, which provides a realistic and interactive training experience for surgeons. The simulator allows surgeons to practice procedures in a safe and controlled.",
                   buttonText: "Coming Soon",
-                  onTap: () {
-                    context.go("/product");
-                  }),
+                  onTap: () {}),
             ],
           ),
           const SizedBox(

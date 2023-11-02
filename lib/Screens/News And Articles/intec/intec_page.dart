@@ -17,17 +17,13 @@ class _IntecPageState extends State<IntecPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Palette.white,
-      body: Column(
+      body: const Column(
         children: [
-          const NavBar(),
+          NavBar(),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
-                children: [
-                  const IntecImage(),
-                  const IntecTextPage(),
-                  AtreBottomSheet()
-                ],
+                children: [IntecImage(), IntecTextPage(), AtreBottomSheet()],
               ),
             ),
           )

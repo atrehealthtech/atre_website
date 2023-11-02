@@ -17,15 +17,15 @@ class _NidhiParayasPageState extends State<NidhiParayasPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Palette.white,
-      body: Column(
+      body: const Column(
         children: [
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const NavBar(),
-                  const NidhiPrayasImage(),
-                  const NidhiPrayasTextPage(),
+                  NavBar(),
+                  NidhiPrayasImage(),
+                  NidhiPrayasTextPage(),
                   AtreBottomSheet()
                 ],
               ),

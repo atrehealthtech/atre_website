@@ -17,17 +17,13 @@ class _NewsAndArticlesState extends State<NewsAndArticles> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Palette.white,
-      body: Column(
+      body: const Column(
         children: [
-          const NavBar(),
+          NavBar(),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
-                children: [
-                  const ArticlePage(),
-                  const SignUpPage(),
-                  AtreBottomSheet()
-                ],
+                children: [ArticlePage(), SignUpPage(), AtreBottomSheet()],
               ),
             ),
           )

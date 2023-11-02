@@ -8,12 +8,24 @@ class NidhiPrayasImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      mobile: (_) => DeskTopNidhiPrayasImage(),
+      mobile: (_) => MobileNidhiPrayasImage(),
       desktop: (_) => DeskTopNidhiPrayasImage(),
     );
   }
 
+// ! Desktop UI
+
   Widget DeskTopNidhiPrayasImage() => Container(
+        width: double.infinity,
+        child: Image.asset(
+          myImages.nidhiPrays,
+          fit: BoxFit.cover,
+        ),
+      );
+
+// ! Mobile UI
+
+  Widget MobileNidhiPrayasImage() => Container(
         width: double.infinity,
         child: Image.asset(
           myImages.nidhiPrays,

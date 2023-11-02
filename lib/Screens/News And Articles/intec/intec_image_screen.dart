@@ -10,12 +10,19 @@ class IntecImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      mobile: (_) => DeskTopIntecImage(),
+      mobile: (_) => MobileIntecImage(),
       desktop: (_) => DeskTopIntecImage(),
     );
   }
 
   Widget DeskTopIntecImage() => Container(
+        width: double.infinity,
+        child: Image.asset(
+          myImages.inTecImg,
+          fit: BoxFit.cover,
+        ),
+      );
+  Widget MobileIntecImage() => Container(
         width: double.infinity,
         child: Image.asset(
           myImages.inTecImg,

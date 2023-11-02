@@ -62,13 +62,12 @@ Widget DeskTopSignUp() {
 // ignore: non_constant_identifier_names
 Widget MobileSignUp() {
   return Container(
+    padding: const EdgeInsets.all(20),
+    margin: const EdgeInsets.only(bottom: 10),
     color: Palette.paleGreen,
     width: double.infinity,
-    margin: const EdgeInsets.symmetric(vertical: 60, horizontal: 10),
-    padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 100),
     child: Column(children: [
       Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           myWidgets.boldBlackMidText(text: articleString.boldText),
           const SizedBox(
@@ -131,7 +130,7 @@ Widget buildSubmit() => Row(
         InkWell(
           onTap: () {},
           child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
               decoration: BoxDecoration(
                   color: Palette.primary,
                   borderRadius: BorderRadius.circular(8)),

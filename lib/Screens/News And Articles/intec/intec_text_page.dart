@@ -15,6 +15,8 @@ class IntecTextPage extends StatelessWidget {
   }
 }
 
+// ! Desktop UI
+
 Widget deskTopIntecTextPage() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 200, vertical: 70),
@@ -26,62 +28,58 @@ Widget deskTopIntecTextPage() {
           height: 5,
         ),
         myWidgets.greyMidText(text: intecString.smallText),
-         const SizedBox(
+        const SizedBox(
           height: 50,
         ),
-        myWidgets.greyNormalText(text: intecString.paraText1),
-         const SizedBox(
+        myWidgets.greyNormalText(text: intecString.intecParaText),
+        const SizedBox(
           height: 180,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100) ,
+          padding: const EdgeInsets.symmetric(horizontal: 100),
           child: myWidgets.greyNormalText(text: intecString.paraText2),
         ),
-         const SizedBox(
+        const SizedBox(
           height: 180,
         ),
         myWidgets.greyNormalText(text: intecString.paraText3),
-          const SizedBox(
+        const SizedBox(
           height: 50,
         ),
       ],
     ),
-    
   );
-  
 }
+
+// ! Mobile UI
+
 Widget mobileIntecTextPage() {
   return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 200, vertical: 70),
+    padding: const EdgeInsets.all(15),
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        myWidgets.blackTitle(text: intecString.titleText),
+        myWidgets.dmSans17Bold(text: intecString.titleText),
         const SizedBox(
           height: 5,
         ),
         myWidgets.greyMidText(text: intecString.smallText),
-         const SizedBox(
-          height: 30,
+        const SizedBox(
+          height: 10,
         ),
-        myWidgets.greyNormalText(text: intecString.paraText1),
-         const SizedBox(
-          height: 80,
+        myWidgets.dmSans16Grey(text: intecString.intecParaText),
+        const SizedBox(
+          height: 40,
         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 80) ,
-          child: myWidgets.greyNormalText(text: intecString.paraText2),
+        myWidgets.dmSans16Grey(text: intecString.paraText2),
+        const SizedBox(
+          height: 40,
         ),
-         const SizedBox(
-          height: 80,
-        ),
-        myWidgets.greyNormalText(text: intecString.paraText3),
-          const SizedBox(
+        myWidgets.dmSans16Grey(text: intecString.paraText3),
+        const SizedBox(
           height: 30,
         ),
       ],
     ),
-    
   );
-  
 }

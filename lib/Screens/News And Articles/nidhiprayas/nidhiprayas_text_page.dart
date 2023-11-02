@@ -16,41 +16,6 @@ class NidhiPrayasTextPage extends StatelessWidget {
 
 // ignore: non_constant_identifier_names
 Widget deskTopNidhiPraysTextPage() {
- return Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 200, vertical: 70),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        myWidgets.blackTitle(text: nidhiPraysString.titleText),
-        const SizedBox(
-          height: 5,
-        ),
-        myWidgets.greyMidText(text: nidhiPraysString.smallText),
-         const SizedBox(
-          height: 50,
-        ),
-        myWidgets.greyNormalText(text: nidhiPraysString.paraText1),
-         const SizedBox(
-          height: 180,
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 100) ,
-          child: myWidgets.greyNormalText(text: nidhiPraysString.paraText2),
-        ),
-         const SizedBox(
-          height: 180,
-        ),
-        myWidgets.greyNormalText(text: nidhiPraysString.paraText3),
-          const SizedBox(
-          height: 50,
-        ),
-      ],
-    ),
-    
-  );  
-}
-
-Widget mobileNidhiPrayasTextPage() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 200, vertical: 70),
     child: Column(
@@ -61,26 +26,56 @@ Widget mobileNidhiPrayasTextPage() {
           height: 5,
         ),
         myWidgets.greyMidText(text: nidhiPraysString.smallText),
-         const SizedBox(
-          height: 30,
+        const SizedBox(
+          height: 50,
         ),
         myWidgets.greyNormalText(text: nidhiPraysString.paraText1),
-         const SizedBox(
-          height: 80,
+        const SizedBox(
+          height: 180,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 80) ,
+          padding: const EdgeInsets.symmetric(horizontal: 100),
           child: myWidgets.greyNormalText(text: nidhiPraysString.paraText2),
         ),
-        Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 80) ,
-          child: myWidgets.greyNormalText(text: nidhiPraysString.paraText3),
+        const SizedBox(
+          height: 180,
         ),
-          const SizedBox(
+        myWidgets.greyNormalText(text: nidhiPraysString.paraText3),
+        const SizedBox(
+          height: 50,
+        ),
+      ],
+    ),
+  );
+}
+
+Widget mobileNidhiPrayasTextPage() {
+  return Padding(
+    padding: const EdgeInsets.all(15),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        myWidgets.dmSans17Bold(text: nidhiPraysString.titleText),
+        const SizedBox(
+          height: 5,
+        ),
+        myWidgets.greyMidText(text: nidhiPraysString.smallText),
+        const SizedBox(
+          height: 30,
+        ),
+        myWidgets.dmSans16Grey(text: nidhiPraysString.paraText1),
+        const SizedBox(
+          height: 40,
+        ),
+        myWidgets.dmSans16Grey(text: nidhiPraysString.paraText2),
+        const SizedBox(
+          height: 40,
+        ),
+        myWidgets.dmSans16Grey(text: nidhiPraysString.paraText3),
+        const SizedBox(
           height: 30,
         ),
       ],
     ),
-    
   );
 }
