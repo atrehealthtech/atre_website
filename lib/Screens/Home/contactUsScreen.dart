@@ -31,71 +31,69 @@ class ContactUsScreen extends StatelessWidget {
           const SizedBox(
             height: 70,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 200),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Expanded(
-                    child: Container(
-                        alignment: Alignment.topRight,
-                        margin: const EdgeInsets.symmetric(horizontal: 60),
-                        padding: const EdgeInsets.all(30),
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(7),
-                            color: Palette.white,
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.2),
-                                blurRadius: 10.0,
-                              )
-                            ]),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            myWidgets.blackMidText(text: "Name"),
-                            myWidgets.myTextField(),
-                            Row(
-                              children: [
-                                Expanded(
-                                    child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    myWidgets.blackMidText(
-                                        text: "Organization Name"),
-                                    myWidgets.myTextField(),
-                                    myWidgets.blackMidText(text: "Email ID"),
-                                    myWidgets.myTextField(),
-                                  ],
-                                )),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                Expanded(
-                                    child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    myWidgets.blackMidText(text: "Designation"),
-                                    myWidgets.myTextField(),
-                                    myWidgets.blackMidText(
-                                        text: "Contact Number"),
-                                    myWidgets.myTextField(),
-                                  ],
-                                ))
-                              ],
-                            ),
-                            myWidgets.blackMidText(text: "Describe Briefly"),
-                            myWidgets.describeField(),
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Align(
-                                alignment: Alignment.center,
-                                child: myWidgets.contactUsButton())
-                          ],
-                        ))),
-                Expanded(
-                    child: Column(
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                  width: 500,
+                  alignment: Alignment.topRight,
+                  margin: const EdgeInsets.only(left: 200, right: 50),
+                  padding: const EdgeInsets.all(30),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(7),
+                      color: Palette.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.2),
+                          blurRadius: 10.0,
+                        )
+                      ]),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      myWidgets.blackMidText(text: "Name"),
+                      myWidgets.myTextField(),
+                      Row(
+                        children: [
+                          Expanded(
+                              child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              myWidgets.blackMidText(text: "Organization Name"),
+                              myWidgets.myTextField(),
+                              myWidgets.blackMidText(text: "Email ID"),
+                              myWidgets.myTextField(),
+                            ],
+                          )),
+                          const SizedBox(
+                            width: 20,
+                          ),
+                          Expanded(
+                              child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              myWidgets.blackMidText(text: "Designation"),
+                              myWidgets.myTextField(),
+                              myWidgets.blackMidText(text: "Contact Number"),
+                              myWidgets.myTextField(),
+                            ],
+                          ))
+                        ],
+                      ),
+                      myWidgets.blackMidText(text: "Describe Briefly"),
+                      myWidgets.describeField(),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Align(
+                          alignment: Alignment.center,
+                          child: myWidgets.contactUsButton())
+                    ],
+                  )),
+              Expanded(
+                  child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 100),
+                child: Column(
                   children: [
                     myWidgets.blackTitleText(text: "Write to us"),
                     myWidgets.greenMidText(text: "info@atrehealthtech.com"),
@@ -141,9 +139,9 @@ class ContactUsScreen extends StatelessWidget {
                       ),
                     ),
                   ],
-                ))
-              ],
-            ),
+                ),
+              ))
+            ],
           )
         ],
       ),
@@ -180,33 +178,14 @@ class ContactUsScreen extends StatelessWidget {
                     children: [
                       myWidgets.blackMidText(text: "Name"),
                       myWidgets.myTextField(),
-                      Row(
-                        children: [
-                          Expanded(
-                              child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              myWidgets.blackMidText(text: "Organization Name"),
-                              myWidgets.myTextField(),
-                              myWidgets.blackMidText(text: "Email ID"),
-                              myWidgets.myTextField(),
-                            ],
-                          )),
-                          const SizedBox(
-                            width: 20,
-                          ),
-                          Expanded(
-                              child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              myWidgets.blackMidText(text: "Designation"),
-                              myWidgets.myTextField(),
-                              myWidgets.blackMidText(text: "Contact Number"),
-                              myWidgets.myTextField(),
-                            ],
-                          ))
-                        ],
-                      ),
+                      myWidgets.blackMidText(text: "Organization Name"),
+                      myWidgets.myTextField(),
+                      myWidgets.blackMidText(text: "Email ID"),
+                      myWidgets.myTextField(),
+                      myWidgets.blackMidText(text: "Designation"),
+                      myWidgets.myTextField(),
+                      myWidgets.blackMidText(text: "Contact Number"),
+                      myWidgets.myTextField(),
                       myWidgets.blackMidText(text: "Describe Briefly"),
                       myWidgets.describeField(),
                       const SizedBox(

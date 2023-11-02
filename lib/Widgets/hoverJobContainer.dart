@@ -6,8 +6,7 @@ import '../Utils/colors.dart';
 import '../Utils/icons.dart';
 import 'myWidgets.dart';
 
-Widget hoverJobContainer(
-    {required Function onTap, required String role, required String subRole}) {
+Widget hoverJobContainer({required Function onTap, required String role}) {
   return HoverWidget(
       hoverChild: Container(
         width: double.infinity,
@@ -66,7 +65,7 @@ Widget hoverJobContainer(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     myWidgets.midBlackText(text: role),
-                    myWidgets.dmSans16Grey(text: subRole)
+                    // myWidgets.dmSans16Grey(text: subRole)
                   ],
                 )),
             Expanded(
@@ -105,7 +104,7 @@ Widget hoverJobContainer(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     myWidgets.midBlackText(text: role),
-                    myWidgets.dmSans16Grey(text: subRole)
+                    // myWidgets.dmSans16Grey(text: subRole)
                   ],
                 )),
             Expanded(

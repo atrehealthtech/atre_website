@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:svg_flutter/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../Utils/Sizes.dart';
 import 'navBar.dart';
@@ -83,7 +84,12 @@ class AtreBottomSheet extends StatelessWidget {
                     Row(
                       children: [
                         IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchInBrowser(Uri(
+                                  scheme: 'https',
+                                  host: 'www.linkedin.com',
+                                  path: "/company/atrehealthtech/"));
+                            },
                             icon: SvgPicture.asset(myIcons.linkedIn_White)),
                         IconButton(
                             onPressed: () {},
@@ -157,7 +163,13 @@ class AtreBottomSheet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      _launchInBrowser(Uri(
+                          scheme: 'https',
+                          host: 'www.linkedin.com',
+                          path:
+                              "/in/company/atrehealthtech?trk=public_profile_topcard-current-company"));
+                    },
                     icon: SvgPicture.asset(myIcons.linkedIn_White)),
                 IconButton(
                     onPressed: () {},
@@ -183,5 +195,14 @@ class AtreBottomSheet extends StatelessWidget {
         ),
       ),
     );
+  }
+}
+
+Future<void> _launchInBrowser(Uri url) async {
+  if (!await launchUrl(
+    url,
+    mode: LaunchMode.externalApplication,
+  )) {
+    throw Exception('Could not launch $url');
   }
 }

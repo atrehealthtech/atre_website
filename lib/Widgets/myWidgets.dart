@@ -404,7 +404,7 @@ class MyWidgets {
   // this widget used for technology image container
 
   Widget technologyContainer(
-      {required double containerHeight,
+      {double? containerHeight,
       required double containerWidth,
       required String img,
       required String titleText,

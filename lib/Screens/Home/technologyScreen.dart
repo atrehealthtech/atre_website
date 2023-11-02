@@ -43,7 +43,7 @@ class TechnologyScreen extends StatelessWidget {
             children: [
               // 1st Container
               myWidgets.technologyContainer(
-                  containerHeight: 440,
+                  containerHeight: 460,
                   containerWidth: 300,
                   img: myImages.technologyImg_1,
                   titleText: "Tele-robotic Ultrasound System",
@@ -56,7 +56,7 @@ class TechnologyScreen extends StatelessWidget {
               ),
               // 2nd Container
               myWidgets.technologyContainer(
-                  containerHeight: 440,
+                  containerHeight: 460,
                   containerWidth: 300,
                   img: myImages.technologyImg_2,
                   titleText: "Surgical simulator",
@@ -77,6 +77,7 @@ class TechnologyScreen extends StatelessWidget {
   Widget MobileTechnology() {
     return Container(
       // height: h! / 1.085,
+      margin: const EdgeInsetsDirectional.symmetric(horizontal: 10),
       width: double.infinity,
       color: Palette.white,
       child: Column(
@@ -90,7 +91,7 @@ class TechnologyScreen extends StatelessWidget {
           ),
           myWidgets.dmSans16Grey(
               text:
-                  "From concept to product, and from edge to cloud!\n     We deliver cutting edge technology solutions."),
+                  "From concept to product, and from edge to cloud! We deliver cutting edge technology solutions."),
           const SizedBox(
             height: 70,
           ),
@@ -99,7 +100,6 @@ class TechnologyScreen extends StatelessWidget {
             children: [
               // 1st Container
               myWidgets.technologyContainer(
-                  containerHeight: 440,
                   containerWidth: 300,
                   img: myImages.technologyImg_1,
                   titleText: "Tele-robotic Ultrasound System",
@@ -112,7 +112,6 @@ class TechnologyScreen extends StatelessWidget {
               ),
               // 2nd Container
               myWidgets.technologyContainer(
-                  containerHeight: 440,
                   containerWidth: 300,
                   img: myImages.technologyImg_2,
                   titleText: "Surgical simulator",

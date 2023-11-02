@@ -39,9 +39,9 @@ class OurPositionsScreen extends StatelessWidget {
                   mainAxisSpacing: 30,
                   crossAxisCount: 2),
               itemBuilder: (context, i) => hoverJobContainer(
-                  onTap: () {},
-                  role: vacancyList[i].role!,
-                  subRole: vacancyList[i].subRole!),
+                onTap: () {},
+                role: vacancyList[i].role!,
+              ),
             ),
           ),
           const SizedBox(
@@ -83,9 +83,9 @@ class OurPositionsScreen extends StatelessWidget {
                 mainAxisSpacing: 30,
                 crossAxisCount: 1),
             itemBuilder: (context, i) => hoverJobContainer(
-                onTap: () {},
-                role: vacancyList[i].role!,
-                subRole: vacancyList[i].subRole!),
+              onTap: () {},
+              role: vacancyList[i].role!,
+            ),
           ),
           const SizedBox(
             height: 10,
@@ -110,8 +110,9 @@ List<AvailableVacancy> vacancyList = [
   AvailableVacancy(role: "UX/UI DESIGNER", subRole: "Porto, Portugal Design"),
   AvailableVacancy(
       role: "FULLSTACK DEVELOPER", subRole: "Porto, Portugal Design"),
-  AvailableVacancy(role: "REACT DEVELOPER", subRole: "Porto, Portugal Design"),
+  AvailableVacancy(
+      role: "JUNIOR ROBOTIC ENGINEER", subRole: "Porto, Portugal Design"),
   AvailableVacancy(role: "PYTHON DEVELOPER", subRole: "Porto, Portugal Design"),
-  AvailableVacancy(role: "MARKETING LEAD", subRole: "Porto, Portugal Design"),
-  AvailableVacancy(role: "PRODUCT MANAGER", subRole: "Porto, Portugal Design"),
+  AvailableVacancy(
+      role: "JUNIOR DESIGN ENGINEER", subRole: "Porto, Portugal Design"),
 ];
