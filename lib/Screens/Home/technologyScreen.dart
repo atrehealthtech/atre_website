@@ -23,9 +23,17 @@ class TechnologyScreen extends StatelessWidget {
 
   Widget DeskTopTechnology(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Palette.white,
+        image: DecorationImage(
+          alignment: Alignment.centerRight,
+          image: AssetImage(
+            myImages.bg_circle_2,
+          ),
+        ),
+      ),
       padding: const EdgeInsets.symmetric(vertical: 80),
       width: double.infinity,
-      color: Palette.white,
       child: Column(
         children: [
           myWidgets.greenTitleText(text: "Technology"),

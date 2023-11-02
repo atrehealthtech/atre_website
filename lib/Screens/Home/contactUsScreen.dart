@@ -6,6 +6,7 @@ import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../Utils/Sizes.dart';
+import '../../Utils/images.dart';
 import '../../Widgets/myWidgets.dart';
 
 class ContactUsScreen extends StatelessWidget {
@@ -24,7 +25,15 @@ class ContactUsScreen extends StatelessWidget {
   Widget DeskTopContactUs() {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 30),
-      color: Palette.white,
+      decoration: BoxDecoration(
+        color: Palette.white,
+        image: DecorationImage(
+          alignment: Alignment.centerLeft,
+          image: AssetImage(
+            myImages.bg_circle_1,
+          ),
+        ),
+      ),
       child: Column(
         children: [
           myWidgets.greenTitleText(text: "Contact Us"),
