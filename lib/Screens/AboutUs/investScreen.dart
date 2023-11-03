@@ -1,7 +1,8 @@
 import 'package:atre_website/Utils/colors.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import '../../Utils/texts.dart';
+import '../../Widgets/myWidgets.dart';
 
 class InvestScreen extends StatelessWidget {
   const InvestScreen({super.key});
@@ -21,16 +22,16 @@ class InvestScreen extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 10),
       child: Column(
         children: [
-          myWidgets.boldBlackText(
+          myTexts.boldBlackText(
               text:
                   "Invest in responsible revolutionizing healthtech with Atre"),
           const SizedBox(
             height: 10,
           ),
-          myWidgets.dmSans16Grey(
+          myTexts.dmSans16Grey(
               text:
                   "We are on a mission to bring advancements to healthcare that benefit every stakeholder."),
-          myWidgets.dmSans16Grey(
+          myTexts.dmSans16Grey(
               text:
                   "We can’t do it without our visionary investors, who steer us toward a bright, renewable future."),
           const SizedBox(

@@ -2,11 +2,11 @@
 
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/images.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:svg_flutter/svg.dart';
 import '../../Utils/Sizes.dart';
+import '../../Utils/texts.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({super.key});
@@ -42,7 +42,7 @@ class IntroScreen extends StatelessWidget {
                 SizedBox(
                   height: h! / 30,
                 ),
-                myWidgets.dmSans16Grey(
+                myTexts.dmSans16Grey(
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
               ],
@@ -84,7 +84,7 @@ class IntroScreen extends StatelessWidget {
                 SvgPicture.asset(
                   myImages.intro_title,
                 ),
-                myWidgets.dmSans16Grey(
+                myTexts.dmSans16Grey(
                     text:
                         "Breaking through the limitations of traditional ultrasound scanning method, TRUS assists with quick precise imaging over long distance, making ultrasound diagnosis more accessible in spite of the uneven distribution of medical resources."),
               ],

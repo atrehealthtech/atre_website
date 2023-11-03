@@ -2,10 +2,12 @@
 
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/icons.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
+
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:svg_flutter/svg.dart';
+
+import '../../Utils/texts.dart';
 
 class OurMissionScreen extends StatelessWidget {
   const OurMissionScreen({super.key});
@@ -27,7 +29,7 @@ class OurMissionScreen extends StatelessWidget {
           const SizedBox(
             height: 35,
           ),
-          myWidgets.greenTitleText(text: "Our Mission"),
+          myTexts.greenTitleText(text: "Our Mission"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 180, vertical: 40),
             child: Row(
@@ -51,8 +53,8 @@ class OurMissionScreen extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              myWidgets.blackMidText(text: "Mission"),
-                              myWidgets.dmSans16Grey(
+                              myTexts.blackMidText(text: "Mission"),
+                              myTexts.dmSans16Grey(
                                   text:
                                       "Our mission is to be at the forefront of advancing health responsibly through the development and deployment of cutting-edge medical robotics technology.")
                             ],
@@ -79,8 +81,8 @@ class OurMissionScreen extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            myWidgets.blackMidText(text: "Vision"),
-                            myWidgets.dmSans16Grey(
+                            myTexts.blackMidText(text: "Vision"),
+                            myTexts.dmSans16Grey(
                                 text:
                                     "We envision a future where medical robotics plays a crucial role in delivering efficient, effective and accurate medical care to improve the lives of patients worldwide")
                           ],
@@ -104,7 +106,7 @@ class OurMissionScreen extends StatelessWidget {
           const SizedBox(
             height: 35,
           ),
-          myWidgets.greenMidText(text: "Our Mission"),
+          myTexts.greenMidText(text: "Our Mission"),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),
             child: Column(
@@ -127,8 +129,8 @@ class OurMissionScreen extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            myWidgets.blackMidText(text: "Mission"),
-                            myWidgets.dmSans16Grey(
+                            myTexts.blackMidText(text: "Mission"),
+                            myTexts.dmSans16Grey(
                                 text:
                                     "Our mission is to be at the forefront of advancing health responsibly through the development and deployment of cutting-edge medical robotics technology.")
                           ],
@@ -156,8 +158,8 @@ class OurMissionScreen extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            myWidgets.blackMidText(text: "Vision"),
-                            myWidgets.dmSans16Grey(
+                            myTexts.blackMidText(text: "Vision"),
+                            myTexts.dmSans16Grey(
                                 text:
                                     "We envision a future where medical robotics plays a crucial role in delivering efficient, effective and accurate medical care to improve the lives of patients worldwide")
                           ],

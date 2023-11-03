@@ -3,9 +3,10 @@
 import 'package:atre_website/Utils/Strings.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/images.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../Utils/texts.dart';
 
 class ProductContact extends StatelessWidget {
   const ProductContact({super.key});
@@ -33,7 +34,7 @@ class ProductContact extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            myWidgets.dmSans48Bold(text: productString.productContactTitle),
+            myTexts.dmSans48Bold(text: productString.productContactTitle),
             const SizedBox(
               height: 40,
             ),
@@ -57,7 +58,7 @@ class ProductContact extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            myWidgets.dmSans32Bold(
+            myTexts.dmSans32Bold(
                 text: "Interested in discussing a project with us?"),
             const SizedBox(
               height: 40,

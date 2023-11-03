@@ -1,7 +1,8 @@
 import 'package:atre_website/Utils/Strings.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-import '../../../Widgets/myWidgets.dart';
+
+import '../../../Utils/texts.dart';
 
 class NidhiPrayasTextPage extends StatelessWidget {
   const NidhiPrayasTextPage({super.key});
@@ -21,26 +22,26 @@ Widget deskTopNidhiPraysTextPage() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        myWidgets.blackTitle(text: nidhiPraysString.titleText),
+        myTexts.blackTitle(text: nidhiPraysString.titleText),
         const SizedBox(
           height: 5,
         ),
-        myWidgets.greyMidText(text: nidhiPraysString.smallText),
+        myTexts.greyMidText(text: nidhiPraysString.smallText),
         const SizedBox(
           height: 50,
         ),
-        myWidgets.greyNormalText(text: nidhiPraysString.paraText1),
+        myTexts.greyNormalText(text: nidhiPraysString.paraText1),
         const SizedBox(
           height: 180,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 100),
-          child: myWidgets.greyNormalText(text: nidhiPraysString.paraText2),
+          child: myTexts.greyNormalText(text: nidhiPraysString.paraText2),
         ),
         const SizedBox(
           height: 180,
         ),
-        myWidgets.greyNormalText(text: nidhiPraysString.paraText3),
+        myTexts.greyNormalText(text: nidhiPraysString.paraText3),
         const SizedBox(
           height: 50,
         ),
@@ -55,23 +56,23 @@ Widget mobileNidhiPrayasTextPage() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        myWidgets.dmSans17Bold(text: nidhiPraysString.titleText),
+        myTexts.dmSans17Bold(text: nidhiPraysString.titleText),
         const SizedBox(
           height: 5,
         ),
-        myWidgets.greyMidText(text: nidhiPraysString.smallText),
+        myTexts.greyMidText(text: nidhiPraysString.smallText),
         const SizedBox(
           height: 30,
         ),
-        myWidgets.dmSans16Grey(text: nidhiPraysString.paraText1),
+        myTexts.dmSans16Grey(text: nidhiPraysString.paraText1),
         const SizedBox(
           height: 40,
         ),
-        myWidgets.dmSans16Grey(text: nidhiPraysString.paraText2),
+        myTexts.dmSans16Grey(text: nidhiPraysString.paraText2),
         const SizedBox(
           height: 40,
         ),
-        myWidgets.dmSans16Grey(text: nidhiPraysString.paraText3),
+        myTexts.dmSans16Grey(text: nidhiPraysString.paraText3),
         const SizedBox(
           height: 30,
         ),

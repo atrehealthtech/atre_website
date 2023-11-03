@@ -1,8 +1,9 @@
 import 'package:atre_website/Utils/Strings.dart';
 import 'package:atre_website/Utils/colors.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../Utils/texts.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
@@ -33,11 +34,11 @@ Widget DeskTopSignUp() {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            myWidgets.boldBlackMidText(text: articleString.boldText),
+            myTexts.boldBlackMidText(text: articleString.boldText),
             const SizedBox(
               height: 5,
             ),
-            myWidgets.midBlackText(text: articleString.signUpParaText),
+            myTexts.midBlackText(text: articleString.signUpParaText),
           ],
         ),
       ),
@@ -69,11 +70,11 @@ Widget MobileSignUp() {
     child: Column(children: [
       Column(
         children: [
-          myWidgets.boldBlackMidText(text: articleString.boldText),
+          myTexts.boldBlackMidText(text: articleString.boldText),
           const SizedBox(
             height: 5,
           ),
-          myWidgets.midBlackText(text: articleString.signUpParaText),
+          myTexts.midBlackText(text: articleString.signUpParaText),
         ],
       ),
       const SizedBox(

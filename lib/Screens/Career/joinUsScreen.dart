@@ -1,7 +1,8 @@
 import 'package:atre_website/Utils/colors.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../Utils/texts.dart';
 
 class JoinUsScreen extends StatelessWidget {
   const JoinUsScreen({super.key});
@@ -20,7 +21,7 @@ class JoinUsScreen extends StatelessWidget {
       color: Palette.white,
       child: Column(
         children: [
-          myWidgets.greenMidText(text: "Why you should join us"),
+          myTexts.greenMidText(text: "Why you should join us"),
           const SizedBox(
             height: 50,
           ),
@@ -31,8 +32,8 @@ class JoinUsScreen extends StatelessWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  myWidgets.blackMidText(text: "Innovation"),
-                  myWidgets.dmSans16Grey(
+                  myTexts.blackMidText(text: "Innovation"),
+                  myTexts.dmSans16Grey(
                       text:
                           "From ideation to execution, innovation is at the heart of everything we do.")
                 ],
@@ -44,8 +45,8 @@ class JoinUsScreen extends StatelessWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  myWidgets.blackMidText(text: "Flexible working hours"),
-                  myWidgets.dmSans16Grey(
+                  myTexts.blackMidText(text: "Flexible working hours"),
+                  myTexts.dmSans16Grey(
                       text:
                           "Your time, your way - take control of your schedule with our flexible working hours.")
                 ],
@@ -57,8 +58,8 @@ class JoinUsScreen extends StatelessWidget {
                   child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  myWidgets.blackMidText(text: "Great learning environment"),
-                  myWidgets.dmSans16Grey(
+                  myTexts.blackMidText(text: "Great learning environment"),
+                  myTexts.dmSans16Grey(
                       text:
                           "Learning is a journey, and we provide the perfect environment for yours.")
                 ],
@@ -77,26 +78,26 @@ class JoinUsScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          myWidgets.greenMidText(text: "Why you should join us"),
+          myTexts.greenMidText(text: "Why you should join us"),
           const SizedBox(
             height: 20,
           ),
-          myWidgets.blackMidText(text: "Innovation"),
-          myWidgets.dmSans16Grey(
+          myTexts.blackMidText(text: "Innovation"),
+          myTexts.dmSans16Grey(
               text:
                   "From ideation to execution, innovation is at the heart of everything we do."),
           const SizedBox(
             height: 10,
           ),
-          myWidgets.blackMidText(text: "Flexible working hours"),
-          myWidgets.dmSans16Grey(
+          myTexts.blackMidText(text: "Flexible working hours"),
+          myTexts.dmSans16Grey(
               text:
                   "Your time, your way - take control of your schedule with our flexible working hours."),
           const SizedBox(
             height: 10,
           ),
-          myWidgets.blackMidText(text: "Great learning environment"),
-          myWidgets.dmSans16Grey(
+          myTexts.blackMidText(text: "Great learning environment"),
+          myTexts.dmSans16Grey(
               text:
                   "Learning is a journey, and we provide the perfect environment for yours.")
         ],

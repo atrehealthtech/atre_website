@@ -9,7 +9,7 @@ import 'package:svg_flutter/svg.dart';
 
 import '../../Utils/Sizes.dart';
 import '../../Utils/icons.dart';
-import '../../Widgets/myWidgets.dart';
+import '../../Utils/texts.dart';
 
 class OurAdvisersScreen extends StatelessWidget {
   const OurAdvisersScreen({super.key});
@@ -30,7 +30,7 @@ class OurAdvisersScreen extends StatelessWidget {
         const SizedBox(
           height: 50,
         ),
-        myWidgets.greenTitleText(text: "Our Advisers"),
+        myTexts.greenTitleText(text: "Our Advisers"),
         const SizedBox(
           height: 50,
         ),
@@ -68,7 +68,7 @@ class OurAdvisersScreen extends StatelessWidget {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    myWidgets.dmSans16Grey(
+                                    myTexts.dmSans16Grey(
                                         text: advisersList[i].content),
                                     SvgPicture.asset(myIcons.linkedIn_black),
                                   ],
@@ -95,7 +95,7 @@ class OurAdvisersScreen extends StatelessWidget {
                 Container(
                   child: Column(
                     children: [
-                      myWidgets.miniBlackTitleText(
+                      myTexts.miniBlackTitleText(
                           text: advisersList[i].name!.toUpperCase()),
                     ],
                   ),
@@ -115,7 +115,7 @@ class OurAdvisersScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          myWidgets.greenTitleText(text: "Our Advisers"),
+          myTexts.greenTitleText(text: "Our Advisers"),
           const SizedBox(
             height: 20,
           ),
@@ -150,7 +150,7 @@ class OurAdvisersScreen extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  myWidgets.miniBlackTitleText(
+                  myTexts.miniBlackTitleText(
                       text: advisersList[i].name!.toUpperCase()),
                 ],
               ),

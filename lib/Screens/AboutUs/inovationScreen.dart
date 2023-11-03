@@ -1,9 +1,8 @@
 import 'package:atre_website/Utils/images.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
-
 import '../../Utils/Sizes.dart';
+import '../../Utils/texts.dart';
 
 class InnovationScreen extends StatelessWidget {
   const InnovationScreen({super.key});
@@ -38,24 +37,24 @@ class InnovationScreen extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    myWidgets.boldBlackText(
+                    myTexts.boldBlackText(
                         text: "Leading through innovation and creativity"),
                     const SizedBox(
                       height: 20,
                     ),
-                    myWidgets.dmSans16Grey(
+                    myTexts.dmSans16Grey(
                         text:
                             "At Atre, the focus is to advance health responsibly through the use of cutting-edge technology. We believe that by leveraging the power of robotics, ML, and AI, we can improve patient outcomes and support the medical professionals who care for them."),
                     const SizedBox(
                       height: 20,
                     ),
-                    myWidgets.dmSans16Grey(
+                    myTexts.dmSans16Grey(
                         text:
                             "Our team is composed of experts in the fields of robotics, AI, and medicine, all of whom are dedicated to developing innovative solutions that improve patient care. We are committed to responsible innovation and are dedicated to ensuring that our technology is safe, effective, and accessible to all, regardless of their economic or social circumstances."),
                     const SizedBox(
                       height: 20,
                     ),
-                    myWidgets.dmSans16Grey(
+                    myTexts.dmSans16Grey(
                         text:
                             "Our current focus is on teleoperated medical devices, such as our teleoperated ultrasound system. We believe that by providing medical professionals with remote diagnostic tools, we can democratize quality healthcare."),
                   ],
@@ -80,24 +79,24 @@ class InnovationScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              myWidgets.boldBlackText(
+              myTexts.boldBlackText(
                   text: "Leading through innovation and creativity"),
               const SizedBox(
                 height: 20,
               ),
-              myWidgets.dmSans16Grey(
+              myTexts.dmSans16Grey(
                   text:
                       "At Atre, the focus is to advance health responsibly through the use of cutting-edge technology. We believe that by leveraging the power of robotics, ML, and AI, we can improve patient outcomes and support the medical professionals who care for them."),
               const SizedBox(
                 height: 20,
               ),
-              myWidgets.dmSans16Grey(
+              myTexts.dmSans16Grey(
                   text:
                       "Our team is composed of experts in the fields of robotics, AI, and medicine, all of whom are dedicated to developing innovative solutions that improve patient care. We are committed to responsible innovation and are dedicated to ensuring that our technology is safe, effective, and accessible to all, regardless of their economic or social circumstances."),
               const SizedBox(
                 height: 20,
               ),
-              myWidgets.dmSans16Grey(
+              myTexts.dmSans16Grey(
                   text:
                       "Our current focus is on teleoperated medical devices, such as our teleoperated ultrasound system. We believe that by providing medical professionals with remote diagnostic tools, we can democratize quality healthcare."),
             ],

@@ -3,7 +3,6 @@
 import 'package:atre_website/Provider/nav_bar_provider.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/icons.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
@@ -12,6 +11,7 @@ import 'package:svg_flutter/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Utils/Sizes.dart';
+import '../Utils/texts.dart';
 
 class AtreBottomSheet extends StatefulWidget {
   const AtreBottomSheet({super.key});
@@ -47,10 +47,10 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    myWidgets.whiteTitleText(text: "ABOUT"),
+                    myTexts.whiteTitleText(text: "ABOUT"),
                     Padding(
                       padding: const EdgeInsets.only(right: 20, top: 10),
-                      child: myWidgets.whiteMidText(
+                      child: myTexts.whiteMidText(
                           text:
                               "At Atre, the focus is to advance health responsibly through the use of cutting-edge technology. We believe that by leveraging the power of robotics, ML, and AI, we can improve patient outcomes and support the medical professionals who care for them."),
                     )
@@ -60,13 +60,13 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    myWidgets.whiteTitleText(text: "QUICK LINKS"),
+                    myTexts.whiteTitleText(text: "QUICK LINKS"),
                     Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: ListView.builder(
                           shrinkWrap: true,
                           itemCount: provider.navBarList.length,
-                          itemBuilder: (context, i) => myWidgets.hoverWhiteText(
+                          itemBuilder: (context, i) => myTexts.hoverWhiteText(
                               text: provider.navBarList[i].title,
                               onTap: () {
                                 context.go(provider.navBarList[i].navigation);
@@ -79,7 +79,7 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    myWidgets.whiteTitleText(text: "FOLLOW US"),
+                    myTexts.whiteTitleText(text: "FOLLOW US"),
                     Row(
                       children: [
                         IconButton(
@@ -107,12 +107,11 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                     child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    myWidgets.hoverWhiteText(
+                    myTexts.hoverWhiteText(
                         text: "Terms & Service", onTap: () {}),
-                    myWidgets.hoverWhiteText(
+                    myTexts.hoverWhiteText(
                         text: "Privacy Policy", onTap: () {}),
-                    myWidgets.hoverWhiteText(
-                        text: "Cookie Policy", onTap: () {}),
+                    myTexts.hoverWhiteText(text: "Cookie Policy", onTap: () {}),
                   ],
                 ))
               ],
@@ -120,7 +119,7 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
             const SizedBox(
               height: 30,
             ),
-            myWidgets.whiteSmallText(
+            myTexts.whiteSmallText(
                 text:
                     "COPYRIGHT © 2023 ALL RIGHTS RESERVED BY ATRE HEALTH TECH")
           ],
@@ -138,21 +137,21 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
         padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
         child: Column(
           children: [
-            myWidgets.whiteTitleText(text: "ABOUT"),
+            myTexts.whiteTitleText(text: "ABOUT"),
             Padding(
               padding: const EdgeInsets.only(right: 20, top: 10),
-              child: myWidgets.whiteMidText(
+              child: myTexts.whiteMidText(
                   text:
                       "At Atre, the focus is to advance health responsibly through the use of cutting-edge technology. We believe that by leveraging the power of robotics, ML, and AI, we can improve patient outcomes and support the medical professionals who care for them."),
             ),
-            myWidgets.whiteTitleText(text: "QUICK LINKS"),
+            myTexts.whiteTitleText(text: "QUICK LINKS"),
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: provider.navBarList.length,
                   itemBuilder: (context, i) => Center(
-                        child: myWidgets.hoverWhiteText(
+                        child: myTexts.hoverWhiteText(
                             text: provider.navBarList[i].title,
                             onTap: () {
                               context.go(provider.navBarList[i].navigation);
@@ -160,7 +159,7 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                             }),
                       )),
             ),
-            myWidgets.whiteTitleText(text: "FOLLOW US"),
+            myTexts.whiteTitleText(text: "FOLLOW US"),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -184,13 +183,13 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                     icon: SvgPicture.asset(myIcons.insta_White))
               ],
             ),
-            myWidgets.hoverWhiteText(text: "Terms & Service", onTap: () {}),
-            myWidgets.hoverWhiteText(text: "Privacy Policy", onTap: () {}),
-            myWidgets.hoverWhiteText(text: "Cookie Policy", onTap: () {}),
+            myTexts.hoverWhiteText(text: "Terms & Service", onTap: () {}),
+            myTexts.hoverWhiteText(text: "Privacy Policy", onTap: () {}),
+            myTexts.hoverWhiteText(text: "Cookie Policy", onTap: () {}),
             const SizedBox(
               height: 30,
             ),
-            myWidgets.whiteSmallText(
+            myTexts.whiteSmallText(
                 text:
                     "COPYRIGHT © 2023 ALL RIGHTS RESERVED BY ATRE HEALTH TECH")
           ],

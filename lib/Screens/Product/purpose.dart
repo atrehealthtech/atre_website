@@ -2,11 +2,11 @@
 
 import 'package:atre_website/Utils/Strings.dart';
 import 'package:atre_website/Utils/icons.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:svg_flutter/svg.dart';
 import '../../Utils/colors.dart';
+import '../../Utils/texts.dart';
 
 class PurposeScreen extends StatelessWidget {
   const PurposeScreen({super.key});
@@ -26,7 +26,7 @@ class PurposeScreen extends StatelessWidget {
         color: Palette.liteGreen,
         width: double.infinity,
         child: Column(children: [
-          myWidgets.dmSans36Bold(text: productString.designPurpose),
+          myTexts.dmSans36Bold(text: productString.designPurpose),
           const SizedBox(
             height: 10,
           ),
@@ -67,7 +67,7 @@ class PurposeScreen extends StatelessWidget {
         color: Palette.liteGreen,
         width: double.infinity,
         child: Column(children: [
-          myWidgets.dmSans36Bold(text: productString.designPurpose),
+          myTexts.dmSans36Bold(text: productString.designPurpose),
           const SizedBox(
             height: 10,
           ),
@@ -106,11 +106,11 @@ class PurposeScreen extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            myWidgets.dmSans17Bold(text: title),
+            myTexts.dmSans17Bold(text: title),
             const SizedBox(
               height: 10,
             ),
-            myWidgets.dmSans16Grey(text: content)
+            myTexts.dmSans16Grey(text: content)
           ],
         ),
       );
