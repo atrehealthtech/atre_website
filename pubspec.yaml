@@ -45,24 +45,24 @@ flutter:
 
   # list giving the asset and other descriptors for the font. For
   # example:
-  fonts:
-    - family: DMSans
-      fonts:
-        - asset: assets/fonts/DMSans-Bold.ttf
-        - asset: assets/fonts/DMSans-BoldItalic.ttf
-        - asset: assets/fonts/DMSans-Italic.ttf
-        - asset: assets/fonts/DMSans-Medium.ttf
-        - asset: assets/fonts/DMSans-MediumItalic.ttf
-        - asset: assets/fonts/DMSans-Regular.ttf
-          style: italic
+  # fonts:
+  #   - family: DMSans
+  #     fonts:
+  #       - asset: assets/fonts/DMSans-Bold.ttf
+  #       - asset: assets/fonts/DMSans-BoldItalic.ttf
+  #       - asset: assets/fonts/DMSans-Italic.ttf
+  #       - asset: assets/fonts/DMSans-Medium.ttf
+  #       - asset: assets/fonts/DMSans-MediumItalic.ttf
+  #       - asset: assets/fonts/DMSans-Regular.ttf
+  #         style: italic
 
-    - family: DancingScript
-      fonts:
-        - asset: assets/fonts/DancingScript-Bold.ttf
-        - asset: assets/fonts/DancingScript-Medium.ttf
-        - asset: assets/fonts/DancingScript-Regular.ttf
-        - asset: assets/fonts/DancingScript-SemiBold.ttf
-          style: italic
+  #   - family: DancingScript
+  #     fonts:
+  #       - asset: assets/fonts/DancingScript-Bold.ttf
+  #       - asset: assets/fonts/DancingScript-Medium.ttf
+  #       - asset: assets/fonts/DancingScript-Regular.ttf
+  #       - asset: assets/fonts/DancingScript-SemiBold.ttf
+  #         style: italic
           
   #   - family: Trajan Pro
   #     fonts:
