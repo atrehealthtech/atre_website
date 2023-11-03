@@ -70,6 +70,7 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                               text: provider.navBarList[i].title,
                               onTap: () {
                                 context.go(provider.navBarList[i].navigation);
+                                provider.select(i);
                               })),
                     )
                   ],
@@ -155,6 +156,7 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
                             text: provider.navBarList[i].title,
                             onTap: () {
                               context.go(provider.navBarList[i].navigation);
+                              provider.select(i);
                             }),
                       )),
             ),
