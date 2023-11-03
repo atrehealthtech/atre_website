@@ -159,7 +159,7 @@ class _NavButtonState extends State<NavButton> {
   Widget build(BuildContext context) {
     return OnHover(
       builder: (bool isHovered) {
-        return GestureDetector(
+        return InkWell(
           onTap: () {
             context.go(widget.navigation);
             widget.onTap();

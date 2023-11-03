@@ -19,7 +19,7 @@ class InnovationScreen extends StatelessWidget {
 
   Widget DeskTopInnovation() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 100),
       child: Row(
         // crossAxisAlignment: CrossAxisAlignment.start,
         children: [

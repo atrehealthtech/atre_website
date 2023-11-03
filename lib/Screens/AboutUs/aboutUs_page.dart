@@ -19,20 +19,20 @@ class AboutUs extends StatefulWidget {
 class _AboutUsState extends State<AboutUs> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: [
-          const NavBar(),
+          NavBar(),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  const AboutImage(),
-                  const InnovationScreen(),
-                  const OurMissionScreen(),
-                  const OurTeamSlideScreen(),
-                  const InvestScreen(),
+                  AboutImage(),
+                  InnovationScreen(),
+                  OurMissionScreen(),
+                  OurTeamSlideScreen(),
                   OurAdvisersScreen(),
+                  InvestScreen(),
                   AtreBottomSheet()
                 ],
               ),

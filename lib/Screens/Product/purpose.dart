@@ -45,16 +45,16 @@ class PurposeScreen extends StatelessWidget {
               Expanded(
                   child: _buildPurposeDetail(
                       icon: myIcons.hospital,
-                      title: productString.designTitle_1,
-                      content: productString.design_desc_1)),
+                      title: productString.designTitle_2,
+                      content: productString.design_desc_2)),
 
               //  3rd Purpose
 
               Expanded(
                   child: _buildPurposeDetail(
                       icon: myIcons.patient,
-                      title: productString.designTitle_1,
-                      content: productString.design_desc_1))
+                      title: productString.designTitle_3,
+                      content: productString.design_desc_3))
             ],
           )
         ]),
@@ -80,15 +80,15 @@ class PurposeScreen extends StatelessWidget {
 
           _buildPurposeDetail(
               icon: myIcons.hospital,
-              title: productString.designTitle_1,
-              content: productString.design_desc_1),
+              title: productString.designTitle_2,
+              content: productString.design_desc_2),
 
           //  3rd Purpose
 
           _buildPurposeDetail(
               icon: myIcons.patient,
-              title: productString.designTitle_1,
-              content: productString.design_desc_1)
+              title: productString.designTitle_3,
+              content: productString.design_desc_3)
         ]),
       );
 
