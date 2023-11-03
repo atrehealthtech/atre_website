@@ -4,7 +4,7 @@ import 'package:svg_flutter/svg.dart';
 
 import '../Utils/colors.dart';
 import '../Utils/icons.dart';
-import 'myWidgets.dart';
+import '../Utils/texts.dart';
 
 Widget hoverJobContainer({required Function onTap, required String role}) {
   return HoverWidget(
@@ -64,8 +64,8 @@ Widget hoverJobContainer({required Function onTap, required String role}) {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    myWidgets.midBlackText(text: role),
-                    // myWidgets.dmSans16Grey(text: subRole)
+                    myTexts.midBlackText(text: role),
+                    // myTexts.dmSans16Grey(text: subRole)
                   ],
                 )),
             Expanded(
@@ -73,7 +73,7 @@ Widget hoverJobContainer({required Function onTap, required String role}) {
               onTap: onTap as void Function(),
               child: Row(
                 children: [
-                  myWidgets.greenMiniText(text: "Apply"),
+                  myTexts.greenMiniText(text: "Apply"),
                   Icon(
                     Icons.arrow_forward,
                     color: Palette.primary,
@@ -103,14 +103,14 @@ Widget hoverJobContainer({required Function onTap, required String role}) {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    myWidgets.midBlackText(text: role),
-                    // myWidgets.dmSans16Grey(text: subRole)
+                    myTexts.midBlackText(text: role),
+                    // myTexts.dmSans16Grey(text: subRole)
                   ],
                 )),
             Expanded(
                 child: Row(
               children: [
-                myWidgets.greenMiniText(text: "Apply"),
+                myTexts.greenMiniText(text: "Apply"),
                 Icon(
                   Icons.arrow_forward,
                   color: Palette.primary,

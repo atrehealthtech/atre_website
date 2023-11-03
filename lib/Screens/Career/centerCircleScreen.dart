@@ -1,7 +1,8 @@
 import 'package:atre_website/Utils/images.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../Utils/texts.dart';
 
 class CenterCircleScreen extends StatelessWidget {
   const CenterCircleScreen({super.key});
@@ -29,8 +30,8 @@ class CenterCircleScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          myWidgets.greenDancingText(text: "And above all..."),
-          myWidgets.dancingMidText(
+          myTexts.greenDancingText(text: "And above all..."),
+          myTexts.dancingMidText(
               text:
                   "A growing and talented team, fueled by a quality driven culture")
         ],
@@ -51,8 +52,8 @@ class CenterCircleScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          myWidgets.greenDancingText(text: "And above all..."),
-          myWidgets.dancingMidText(
+          myTexts.greenDancingText(text: "And above all..."),
+          myTexts.dancingMidText(
               text:
                   "A growing and talented team, fueled by a quality driven culture")
         ],

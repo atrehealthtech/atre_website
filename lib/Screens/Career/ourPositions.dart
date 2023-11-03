@@ -1,6 +1,6 @@
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import '../../Utils/texts.dart';
 import '../../Widgets/hoverJobContainer.dart';
 
 class OurPositionsScreen extends StatelessWidget {
@@ -19,11 +19,11 @@ class OurPositionsScreen extends StatelessWidget {
       margin: const EdgeInsets.symmetric(horizontal: 70, vertical: 70),
       child: Column(
         children: [
-          myWidgets.greenMidText(text: "Our Open Positions"),
+          myTexts.greenMidText(text: "Our Open Positions"),
           const SizedBox(
             height: 8,
           ),
-          myWidgets.dmSans16Grey(
+          myTexts.dmSans16Grey(
               text: "We're always on the lookout for talented people."),
           const SizedBox(
             height: 50,
@@ -48,11 +48,11 @@ class OurPositionsScreen extends StatelessWidget {
             height: 40,
           ),
           Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            myWidgets.dmSans17Bold(
+            myTexts.dmSans17Bold(
                 text:
                     "Don’t see something you fit into? No worries Please fill the form and we'll be in touch. "),
             InkWell(
-                onTap: () {}, child: myWidgets.greenDmSans17Bold(text: "Apply"))
+                onTap: () {}, child: myTexts.greenDmSans17Bold(text: "Apply"))
           ])
         ],
       ),
@@ -65,11 +65,11 @@ class OurPositionsScreen extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          myWidgets.greenMidText(text: "Our Open positions"),
+          myTexts.greenMidText(text: "Our Open positions"),
           const SizedBox(
             height: 8,
           ),
-          myWidgets.dmSans16Grey(
+          myTexts.dmSans16Grey(
               text: "We're always on the lookout for talented people."),
           const SizedBox(
             height: 50,
@@ -90,7 +90,7 @@ class OurPositionsScreen extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          myWidgets.dmSans17Bold(
+          myTexts.dmSans17Bold(
               text:
                   "Don’t see something you fit into? No worries Please fill the form and well be in touch.")
         ],

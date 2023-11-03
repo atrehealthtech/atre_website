@@ -2,11 +2,11 @@
 
 import 'package:atre_website/Utils/Strings.dart';
 import 'package:atre_website/Utils/images.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:svg_flutter/svg_flutter.dart';
 import '../../Utils/icons.dart';
+import '../../Utils/texts.dart';
 
 class ProductIntro extends StatelessWidget {
   const ProductIntro({super.key});
@@ -53,12 +53,11 @@ class ProductIntro extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        myWidgets.dmSans32Bold(
-                            text: productString.productTitle),
+                        myTexts.dmSans32Bold(text: productString.productTitle),
                         const SizedBox(
                           height: 10,
                         ),
-                        myWidgets.dmSans16Grey(text: productString.productDesc),
+                        myTexts.dmSans16Grey(text: productString.productDesc),
                         const SizedBox(
                           height: 20,
                         ),
@@ -81,7 +80,7 @@ class ProductIntro extends StatelessWidget {
             const SizedBox(
               height: 100,
             ),
-            myWidgets.dmSans32Bold(text: "These 2 components make up TRUS"),
+            myTexts.dmSans32Bold(text: "These 2 components make up TRUS"),
             const SizedBox(
               height: 50,
             ),
@@ -94,11 +93,11 @@ class ProductIntro extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        myWidgets.dmSans17Bold(text: productString.component_2),
+                        myTexts.dmSans17Bold(text: productString.component_2),
                         const SizedBox(
                           height: 10,
                         ),
-                        myWidgets.dmSans16Grey(
+                        myTexts.dmSans16Grey(
                             text: productString.component_desc_2)
                       ],
                     )),
@@ -138,11 +137,11 @@ class ProductIntro extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        myWidgets.dmSans17Bold(text: productString.component_1),
+                        myTexts.dmSans17Bold(text: productString.component_1),
                         const SizedBox(
                           height: 10,
                         ),
-                        myWidgets.dmSans16Grey(
+                        myTexts.dmSans16Grey(
                             text: productString.component_desc_1)
                       ],
                     )),
@@ -174,11 +173,11 @@ class ProductIntro extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              myWidgets.dmSans32Bold(text: productString.productTitle),
+              myTexts.dmSans32Bold(text: productString.productTitle),
               const SizedBox(
                 height: 10,
               ),
-              myWidgets.dmSans16Grey(text: productString.productDesc),
+              myTexts.dmSans16Grey(text: productString.productDesc),
               const SizedBox(
                 height: 20,
               ),
@@ -199,7 +198,7 @@ class ProductIntro extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          myWidgets.dmSans32Bold(text: "These 2 components make up TRUS"),
+          myTexts.dmSans32Bold(text: "These 2 components make up TRUS"),
           const SizedBox(
             height: 20,
           ),
@@ -210,7 +209,7 @@ class ProductIntro extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  myWidgets.dmSans17Bold(text: productString.component_2),
+                  myTexts.dmSans17Bold(text: productString.component_2),
                   const SizedBox(
                     height: 20,
                   ),
@@ -224,7 +223,7 @@ class ProductIntro extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                  myWidgets.dmSans16Grey(text: productString.component_desc_2)
+                  myTexts.dmSans16Grey(text: productString.component_desc_2)
                 ],
               ),
             ],
@@ -238,7 +237,7 @@ class ProductIntro extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              myWidgets.dmSans17Bold(text: productString.component_1),
+              myTexts.dmSans17Bold(text: productString.component_1),
               const SizedBox(
                 height: 20,
               ),
@@ -252,7 +251,7 @@ class ProductIntro extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              myWidgets.dmSans16Grey(text: productString.component_desc_1)
+              myTexts.dmSans16Grey(text: productString.component_desc_1)
             ],
           ),
         ],
@@ -274,7 +273,7 @@ class ProductIntro extends StatelessWidget {
           const SizedBox(
             width: 05,
           ),
-          Expanded(flex: 8, child: myWidgets.dmSans16Grey(text: content))
+          Expanded(flex: 8, child: myTexts.dmSans16Grey(text: content))
         ],
       ),
     );

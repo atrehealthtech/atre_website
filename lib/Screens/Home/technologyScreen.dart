@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:go_router/go_router.dart';
 import '../../Utils/Sizes.dart';
+import '../../Utils/texts.dart';
 
 class TechnologyScreen extends StatelessWidget {
   const TechnologyScreen({super.key});
@@ -36,11 +37,11 @@ class TechnologyScreen extends StatelessWidget {
       width: double.infinity,
       child: Column(
         children: [
-          myWidgets.greenTitleText(text: "Technology"),
+          myTexts.greenTitleText(text: "Technology"),
           const SizedBox(
             height: 10,
           ),
-          myWidgets.dmSans16Grey(
+          myTexts.dmSans16Grey(
               text:
                   "From concept to product, and from edge to cloud!\n     We deliver cutting edge technology solutions."),
           const SizedBox(
@@ -95,11 +96,11 @@ class TechnologyScreen extends StatelessWidget {
           const SizedBox(
             height: 70,
           ),
-          myWidgets.greenTitleText(text: "Technology"),
+          myTexts.greenTitleText(text: "Technology"),
           const SizedBox(
             height: 10,
           ),
-          myWidgets.dmSans16Grey(
+          myTexts.dmSans16Grey(
               text:
                   "From concept to product, and from edge to cloud! We deliver cutting edge technology solutions."),
           const SizedBox(

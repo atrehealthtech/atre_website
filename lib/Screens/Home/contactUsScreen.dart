@@ -1,6 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:atre_website/Utils/colors.dart';
+import 'package:atre_website/Utils/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:responsive_builder/responsive_builder.dart';
@@ -36,7 +37,7 @@ class ContactUsScreen extends StatelessWidget {
       ),
       child: Column(
         children: [
-          myWidgets.greenTitleText(text: "Contact Us"),
+          myTexts.greenTitleText(text: "Contact Us"),
           const SizedBox(
             height: 70,
           ),
@@ -60,7 +61,7 @@ class ContactUsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      myWidgets.blackMidText(text: "Name"),
+                      myTexts.blackMidText(text: "Name"),
                       myWidgets.myTextField(),
                       Row(
                         children: [
@@ -68,9 +69,9 @@ class ContactUsScreen extends StatelessWidget {
                               child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              myWidgets.blackMidText(text: "Organization Name"),
+                              myTexts.blackMidText(text: "Organization Name"),
                               myWidgets.myTextField(),
-                              myWidgets.blackMidText(text: "Email ID"),
+                              myTexts.blackMidText(text: "Email ID"),
                               myWidgets.myTextField(),
                             ],
                           )),
@@ -81,15 +82,15 @@ class ContactUsScreen extends StatelessWidget {
                               child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              myWidgets.blackMidText(text: "Designation"),
+                              myTexts.blackMidText(text: "Designation"),
                               myWidgets.myTextField(),
-                              myWidgets.blackMidText(text: "Contact Number"),
+                              myTexts.blackMidText(text: "Contact Number"),
                               myWidgets.myTextField(),
                             ],
                           ))
                         ],
                       ),
-                      myWidgets.blackMidText(text: "Describe Briefly"),
+                      myTexts.blackMidText(text: "Describe Briefly"),
                       myWidgets.describeField(),
                       const SizedBox(
                         height: 20,
@@ -104,9 +105,9 @@ class ContactUsScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 100),
                 child: Column(
                   children: [
-                    myWidgets.blackTitleText(text: "Write to us"),
-                    myWidgets.greenMidText(text: "info@atrehealthtech.com"),
-                    myWidgets.dmSans16Grey(
+                    myTexts.blackTitleText(text: "Write to us"),
+                    myTexts.greenMidText(text: "info@atrehealthtech.com"),
+                    myTexts.dmSans16Grey(
                         text: "We will back with in 2 business days."),
                     const SizedBox(
                       height: 40,
@@ -124,12 +125,12 @@ class ContactUsScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          myWidgets.blackTitleText(text: "Reach us here"),
+                          myTexts.blackTitleText(text: "Reach us here"),
                           const SizedBox(
                             height: 10,
                           ),
-                          myWidgets.dmSans16Grey(text: "Atre Health Tech"),
-                          myWidgets.dmSans16Grey(
+                          myTexts.dmSans16Grey(text: "Atre Health Tech"),
+                          myTexts.dmSans16Grey(
                               text:
                                   "45, Avinashi Road, \nPSG Foundry, Neelambur, \nCoimbatore, Tamil Nadu."),
                           const SizedBox(
@@ -162,7 +163,7 @@ class ContactUsScreen extends StatelessWidget {
       color: Palette.white,
       child: Column(
         children: [
-          myWidgets.greenTitleText(text: "Contact Us"),
+          myTexts.greenTitleText(text: "Contact Us"),
           const SizedBox(
             height: 70,
           ),
@@ -185,17 +186,17 @@ class ContactUsScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      myWidgets.blackMidText(text: "Name"),
+                      myTexts.blackMidText(text: "Name"),
                       myWidgets.myTextField(),
-                      myWidgets.blackMidText(text: "Organization Name"),
+                      myTexts.blackMidText(text: "Organization Name"),
                       myWidgets.myTextField(),
-                      myWidgets.blackMidText(text: "Email ID"),
+                      myTexts.blackMidText(text: "Email ID"),
                       myWidgets.myTextField(),
-                      myWidgets.blackMidText(text: "Designation"),
+                      myTexts.blackMidText(text: "Designation"),
                       myWidgets.myTextField(),
-                      myWidgets.blackMidText(text: "Contact Number"),
+                      myTexts.blackMidText(text: "Contact Number"),
                       myWidgets.myTextField(),
-                      myWidgets.blackMidText(text: "Describe Briefly"),
+                      myTexts.blackMidText(text: "Describe Briefly"),
                       myWidgets.describeField(),
                       const SizedBox(
                         height: 20,
@@ -210,9 +211,9 @@ class ContactUsScreen extends StatelessWidget {
               ),
               Column(
                 children: [
-                  myWidgets.blackTitleText(text: "Write to us"),
-                  myWidgets.greenMidText(text: "info@atrehealthtech.com"),
-                  myWidgets.dmSans16Grey(
+                  myTexts.blackTitleText(text: "Write to us"),
+                  myTexts.greenMidText(text: "info@atrehealthtech.com"),
+                  myTexts.dmSans16Grey(
                       text: "We will back with in 2 business days."),
                   const SizedBox(
                     height: 40,
@@ -230,12 +231,12 @@ class ContactUsScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        myWidgets.blackTitleText(text: "Reach us here"),
+                        myTexts.blackTitleText(text: "Reach us here"),
                         const SizedBox(
                           height: 10,
                         ),
-                        myWidgets.dmSans16Grey(text: "Atre Health Tech"),
-                        myWidgets.dmSans16Grey(
+                        myTexts.dmSans16Grey(text: "Atre Health Tech"),
+                        myTexts.dmSans16Grey(
                             text:
                                 "45, Avinashi Road, \nPSG Foundry, Neelambur, \nCoimbatore, Tamil Nadu."),
                         const SizedBox(

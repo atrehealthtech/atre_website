@@ -1,7 +1,8 @@
 import 'package:atre_website/Utils/Strings.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../../Utils/texts.dart';
 
 class IntecTextPage extends StatelessWidget {
   const IntecTextPage({super.key});
@@ -23,26 +24,26 @@ Widget deskTopIntecTextPage() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        myWidgets.blackTitle(text: intecString.titleText),
+        myTexts.blackTitle(text: intecString.titleText),
         const SizedBox(
           height: 5,
         ),
-        myWidgets.greyMidText(text: intecString.smallText),
+        myTexts.greyMidText(text: intecString.smallText),
         const SizedBox(
           height: 50,
         ),
-        myWidgets.greyNormalText(text: intecString.intecParaText),
+        myTexts.greyNormalText(text: intecString.intecParaText),
         const SizedBox(
           height: 180,
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 100),
-          child: myWidgets.greyNormalText(text: intecString.paraText2),
+          child: myTexts.greyNormalText(text: intecString.paraText2),
         ),
         const SizedBox(
           height: 180,
         ),
-        myWidgets.greyNormalText(text: intecString.paraText3),
+        myTexts.greyNormalText(text: intecString.paraText3),
         const SizedBox(
           height: 50,
         ),
@@ -59,23 +60,23 @@ Widget mobileIntecTextPage() {
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        myWidgets.dmSans17Bold(text: intecString.titleText),
+        myTexts.dmSans17Bold(text: intecString.titleText),
         const SizedBox(
           height: 5,
         ),
-        myWidgets.greyMidText(text: intecString.smallText),
+        myTexts.greyMidText(text: intecString.smallText),
         const SizedBox(
           height: 10,
         ),
-        myWidgets.dmSans16Grey(text: intecString.intecParaText),
+        myTexts.dmSans16Grey(text: intecString.intecParaText),
         const SizedBox(
           height: 40,
         ),
-        myWidgets.dmSans16Grey(text: intecString.paraText2),
+        myTexts.dmSans16Grey(text: intecString.paraText2),
         const SizedBox(
           height: 40,
         ),
-        myWidgets.dmSans16Grey(text: intecString.paraText3),
+        myTexts.dmSans16Grey(text: intecString.paraText3),
         const SizedBox(
           height: 30,
         ),

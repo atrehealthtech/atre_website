@@ -2,7 +2,6 @@
 
 import 'package:atre_website/Utils/icons.dart';
 import 'package:atre_website/Utils/images.dart';
-import 'package:atre_website/Widgets/myWidgets.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:hovering/hovering.dart';
@@ -11,6 +10,7 @@ import 'package:svg_flutter/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../Utils/Sizes.dart';
+import '../../Utils/texts.dart';
 
 class OurTeamSlideScreen extends StatelessWidget {
   const OurTeamSlideScreen({super.key});
@@ -31,7 +31,7 @@ class OurTeamSlideScreen extends StatelessWidget {
         const SizedBox(
           height: 50,
         ),
-        myWidgets.greenTitleText(text: "Our Team"),
+        myTexts.greenTitleText(text: "Our Team"),
         const SizedBox(
           height: 50,
         ),
@@ -78,7 +78,7 @@ class OurTeamSlideScreen extends StatelessWidget {
                                   children: [
                                     SvgPicture.asset(myIcons.linkedIn_black),
                                     slideList[i].content != ""
-                                        ? myWidgets.dmSans16Grey(
+                                        ? myTexts.dmSans16Grey(
                                             text: slideList[i].content!)
                                         : Container(),
                                   ],
@@ -105,9 +105,9 @@ class OurTeamSlideScreen extends StatelessWidget {
                 Container(
                   child: Column(
                     children: [
-                      myWidgets.miniBlackTitleText(
+                      myTexts.miniBlackTitleText(
                           text: slideList[i].name!.toUpperCase()),
-                      myWidgets.dmSans16Grey(text: slideList[i].role!)
+                      myTexts.dmSans16Grey(text: slideList[i].role!)
                     ],
                   ),
                 )
@@ -126,7 +126,7 @@ class OurTeamSlideScreen extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          myWidgets.greenTitleText(text: "Our Team"),
+          myTexts.greenTitleText(text: "Our Team"),
           const SizedBox(
             height: 20,
           ),
@@ -162,9 +162,9 @@ class OurTeamSlideScreen extends StatelessWidget {
                   const SizedBox(
                     height: 15,
                   ),
-                  myWidgets.miniBlackTitleText(
+                  myTexts.miniBlackTitleText(
                       text: slideList[i].name!.toUpperCase()),
-                  myWidgets.dmSans16Grey(text: slideList[i].role!)
+                  myTexts.dmSans16Grey(text: slideList[i].role!)
                 ],
               ),
             ),
