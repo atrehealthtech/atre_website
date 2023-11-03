@@ -72,15 +72,17 @@ class OurTeamSlideScreen extends StatelessWidget {
                             },
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  slideList[i].content != ""
-                                      ? myWidgets.dmSans16Grey(
-                                          text: slideList[i].content!)
-                                      : Container(),
-                                  SvgPicture.asset(myIcons.linkedIn_black),
-                                ],
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    SvgPicture.asset(myIcons.linkedIn_black),
+                                    slideList[i].content != ""
+                                        ? myWidgets.dmSans16Grey(
+                                            text: slideList[i].content!)
+                                        : Container(),
+                                  ],
+                                ),
                               ),
                             ))),
                   ),
@@ -252,7 +254,8 @@ List<OurTeam> slideList = [
       role: "Front End Developer",
       imgUrl: myImages.velImg,
       linkedInUrl: "velmurugan-ravindran-a83438286/",
-      content: ""),
+      content:
+          "I am a skilled Flutter developer with a passion for crafting high-quality, cross-platform mobile applications. With one year of experience in the world of app development, I specialize in building robust and user-friendly applications that meet the evolving needs of today's digital landscape."),
   OurTeam(
       name: "Rohith S",
       role: "Testing",
