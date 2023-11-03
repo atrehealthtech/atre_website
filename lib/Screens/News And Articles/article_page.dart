@@ -79,7 +79,7 @@ Widget MobileArticle(BuildContext context) {
           containerWidth: 450,
           img: myImages.inTecImg,
           titleText: articleString.articleTitleText1,
-          dmSans16Grey: articleString.articleParaText,
+          dmSans16Grey: intecString.intecParaText,
           buttonText: articleString.buttonText,
           onTap: () {}),
       SizedBox(
