@@ -141,6 +141,7 @@ class _AtreBottomSheetState extends State<AtreBottomSheet> {
             Padding(
               padding: const EdgeInsets.only(right: 20, top: 10),
               child: myTexts.whiteMidText(
+                  align: TextAlign.center,
                   text:
                       "At Atre, the focus is to advance health responsibly through the use of cutting-edge technology. We believe that by leveraging the power of robotics, ML, and AI, we can improve patient outcomes and support the medical professionals who care for them."),
             ),

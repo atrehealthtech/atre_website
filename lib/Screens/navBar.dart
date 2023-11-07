@@ -52,7 +52,6 @@ class _NavBarState extends State<NavBar> {
                   onTap: () {
                     setState(() {
                       isMenuClick = !isMenuClick;
-                      print(isMenuClick);
                     });
                   },
                   child: const Icon(Icons.menu))
@@ -68,7 +67,6 @@ class _NavBarState extends State<NavBar> {
                       child: NavButton(
                         onTap: () {
                           // Selected item
-
                           provider.select(i);
                         },
                         selected: provider.selected[i],
@@ -109,7 +107,6 @@ class _NavBarState extends State<NavBar> {
                         child: NavButton(
                           onTap: () {
                             // Selected item
-
                             provider.select(i);
                           },
                           selected: provider.selected[i],
@@ -174,7 +171,7 @@ class _NavButtonState extends State<NavButton> {
                   fontSize: 16,
                   fontFamily: "DMSans",
                   fontWeight:
-                      widget.selected ? FontWeight.w500 : FontWeight.normal)),
+                      widget.selected ? FontWeight.w300 : FontWeight.normal)),
         );
       },
     );

@@ -136,7 +136,7 @@ class MyWidgets {
                 image:
                     DecorationImage(fit: BoxFit.cover, image: AssetImage(img)),
                 borderRadius: BorderRadius.circular(8),
-                color: Colors.black),
+                color: Colors.grey),
           ),
           const SizedBox(
             height: 10,

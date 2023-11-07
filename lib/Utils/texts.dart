@@ -187,8 +187,9 @@ class MyTexts {
   }
   // this widget used for Mid White text
 
-  Widget whiteMidText({required String text}) {
+  Widget whiteMidText({required String text, TextAlign? align}) {
     return Text(text,
+        textAlign: align,
         style: GoogleFonts.dmSans(
             color: Palette.white, fontSize: 16, fontWeight: FontWeight.normal));
   }

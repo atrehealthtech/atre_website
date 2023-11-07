@@ -19,11 +19,11 @@ class _NidhiParayasPageState extends State<NidhiParayasPage> {
       backgroundColor: Palette.white,
       body: const Column(
         children: [
+          NavBar(),
           Expanded(
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  NavBar(),
                   NidhiPrayasImage(),
                   NidhiPrayasTextPage(),
                   AtreBottomSheet()

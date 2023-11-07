@@ -17,12 +17,14 @@ class IntroScreen extends StatelessWidget {
     w = MediaQuery.of(context).size.width;
     return ScreenTypeLayout.builder(
       mobile: (_) => MobileIntro(),
-      desktop: (_) => DeskTopIntro(),
+      desktop: (_) => DeskTopIntro(context),
     );
   }
 
-  Widget DeskTopIntro() {
+  Widget DeskTopIntro(BuildContext context) {
     return Container(
+      height: MediaQuery.of(context).size.height,
+      width: double.infinity,
       color: Palette.liteGreen,
       child: Row(
         children: [
@@ -35,6 +37,7 @@ class IntroScreen extends StatelessWidget {
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 SvgPicture.asset(
                   myImages.intro_title,
@@ -53,10 +56,8 @@ class IntroScreen extends StatelessWidget {
 
           Expanded(
               child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const SizedBox(
-                height: 100,
-              ),
               SizedBox(
                 height: 600,
                 child: Image.asset(

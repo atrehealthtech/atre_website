@@ -3,7 +3,9 @@ import 'package:atre_website/Screens/Product/purpose.dart';
 import 'package:atre_website/Screens/navBar.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import '../../Provider/product_provider.dart';
 import '../BottomSheet.dart';
 import 'intro.dart';
 
@@ -17,6 +19,13 @@ class ProductPage extends StatefulWidget {
 class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
+    // Product provider
+    final provider = context.watch<ProductProvider>();
+
+    // Provider init for pixels
+
+    provider.pixelInit();
+
     return Scaffold(
       backgroundColor: Palette.white,
       body: Column(
@@ -24,11 +33,12 @@ class _ProductPageState extends State<ProductPage> {
           const NavBar(),
           Expanded(
             child: SingleChildScrollView(
-              child: Column(
+              controller: provider.controller,
+              child: const Column(
                 children: [
-                  const ProductIntro(),
-                  const PurposeScreen(),
-                  const ProductContact(),
+                  ProductIntro(),
+                  PurposeScreen(),
+                  ProductContact(),
                   AtreBottomSheet()
                 ],
               ),
