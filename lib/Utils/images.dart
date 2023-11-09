@@ -4,6 +4,7 @@ final myImages = MyImages();
 
 class MyImages {
   var appLogo = "assets/images/logo.png";
+  var atre_logo = "assets/images/atre_logo.svg";
   var intro_title = "assets/images/intro_title.svg";
 
   var technologyImg_1 = "assets/images/dr_ramalingam.png";

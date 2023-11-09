@@ -1,3 +1,4 @@
+import 'package:atre_website/Routes/web_route_constants.dart';
 import 'package:flutter/material.dart';
 
 class NavBarProvider extends ChangeNotifier {
@@ -18,11 +19,11 @@ class NavBarProvider extends ChangeNotifier {
 
   //  Nav Bar Items
   List<NavBarDetail> navBarList = [
-    NavBarDetail(title: "Home", navigation: "/"),
-    NavBarDetail(title: "About Us", navigation: "/about_us"),
-    NavBarDetail(title: "Career", navigation: "/career"),
-    NavBarDetail(title: "Product", navigation: "/product"),
-    NavBarDetail(title: "News & Article", navigation: "/news_articles")
+    NavBarDetail(title: "Home", navigation: MyRouteConstants.homeRoute),
+    NavBarDetail(title: "About Us", navigation: MyRouteConstants.aboutRoute),
+    NavBarDetail(title: "Career", navigation: MyRouteConstants.careerRoute),
+    NavBarDetail(title: "Product", navigation: MyRouteConstants.productRoute),
+    NavBarDetail(title: "Blogs", navigation: MyRouteConstants.blogsRoute)
   ];
 }
 

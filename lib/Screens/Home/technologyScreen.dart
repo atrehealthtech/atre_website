@@ -63,7 +63,7 @@ class TechnologyScreen extends StatelessWidget {
                     context.go("/product");
                   }),
               SizedBox(
-                width: w! / 20,
+                width: w! / 15,
               ),
               // 2nd Container
               myWidgets.technologyContainer(

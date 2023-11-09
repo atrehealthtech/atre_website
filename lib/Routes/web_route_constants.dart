@@ -1,9 +1,9 @@
 class MyRouteConstants {
-  static const String homeRouteName = "home";
-  static const String aboutRouteName = "about_us";
-  static const String productRouteName = "product";
-  static const String careerRouteName = "career";
-  static const String articlesRouteName = "news_articles";
-  static const String articleIntec = "1";
-  static const String articleNidhiPrayas = "2";
+  static const String homeRoute = "/";
+  static const String aboutRoute = "/about_us";
+  static const String productRoute = "/product";
+  static const String careerRoute = "/career";
+  static const String blogsRoute = "/blogs";
+  static const String blogIntec = "/blogs/1";
+  static const String blogNidhiPrayas = "/blogs/2";
 }

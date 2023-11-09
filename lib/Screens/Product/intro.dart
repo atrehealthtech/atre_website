@@ -47,7 +47,7 @@ class ProductIntro extends StatelessWidget {
                 Expanded(
                     child: SizedBox(
                   height: 500,
-                  child: SlideInRight(
+                  child: SlideInLeft(
                     child: Image.asset(
                       myImages.robot_without_circle,
                     ),

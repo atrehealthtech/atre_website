@@ -1,4 +1,4 @@
-import 'package:atre_website/Screens/News%20And%20Articles/singup_page.dart';
+import 'package:atre_website/Screens/Blogs/singup_page.dart';
 import 'package:atre_website/Screens/BottomSheet.dart';
 import 'package:atre_website/Screens/navBar.dart';
 import 'package:atre_website/Utils/colors.dart';

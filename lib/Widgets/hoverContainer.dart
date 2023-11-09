@@ -15,7 +15,8 @@ class _HoverTechContainerState extends State<HoverTechContainer> {
   bool isHovered = false;
   @override
   Widget build(BuildContext context) {
-    final hovered = Matrix4.identity()..translate(-20, -30, 0);
+    double scaleF = 1.11;
+    final hovered = Matrix4.identity()..scale(scaleF, scaleF);
 
     final transform = isHovered ? hovered : Matrix4.identity();
 

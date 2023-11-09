@@ -1,4 +1,4 @@
-import 'package:atre_website/Screens/News%20And%20Articles/intec/intec_page.dart';
+import 'package:atre_website/Routes/web_route_constants.dart';
 import 'package:atre_website/Utils/Sizes.dart';
 import 'package:atre_website/Utils/colors.dart';
 import 'package:atre_website/Utils/images.dart';
@@ -7,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import '../../Utils/Strings.dart';
-import 'nidhiprayas/nidhiprayas_page.dart';
 
 class ArticlePage extends StatelessWidget {
   const ArticlePage({super.key});
@@ -32,7 +31,7 @@ Widget DeskTopArticle(BuildContext context) {
     child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       myWidgets.articleContainer(
           onContainerTap: () {
-            context.go("/news_articles/1");
+            context.go(MyRouteConstants.blogIntec);
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
@@ -47,7 +46,7 @@ Widget DeskTopArticle(BuildContext context) {
       ),
       myWidgets.articleContainer(
           onContainerTap: () {
-            context.go("/news_articles/2");
+            context.go(MyRouteConstants.blogNidhiPrayas);
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
@@ -70,9 +69,7 @@ Widget MobileArticle(BuildContext context) {
     child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       myWidgets.articleContainer(
           onContainerTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const IntecPage();
-            }));
+            context.go(MyRouteConstants.blogIntec);
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,
@@ -87,9 +84,7 @@ Widget MobileArticle(BuildContext context) {
       ),
       myWidgets.articleContainer(
           onContainerTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return const NidhiParayasPage();
-            }));
+            context.go(MyRouteConstants.blogNidhiPrayas);
           },
           authorText: articleString.authorText,
           nameText: articleString.nameText,

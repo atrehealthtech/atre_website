@@ -2,12 +2,13 @@
 
 import 'package:atre_website/Provider/nav_bar_provider.dart';
 import 'package:atre_website/Utils/colors.dart';
+import 'package:atre_website/Utils/images.dart';
 import 'package:atre_website/Widgets/onHover.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:svg_flutter/svg.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);
@@ -125,13 +126,11 @@ class _NavBarState extends State<NavBar> {
 
   Widget navLogo({required Function onTap}) {
     return InkWell(
-      onTap: onTap as void Function(),
-      child: Text(
-        "atre",
-        style: GoogleFonts.jost(
-            color: Palette.primary, fontWeight: FontWeight.w500, fontSize: 32),
-      ),
-    );
+        onTap: onTap as void Function(),
+        child: SvgPicture.asset(
+          myImages.atre_logo,
+          height: 25,
+        ));
   }
 }
 
